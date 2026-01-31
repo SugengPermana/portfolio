@@ -17,18 +17,30 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <Navbar />
-      <body
-        className={`${poppins.variable} antialiased`}
-      >
+    <html lang="en" data-theme="forest" suppressHydrationWarning>
+      <head>
+        {/* set theme BEFORE React render */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                const theme = localStorage.getItem("theme") || "forest";
+                document.documentElement.setAttribute("data-theme", theme);
+              })();
+            `,
+          }}
+        />
+      </head>
+
+      <body className={`${poppins.variable} antialiased`}>
+        <Navbar />
         {children}
+        {/* <Footer /> */}
       </body>
-      <Footer />
     </html>
   );
 }
