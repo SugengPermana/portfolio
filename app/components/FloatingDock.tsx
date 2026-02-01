@@ -74,7 +74,7 @@ const FloatingDockMobile = ({
                   href={item.href}
                   key={item.title}
                   aria-label={item.title}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-base-200/80 backdrop-blur-md border border-base-300 text-base-content"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
                 </a>
@@ -88,15 +88,15 @@ const FloatingDockMobile = ({
         onClick={() => setOpen(!open)}
         aria-label={open ? "Close navigation menu" : "Open navigation menu"}
         aria-expanded={open}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-base-100 text-base-content border border-base-300"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+        <IconLayoutNavbarCollapse className="h-5 w-5 bg-base-100 text-base-content hover:text-primary " />
       </button>
     </div>
   );
 };
 
-  // Ganti Buat ukuran layar deskstop
+// Ganti Buat ukuran layar deskstop
 const FloatingDockDesktop = ({
   items,
   className,
@@ -112,7 +112,7 @@ const FloatingDockDesktop = ({
       className={cn(
         // Ganti Background
         "fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden sm:flex",
-        "h-13 items-end gap-3 rounded-2xl bg-gray-50 px-3 pb-2 dark:bg-neutral-900",
+        "h-13 items-end gap-3 rounded-2xl bg-base-200 px-3 pb-2",
         className,
       )}
     >
@@ -144,11 +144,14 @@ function IconContainer({
 
   // ganti icon buble
   let widthTransform = useTransform(distance, [-120, 0, 120], [36, 64, 36]);
-let heightTransform = useTransform(distance, [-120, 0, 120], [36, 64, 36]);
+  let heightTransform = useTransform(distance, [-120, 0, 120], [36, 64, 36]);
 
-let widthTransformIcon = useTransform(distance, [-120, 0, 120], [16, 28, 16]);
-let heightTransformIcon = useTransform(distance, [-120, 0, 120], [16, 28, 16]);
-
+  let widthTransformIcon = useTransform(distance, [-120, 0, 120], [16, 28, 16]);
+  let heightTransformIcon = useTransform(
+    distance,
+    [-120, 0, 120],
+    [16, 28, 16],
+  );
 
   let width = useSpring(widthTransform, {
     mass: 0.1,
@@ -182,7 +185,8 @@ let heightTransformIcon = useTransform(distance, [-120, 0, 120], [16, 28, 16]);
         // buat ganti hover bublenya
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800"
+        className="relative flex aspect-square items-center justify-center rounded-full bg-base-100 text-base-content border border-base-300 hover:text-primary-content
+"
       >
         <AnimatePresence>
           {hovered && (
@@ -190,7 +194,8 @@ let heightTransformIcon = useTransform(distance, [-120, 0, 120], [16, 28, 16]);
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-8 left-1/2 w-fit rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs whitespace-pre text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white"
+              className="absolute -top-8 left-1/2 w-fit rounded-md border border-base-300
+        bg-base-200 px-2 py-0.5 text-xs whitespace-pre text-base-content shadow "
             >
               {title}
             </motion.div>

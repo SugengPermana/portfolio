@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from "react";
 import { PaletteIcon } from "lucide-react";
 const THEMES = [
@@ -7,18 +8,13 @@ const THEMES = [
   "bumblebee",
   "emerald",
   "corporate",
-  "synthwave",
-  "retro",
-  "cyberpunk",
   "valentine",
   "halloween",
   "garden",
   "forest",
-  "aqua",
   "lofi",
   "pastel",
   "fantasy",
-  "wireframe",
   "black",
   "luxury",
   "dracula",
@@ -32,7 +28,7 @@ const THEMES = [
   "winter",
 ];
 
-const ThemeSelector = () => {
+const ThemeColor = () => {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem("theme") || "forest";
@@ -80,4 +76,4 @@ const ThemeSelector = () => {
   );
 };
 
-export default ThemeSelector;
+export default ThemeColor;
