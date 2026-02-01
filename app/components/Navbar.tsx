@@ -18,7 +18,7 @@ export function Navbar() {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#home",
     },
 
     {
@@ -26,28 +26,28 @@ export function Navbar() {
       icon: (
         <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#skills",
     },
     {
       title: "Resume",
       icon: (
         <IconFileText className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#resume",
     },
     {
       title: "About",
       icon: (
         <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#about",
     },
     {
       title: "Portfolio",
       icon: (
         <IconBriefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#portfolio",
     },
 
     {
@@ -55,14 +55,14 @@ export function Navbar() {
       icon: (
         <IconMessageCircle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#testimonial",
     },
     {
       title: "Contact",
       icon: (
         <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#contact",
     },
   ];
   return (

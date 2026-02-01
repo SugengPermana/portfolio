@@ -73,6 +73,7 @@ const FloatingDockMobile = ({
                 <a
                   href={item.href}
                   key={item.title}
+                  aria-label={item.title}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
@@ -85,11 +86,11 @@ const FloatingDockMobile = ({
       <button
         type="button"
         onClick={() => setOpen(!open)}
+        aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={open}
         className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800"
       >
-        .
         <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
-        .
       </button>
     </div>
   );
@@ -174,7 +175,7 @@ let heightTransformIcon = useTransform(distance, [-120, 0, 120], [16, 28, 16]);
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a href={href}>
+    <a href={href} aria-label={title}>
       <motion.div
         ref={ref}
         style={{ width, height }}
