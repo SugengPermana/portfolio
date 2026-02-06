@@ -70,16 +70,19 @@ const FloatingDockMobile = ({
 }) => {
   const [open, setOpen] = useState(false);
   const [showThemes, setShowThemes] = useState(false);
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") || "forest";
-    }
-    return "forest";
-  });
+  const [theme, setTheme] = useState<string | null>(null);
+
+  // Client-only: Read theme from localStorage on mount
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") || "forest";
+    setTheme(savedTheme);
+  }, []);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
+    if (theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    }
   }, [theme]);
 
   const handleThemeChange = (newTheme: string) => {
@@ -225,16 +228,20 @@ const FloatingDockDesktop = ({
   className?: string;
 }) => {
   let mouseX = useMotionValue(Infinity);
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") || "forest";
-    }
-    return "forest";
-  });
+  const [theme, setTheme] = useState<string | null>(null);
 
+  // Client-only: Read theme from localStorage on mount
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
+    const savedTheme = localStorage.getItem("theme") || "forest";
+    setTheme(savedTheme);
+  }, []);
+
+  // Update document and localStorage when theme changes (only if theme is set)
+  useEffect(() => {
+    if (theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    }
   }, [theme]);
 
   return (
@@ -261,7 +268,7 @@ function ThemeSwitcherDesktop({
   setTheme,
 }: {
   mouseX: MotionValue;
-  theme: string;
+  theme: string | null;
   setTheme: (theme: string) => void;
 }) {
   let ref = useRef<HTMLDivElement>(null);
