@@ -53,26 +53,8 @@ export const FloatingDock = ({
   desktopClassName?: string;
   mobileClassName?: string;
 }) => {
-  return (
-    <>
-      <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} />
-    </>
-  );
-};
-
-const FloatingDockMobile = ({
-  items,
-  className,
-}: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
-  className?: string;
-}) => {
-  const [open, setOpen] = useState(false);
-  const [showThemes, setShowThemes] = useState(false);
   const [theme, setTheme] = useState<string | null>(null);
 
-  // Client-only: Read theme from localStorage on mount
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "forest";
     setTheme(savedTheme);
@@ -84,6 +66,28 @@ const FloatingDockMobile = ({
       localStorage.setItem("theme", theme);
     }
   }, [theme]);
+
+  return (
+    <>
+      <FloatingDockDesktop items={items} className={desktopClassName} theme={theme} setTheme={setTheme} />
+      <FloatingDockMobile items={items} className={mobileClassName} theme={theme} setTheme={setTheme} />
+    </>
+  );
+};
+
+const FloatingDockMobile = ({
+  items,
+  className,
+  theme,
+  setTheme,
+}: {
+  items: { title: string; icon: React.ReactNode; href: string }[];
+  className?: string;
+  theme: string | null;
+  setTheme: (theme: string) => void;
+}) => {
+  const [open, setOpen] = useState(false);
+  const [showThemes, setShowThemes] = useState(false);
 
   const handleThemeChange = (newTheme: string) => {
     setTheme(newTheme);
@@ -223,26 +227,15 @@ const FloatingDockMobile = ({
 const FloatingDockDesktop = ({
   items,
   className,
+  theme,
+  setTheme,
 }: {
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
+  theme: string | null;
+  setTheme: (theme: string) => void;
 }) => {
   let mouseX = useMotionValue(Infinity);
-  const [theme, setTheme] = useState<string | null>(null);
-
-  // Client-only: Read theme from localStorage on mount
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "forest";
-    setTheme(savedTheme);
-  }, []);
-
-  // Update document and localStorage when theme changes (only if theme is set)
-  useEffect(() => {
-    if (theme) {
-      document.documentElement.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
-    }
-  }, [theme]);
 
   return (
     <motion.div
