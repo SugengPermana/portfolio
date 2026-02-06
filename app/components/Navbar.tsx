@@ -1,7 +1,6 @@
 import { FloatingDock } from "./FloatingDock";
 import {
   IconHome,
-  IconCode,
   IconFileText,
   IconBriefcase,
   IconPhoneOutgoing,
