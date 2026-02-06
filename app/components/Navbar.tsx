@@ -22,11 +22,6 @@ export function Navbar() {
       href: "#about",
     },
     {
-      title: "Skills",
-      icon: <IconCode className="h-full w-full" />,
-      href: "#skills",
-    },
-    {
       title: "Projects",
       icon: <IconBriefcase className="h-full w-full" />,
       href: "#projects",
