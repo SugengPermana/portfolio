@@ -1,11 +1,10 @@
-import React from 'react'
 
-const Portfolio = () => {
+const Projects = () => {
   return (
-    <div>
-      
-    </div>
+    <section id="projects" className="min-h-screen flex items-center justify-center">
+      <h1 className="text-center text-4xl font-bold">Projects</h1>
+    </section>
   )
 }
 
-export default Portfolio
+export default Projects

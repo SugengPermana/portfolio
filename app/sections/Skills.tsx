@@ -1,9 +1,9 @@
 
 const Skills = () => {
   return (
-    <div>
-      Skills
-    </div>
+   <section id="skills" className="min-h-screen flex items-center justify-center">
+      <h1 className="text-center text-4xl font-bold">Skills</h1>
+    </section>
   )
 }
 

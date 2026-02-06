@@ -1,9 +1,9 @@
 
 const Home = () => {
   return (
-    <div>
-      
-    </div>
+    <section id="home" className="min-h-screen flex items-center justify-center">
+      <h1 className="text-center text-4xl font-bold">Home</h1>
+    </section>
   )
 }
 
