@@ -111,15 +111,15 @@ const FloatingDockMobile = ({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               // ganti ukuran layar mobile
-              className="fixed bottom-24 right-6 z-[70] w-64 max-h-96 bg-gray-50 dark:bg-neutral-900 rounded-2xl shadow-2xl overflow-hidden min-[580px]:hidden"
+              className="fixed bottom-24 right-6 z-[70] w-64 max-h-96 bg-base-100 rounded-2xl shadow-2xl overflow-hidden min-[580px]:hidden"
             >
-              <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-neutral-800">
-                <h3 className="font-semibold text-neutral-800 dark:text-neutral-200">Choose Theme</h3>
+              <div className="flex items-center justify-between p-4 border-b border-base-300">
+                <h3 className="font-semibold text-base-content">Choose Theme</h3>
                 <button
                   onClick={() => setShowThemes(false)}
-                  className="p-1 hover:bg-gray-200 dark:hover:bg-neutral-800 rounded-full transition-colors"
+                  className="p-1 hover:bg-base-300 rounded-full transition-colors"
                 >
-                  <IconX className="h-5 w-5 text-neutral-600 dark:text-neutral-400" />
+                  <IconX className="h-5 w-5 text-base-content opacity-70" />
                 </button>
               </div>
               <div className="overflow-y-auto max-h-80 p-2">
@@ -131,7 +131,7 @@ const FloatingDockMobile = ({
                       "w-full flex items-center justify-between p-3 rounded-lg mb-1 transition-colors",
                       theme === t
                         ? "bg-blue-500 text-white"
-                        : "hover:bg-gray-200 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 "
+                        : "hover:bg-base-200 text-base-content"
                     )}
                   >
                     <span className="capitalize font-medium">{t}</span>
@@ -354,15 +354,15 @@ function ThemeSwitcherDesktop({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
-              className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 z-[70] w-64 max-h-96 bg-gray-50 dark:bg-neutral-900 rounded-2xl shadow-2xl overflow-hidden"
+              className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 z-[70] w-64 max-h-96 bg-base-100 rounded-2xl shadow-2xl overflow-hidden"
             >
-              <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-neutral-800">
-                <h3 className="font-semibold text-neutral-800 dark:text-neutral-200">Choose Theme</h3>
+              <div className="flex items-center justify-between p-4 border-b border-base-300">
+                <h3 className="font-semibold text-base-content">Choose Theme</h3>
                 <button
                   onClick={() => setShowThemes(false)}
-                  className="p-1 hover:bg-gray-200 dark:hover:bg-neutral-800 rounded-full transition-colors"
+                  className="p-1 hover:bg-base-300 rounded-full transition-colors"
                 >
-                  <IconX className="h-5 w-5 text-neutral-600 dark:text-neutral-400" />
+                  <IconX className="h-5 w-5 text-base-content opacity-70" />
                 </button>
               </div>
               <div className="overflow-y-auto max-h-80 p-2">
@@ -377,7 +377,7 @@ function ThemeSwitcherDesktop({
                       "w-full flex items-center justify-between p-3 rounded-lg mb-1 transition-colors cursor-pointer",
                       theme === t
                         ? "bg-blue-500 text-white"
-                        : "hover:bg-gray-200 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
+                        : "hover:bg-base-200 text-base-content"
                     )}
                   >
                     <span className="capitalize font-medium">{t}</span>
