@@ -7,13 +7,13 @@ const Home = () => {
     <section id="home" className="min-h-screen items-center justify-center">
       <div className="w-full max-w-5xl mx-auto pt-10 pb-10 px-4 flex flex-col items-center justify-center text-center relative z-10">
         <div className="mb-6">
-          <span className="font-chakra px-4 py-1.5 rounded-full border border-primary/20 bg-primary-content text-xs tracking-widest text-primary uppercase backdrop-blur-md">
+          <span className="font-chakra px-4 py-1.5 rounded-full border border-primary/20 text-xs tracking-widest text-primary uppercase backdrop-blur-md">
             Portfolio 2026 • Edition
           </span>
         </div>
         <div className="relative mb-8">
           <div className="absolute -inset-10 from-purple-500/20 to-blue-500/20 blur-[60px] rounded-full pointer-events-none"></div>
-          <h4 className="relative text-5xl md:text-7xl  text-primary-content tracking-tighter leading-[1.1] uppercase">
+          <h4 className="relative text-4xl md:text-7xl sm:text-5xl   text-primary-content tracking-tighter leading-[1.1] uppercase">
             Sugeng
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-pink-500 to-orange-500">
               .DEV
@@ -24,19 +24,37 @@ const Home = () => {
           <Link
             href="#resume"
             target="_blank"
-            className="group relative inline-flex items-center gap-3 px-8 py-3 bg-white text-black rounded-full font-bold text-sm tracking-wide transition-transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] uppercase"
+            className="group relative inline-flex items-center gap-3 px-6 py-3 bg-black text-white
+    dark:bg-white dark:text-black rounded-full font-bold text-sm tracking-wide transition-transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] uppercase border "
           >
             <IconDownload className="h-4 w-4" />
             <span>Open cv</span>
           </Link>
           <Link
             href="#contact"
-            target="_blank"
-            className="group relative inline-flex items-center gap-3 px-8 py-3 rounded-full border border-white/10 bg-white/5 text-white font-bold text-sm tracking-wide transition-all hover:scale-105 hover:bg-white/10 hover:border-white/30 uppercase"
+            className="
+            group relative inline-flex items-center gap-3
+            px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide
+            transition-all hover:scale-105
+            text-primary-content border border-primary"
           >
             <span>Lets Work Together</span>
             <IconArrowRight className="h-4 w-4" />
           </Link>
+        </div>
+
+        <div className="bg-primary text-primary-content px-6 py-3">
+          PRIMARY TEST
+        </div>
+
+        <div className="mt-16 flex flex-col items-center gap-4">
+          <span className="text-[10px] md:text-xs font-medium tracking-[0.2em] text-gray-500 uppercase animate-bounce">
+            Scroll For more
+          </span>
+          <div
+            className="w-px bg-linear-to-b from-purple-500/50 via-purple-500 to-transparent"
+            style={{ height: "60px" }}
+          ></div>
         </div>
       </div>
     </section>

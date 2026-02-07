@@ -46,7 +46,12 @@ const FloatingDockMobile = ({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className={cn("fixed bottom-6 right-6 z-50 block min-[580px]:hidden", className)}>
+    <div
+      className={cn(
+        "fixed bottom-6 right-6 z-50 block min-[580px]:hidden",
+        className,
+      )}
+    >
       <AnimatePresence>
         {open && (
           <motion.div
@@ -76,7 +81,9 @@ const FloatingDockMobile = ({
                   onClick={() => setOpen(false)}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900 shadow-lg"
                 >
-                  <div className="h-4 w-4 text-neutral-700 dark:text-neutral-300">{item.icon}</div>
+                  <div className="h-4 w-4 text-neutral-700 dark:text-neutral-300">
+                    {item.icon}
+                  </div>
                 </a>
               </motion.div>
             ))}
@@ -94,7 +101,13 @@ const FloatingDockMobile = ({
               transition={{ delay: items.length * 0.05 }}
             >
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900 shadow-lg overflow-hidden">
-                 <ThemeTogglerButton variant="default" size="icon" direction="ltr" system={false} className="w-full h-full hover:bg-transparent text-neutral-700 dark:text-neutral-300" />
+                <ThemeTogglerButton
+                  variant="default"
+                  size="icon"
+                  direction="ltr"
+                  system={false}
+                  className="w-full h-full hover:bg-transparent text-neutral-700 dark:text-neutral-300"
+                />
               </div>
             </motion.div>
           </motion.div>
@@ -132,7 +145,7 @@ const FloatingDockDesktop = ({
       {items.map((item) => (
         <IconContainer mouseX={mouseX} key={item.title} {...item} />
       ))}
-      <DockThemeToggle mouseX={mouseX}  />
+      <DockThemeToggle mouseX={mouseX} />
     </motion.div>
   );
 };
@@ -182,7 +195,13 @@ function DockThemeToggle({ mouseX }: { mouseX: MotionValue }) {
         )}
       </AnimatePresence>
       <div className="flex items-center justify-center w-full h-full">
-         <ThemeTogglerButton variant="ghost" size="icon" direction="ltr" system={false} className="w-full h-full hover:bg-transparent text-neutral-700 dark:text-neutral-300" />
+        <ThemeTogglerButton
+          variant="ghost"
+          size="icon"
+          direction="ltr"
+          system={false}
+          className="w-full h-full hover:bg-transparent text-neutral-700 dark:text-neutral-300"
+        />
       </div>
     </motion.div>
   );
