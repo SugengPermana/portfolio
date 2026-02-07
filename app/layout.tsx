@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${chakra_Petch.variable} antialiased overflow-x-hidden`}>
         <ThemeProvider
           attribute="data-theme"
-          defaultTheme="forest"
+          defaultTheme="white-black"
           enableSystem
           disableTransitionOnChange
         >
