@@ -1,13 +1,11 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { IconArrowRight, IconDownload } from "@tabler/icons-react";
 
 const Home = () => {
   return (
-    <section
-      id="home"
-      className="min-h-screen items-center justify-center font-chakra"
-    >
+    <section id="home" className="w-full max-w-7xl mx-auto pt-10 mb-20">
       <div className="w-full max-w-5xl mx-auto pt-10 pb-10 px-4 flex flex-col items-center justify-center text-center relative z-10">
         <div className="mb-6">
           <span className="font-chakra px-4 py-1.5 rounded-full border border-primary/20 text-xs tracking-widest text-primary uppercase backdrop-blur-md">
@@ -53,6 +51,161 @@ const Home = () => {
             className="w-px bg-linear-to-b from-purple-500/50 via-purple-500 to-transparent"
             style={{ height: "60px" }}
           ></div>
+        </div>
+      </div>
+
+      <div
+        className="group/card w-full max-w-8xl mx-auto p-4 md:p-8 rounded-4xl
+        border border-white/5 bg-neutral-900 shadow-2xl shadow-purple-900/20
+
+        flex flex-col md:flex-row items-center gap-6 md:gap-10
+        relative overflow-hidden transition-all duration-500 hover:border-purple-500/30 hover:shadow-purple-500/20"
+      >
+        <div className="absolute inset-0 bg-linear-to-br from-purple-600/10 via-transparent to-blue-600/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        <div className="relative shrink-0 z-10 order-2 md:order-1 w-full md:w-auto flex flex-col md:flex-row justify-center items-center gap-6">
+          <div className="order-2 md:order-1 flex flex-row md:flex-col gap-4">
+            <Link
+              href="https://www.instagram.com/sgprmna_"
+              target="_blank"
+              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-gray-800 hover:border-gray-600 transition-colors shadow-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="#000000"
+              >
+                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                <path d="M16.5 7.5l0 .01" />
+              </svg>
+            </Link>
+            <Link
+              href="https://github.com/SugengPermana"
+              target="_blank"
+              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-gray-800 hover:border-gray-600 transition-colors shadow-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="text-gray-500"
+                stroke="currentColor"
+              >
+                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+              </svg>
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/sugengpermanadesembry"
+              target="_blank"
+              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-gray-800 hover:border-gray-600 transition-colors shadow-lg text-primary"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="#000000"
+              >
+                <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                <path d="M8 11l0 5" />
+                <path d="M8 8l0 .01" />
+                <path d="M12 16l0 -5" />
+                <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+              </svg>
+            </Link>
+          </div>
+          <div className="relative order-1 md:order-2">
+            <div className="w-70 h-70 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-2xl p-[2px] bg-linear-to-br from-purple-500 via-blue-500 to-purple-400 shadow-lg shadow-purple-500/30 group">
+              <div className="w-full h-full rounded-[14px] overflow-hidden bg-gray-900">
+                {/* foto profile di sini */}
+                <Image
+                  src="/new.png"
+                  loading="eager"
+                  alt="Profile"
+                  width={200}
+                  height={200}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="order-1 md:order-2 text-left space-y-4 relative z-10 w-full">
+          <div className="relative flex justify-start">
+            <span className="relative px-4 py-2 text-xs md:text-xs font-medium text-white/90 rounded-xl inline-flex items-center gap-2 backdrop-blur-md bg-white/5 border border-white/20 shadow-lg">
+              <span className="text-yellow-300">👋</span>
+              <span>Hallo zusammen!</span>
+            </span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-100 to-purple-300 drop-shadow-sm">
+              Sugeng Permana Desembry
+            </span>
+          </h1>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start gap-3 text-gray-200 text-lg font-medium">
+            <div className="flex items-center gap-2">
+              <div className="relative p-2 rounded-full bg-gradient-to-br from-purple-500/20 to-blue-500/20">
+                {/* icon koper di sini */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="#a600ff"
+                  className="icon icon-tabler icons-tabler-filled icon-tabler-briefcase"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z" />
+                </svg>
+              </div>
+              <span>Web Developer</span>
+            </div>
+            <span className="hidden sm:block w-1 h-1 rounded-full bg-gray-600"></span>
+            <div className="flex flex-wrap justify-start gap-2">
+              <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-lg text-cyan-300 bg-white/5 border border-white/10 backdrop-blur-sm cursor-pointer text-xs md:text-sm font-medium">
+                {/* belum di kasih hover animasi */}
+                Frontend Dev
+              </span>
+              <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-lg text-purple-400 bg-white/5 border border-white/10 backdrop-blur-sm cursor-pointer text-xs md:text-sm font-medium">
+                Backend Dev
+              </span>
+              <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-lg text-blue-300 bg-white/5 border border-white/10 backdrop-blur-sm cursor-pointer text-xs md:text-sm font-medium">
+                AI Automation
+              </span>
+            </div>
+          </div>
+          <div className="max-w-lg">
+            <div className="inline-flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-900/50 border border-gray-800">
+              {/* buletan warna warni di sini */}
+              <div className="w-2 h-2 rounded-full"></div>
+              <div className="text-sm text-gray-300">
+                Solving
+                <span className="text-gray-500">•</span>
+                <span className="text-cyan-400 font-mono">Line 2005</span>
+              </div>
+              {/* panah berputar di sini */}
+              <div className="text-xs text-gray-400">⟳</div>
+            </div>
+          </div>
+          <div className="pt-2 flex items-center justify-start gap-2 text-sm text-gray-500 font-medium">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="#a600ff"
+              className="icon icon-tabler icons-tabler-filled icon-tabler-map-pin"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6" />
+            </svg>
+            <span>Bogor, Jawa Barat, Indonesia</span>
+          </div>
         </div>
       </div>
     </section>
