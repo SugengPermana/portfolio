@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans: var(--font-poppins);
   --font-chakra: var(--font-chakra-petch);
-  --font-poppins: var(--font-poppins);
 }

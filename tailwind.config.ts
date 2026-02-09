@@ -2,6 +2,14 @@
 module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   plugins: [require("daisyui")],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-poppins)", "poppins"],
+        chakra: ["var(--font-chakra-petch)", "chakra-petch"],
+      },
+    },
+  },
   daisyui: {
     themes: [
       {

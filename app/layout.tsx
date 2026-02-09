@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${poppins.variable} ${chakra_Petch.variable} antialiased overflow-x-hidden`}
+        className={`${poppins.variable} ${chakra_Petch.variable} font-sans antialiased overflow-x-hidden`}
       >
         <ThemeProvider
           attribute="data-theme"
