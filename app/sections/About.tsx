@@ -1,4 +1,5 @@
 import ShinyText from "../components/ShinyText";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -97,6 +98,176 @@ const About = () => {
                     <span className="text-sm font-medium text-gray-300 uppercase tracking-wider">
                       Years Exp
                     </span>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 pt-30">
+                <div className="space-y-8">
+                  {/* judul */}
+                  {/* task nanti di kasih nama kecil di bawah nya who am I */}
+                  <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
+                    <div>
+                      <h2 className="text-3xl font-bold text-white mb-6">
+                        Wer
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                          bin ich?
+                        </span>
+                      </h2>
+                      <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
+                        <p>
+                          I'm a passionate web developer with a knack for
+                          building engaging and user-friendly digital
+                          experiences. I specialize in modern web technologies
+                          and am always eager to learn new things.
+                        </p>
+                        <p>
+                          My goal is to leverage my technical skills to create
+                          solutions that are not only functional but also
+                          visually <strong>appealing and intuitive</strong> to
+                          use.
+                        </p>
+                        <p>
+                          Beyond development, I’m a lifelong learner who
+                          continuously explores emerging web technologies and
+                          AI-driven solutions to deliver innovative,
+                          future-ready experiences.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* section form info kontak */}
+                <div className="space-y-6">
+                  <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
+                    <div className="p-6 rounded-2xl">
+                      <div className="space-y-4">
+                        {/* Name */}
+                        <div className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              className="w-5 h-5"
+                            >
+                              <path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                              />
+                              <path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" />
+                              <path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" />
+                            </svg>
+                          </div>
+                          <div className="overflow-hidden">
+                            <div className="text-xs text-gray-500">Name</div>
+                            <div className="text-white text-sm font-medium truncate">
+                              Sugeng Permana Desembry
+                            </div>
+                          </div>
+                        </div>
+                        {/* phone */}
+                        <div className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              className="h-5 w-5"
+                            >
+                              <path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                              />
+                              <path d="M9 3a1 1 0 0 1 .877 .519l.051 .11l2 5a1 1 0 0 1 -.313 1.16l-.1 .068l-1.674 1.004l.063 .103a10 10 0 0 0 3.132 3.132l.102 .062l1.005 -1.672a1 1 0 0 1 1.113 -.453l.115 .039l5 2a1 1 0 0 1 .622 .807l.007 .121v4c0 1.657 -1.343 3 -3.06 2.998c-8.579 -.521 -15.418 -7.36 -15.94 -15.998a3 3 0 0 1 2.824 -2.995l.176 -.005h4z" />
+                            </svg>
+                          </div>
+                          <div className="overflow-hidden">
+                            <div className="text-xs text-gray-500">Phone</div>
+                            <div className="text-white text-sm font-medium truncate">
+                              +62 882-9989-8410
+                            </div>
+                          </div>
+                        </div>
+                        {/* email */}
+                        <div className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              className="h-5 w-5"
+                            >
+                              <path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                              />
+                              <path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" />
+                              <path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" />
+                            </svg>
+                          </div>
+                          <div className="overflow-hidden">
+                            <div className="text-xs text-gray-500">Email</div>
+                            <div className="text-white text-sm font-medium truncate">
+                              sugengpermanad@gmail.com
+                            </div>
+                          </div>
+                        </div>
+                        {/* location */}
+                        <div className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              className="h-5 w-5"
+                            >
+                              <path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                              />
+                              <path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6" />
+                            </svg>
+                          </div>
+                          <div className="overflow-hidden">
+                            <div className="text-xs text-gray-500">
+                              Location
+                            </div>
+                            <div className="text-white text-sm font-medium truncate">
+                              Bogor, Indonesia
+                            </div>
+                          </div>
+                        </div>
+                        {/* send message */}
+                        <Link
+                          href=""
+                          className="w-full mt-6 px-6 py-3 rounded-lg bg-white text-black font-bold text-sm hover:bg-gray-200 transition-colors duration-300 flex items-center justify-center gap-2 text-primary border border-primary bg-primary"
+                        >
+                          <span>Send Message</span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            className="h-5 w-5
+                            "
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+                            <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+                            <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+                            <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+                            <path d="M5 3l-1 -1" />
+                            <path d="M4 7h-1" />
+                            <path d="M14 3l1 -1" />
+                            <path d="M15 6h1" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
