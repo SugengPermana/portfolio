@@ -1,3 +1,4 @@
+"use client";
 import ShinyText from "../components/ShinyText";
 import Link from "next/link";
 
@@ -12,11 +13,18 @@ const About = () => {
         </div>
 
         <div className="relative z-10 pt-20">
-          <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
-            <div className="text-center mb-10">
+          <div
+            id="about"
+            className="pt-10 transition-all duration-1000 ease-out transform opacity-100 translate-y-0 "
+          >
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="text-center mb-10"
+            >
               {/* text judul */}
               <ShinyText
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-linear-to-r from-purple-500/10 to-blue-500/10 border border-primary backdrop-blur-sm mb-8 group hover:scale-105 transition-transform duration-300"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-linear-to-r from-purple-500/10 to-blue-500/10 border border-primary backdrop-blur-sm mb-8 group hover:scale-105 transition-transform duration-300"
                 text="✨ About Me "
                 speed={2}
                 delay={1}
@@ -29,7 +37,11 @@ const About = () => {
                 disabled={false}
               />
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-center flex flex-col">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-center flex flex-col"
+            >
               {/* text sub judul */}
               <span className="text-primary">
                 Transforming ideas into impactful
@@ -37,7 +49,11 @@ const About = () => {
               <span className="text-primary">Web Experiences</span>
               <span className="text-primary">through technology</span>
             </h1>
-            <div className="flex flex-wrap justify-center gap-6 md:gap-12 mt-12 py-8 px-4">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="flex flex-wrap justify-center gap-6 md:gap-12 mt-12 py-8 px-4"
+            >
               <div className="group flex flex-col items-center justify-center relative">
                 {/* bg and border */}
                 <div className="absolute inset-0 bg-neutral-900 rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
@@ -107,13 +123,21 @@ const About = () => {
                   {/* task nanti di kasih nama kecil di bawah nya who am I */}
                   <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
                     <div>
-                      <h2 className="text-3xl font-bold text-white mb-6">
+                      <h2
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        className="text-3xl font-bold text-white mb-6"
+                      >
                         Wer
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                        <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-500">
                           bin ich?
                         </span>
                       </h2>
-                      <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
+                      <div
+                        data-aos="fade-up"
+                        data-aos-duration="1500"
+                        className="space-y-6 text-gray-300 text-lg leading-relaxed"
+                      >
                         <p>
                           I'm a passionate web developer with a knack for
                           building engaging and user-friendly digital
@@ -142,7 +166,11 @@ const About = () => {
                     <div className="p-6 rounded-2xl">
                       <div className="space-y-4">
                         {/* Name */}
-                        <div className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300">
+                        <div
+                          data-aos="fade-up"
+                          data-aos-duration="1000"
+                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300"
+                        >
                           <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +195,11 @@ const About = () => {
                           </div>
                         </div>
                         {/* phone */}
-                        <div className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300">
+                        <div
+                          data-aos="fade-up"
+                          data-aos-duration="1000"
+                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300"
+                        >
                           <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +223,11 @@ const About = () => {
                           </div>
                         </div>
                         {/* email */}
-                        <div className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300">
+                        <div
+                          data-aos="fade-up"
+                          data-aos-duration="1000"
+                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300"
+                        >
                           <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +252,11 @@ const About = () => {
                           </div>
                         </div>
                         {/* location */}
-                        <div className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300">
+                        <div
+                          data-aos="fade-up"
+                          data-aos-duration="1000"
+                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300"
+                        >
                           <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -243,6 +283,8 @@ const About = () => {
                         </div>
                         {/* send message */}
                         <Link
+                          data-aos="fade-in"
+                          data-aos-duration="1000"
                           href=""
                           className="w-full mt-6 px-6 py-3 rounded-lg bg-white text-black font-bold text-sm hover:bg-gray-200 transition-colors duration-300 flex items-center justify-center gap-2 text-primary border border-primary bg-primary"
                         >

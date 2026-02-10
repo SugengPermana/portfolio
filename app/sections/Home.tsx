@@ -6,7 +6,7 @@ import { IconArrowRight, IconDownload } from "@tabler/icons-react";
 const Home = () => {
   return (
     <section id="home" className="w-full max-w-7xl mx-auto pt-10 mb-20">
-      <div className="w-full max-w-5xl mx-auto pt-10 pb-10 px-4 flex flex-col items-center justify-center text-center relative z-10">
+      <div className="w-full max-w-5xl mx-auto pb-10 px-4 flex flex-col items-center justify-center text-center relative z-10 mb-15 md:mb-20 md:pt-20 lg:pt-15 lg:mb-5">
         <div className="mb-6">
           <span className="font-chakra px-4 py-1.5 rounded-full border border-primary/20 text-xs tracking-widest text-primary uppercase backdrop-blur-md">
             Portfolio 2026 • Edition
@@ -43,13 +43,13 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="mt-16 flex flex-col items-center gap-4">
+        <div className="mt-20 md:mb-15 flex flex-col items-center gap-4">
           <span className="text-[10px] md:text-xs font-medium tracking-[0.2em] text-gray-500 uppercase animate-bounce">
             Scroll For more
           </span>
           <div
             className="w-px bg-linear-to-b from-purple-500/50 via-purple-500 to-transparent"
-            style={{ height: "60px" }}
+            style={{ height: "80px", width: "3px" }}
           ></div>
         </div>
       </div>
@@ -143,13 +143,13 @@ const Home = () => {
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-100 to-purple-300 drop-shadow-sm">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-purple-100 to-purple-300 drop-shadow-sm">
               Sugeng Permana Desembry
             </span>
           </h1>
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start gap-3 text-gray-200 text-lg font-medium">
             <div className="flex items-center gap-2">
-              <div className="relative p-2 rounded-full bg-gradient-to-br from-purple-500/20 to-blue-500/20">
+              <div className="relative p-2 rounded-full bg-linear-to-br from-purple-500/20 to-blue-500/20">
                 {/* icon koper di sini */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

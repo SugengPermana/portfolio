@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Chakra_Petch } from "next/font/google";
 import { Navbar } from "./components/Navbar";
+import AOSProvider from "./components/AOSProvider";
 import Footer from "@/app/components/Footer";
 import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
@@ -40,7 +41,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          {children}
+          <AOSProvider>{children}</AOSProvider>
           {/* <Footer /> */}
         </ThemeProvider>
       </body>
