@@ -1,6 +1,7 @@
 "use client";
-import ShinyText from "../components/ShinyText";
+import ShinyText from "../components/ui/ShinyText";
 import Link from "next/link";
+import CardAbout from "../components/ui/CardAbout";
 
 const About = () => {
   return (
@@ -119,20 +120,24 @@ const About = () => {
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 pt-30">
                 <div className="space-y-8">
-                  {/* judul */}
-                  {/* task nanti di kasih nama kecil di bawah nya who am I */}
                   <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
                     <div>
+                      {/* Title utama */}
                       <h2
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        className="text-3xl font-bold text-white mb-6"
+                        className="text-3xl font-bold text-white mb-2"
                       >
-                        Wer
+                        <span className="mr-2">Wer</span>
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-500">
                           bin ich?
                         </span>
                       </h2>
+
+                      {/* Subtitle kecil */}
+                      <p className="text-xs uppercase tracking-[0.3em] text-gray-300 mb-6">
+                        Who am I?
+                      </p>
                       <div
                         data-aos="fade-up"
                         data-aos-duration="1500"
@@ -160,7 +165,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                {/* section form info kontak */}
+                {/* section form kontak */}
                 <div className="space-y-6">
                   <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
                     <div className="p-6 rounded-2xl">
@@ -313,6 +318,8 @@ const About = () => {
                   </div>
                 </div>
               </div>
+              {/* ===============CardAabout=================== */}
+              <CardAbout />
             </div>
           </div>
         </div>
