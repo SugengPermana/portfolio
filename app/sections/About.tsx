@@ -135,7 +135,11 @@ const About = () => {
                       </h2>
 
                       {/* Subtitle kecil */}
-                      <p className="text-xs uppercase tracking-[0.3em] text-gray-300 mb-6">
+                      <p
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        className="text-xs uppercase tracking-[0.3em] text-gray-300 mb-6"
+                      >
                         Who am I?
                       </p>
                       <div

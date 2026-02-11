@@ -3,7 +3,11 @@ import Image from "next/image";
 const CardAbout = () => {
   return (
     <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-none">
-      <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 "
+      >
         <div className="group rounded-3xl border border-white/10 hover:border-white/20 transition-all duration-300 relative overflow-hidden min-h-[400px]">
           <div className="absolute inset-0 z-0">
             <Image
@@ -41,7 +45,11 @@ const CardAbout = () => {
         </div>
       </div>
       <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
-        <div className="group rounded-3xl border border-white/10 hover:border-white/20 transition-all duration-300 relative overflow-hidden min-h-[400px]">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className="group rounded-3xl border border-white/10 hover:border-white/20 transition-all duration-300 relative overflow-hidden min-h-[400px]"
+        >
           <div className="absolute inset-0 z-0">
             <Image
               src="/abe.png"
