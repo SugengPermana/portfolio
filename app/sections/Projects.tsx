@@ -1,4 +1,5 @@
 import ShinyText from "../components/ui/ShinyText";
+import CardProjects from "../components/ui/CardProjects";
 
 const Projects = () => {
   return (
@@ -77,6 +78,8 @@ const Projects = () => {
           </div>
         </div>
       </div>
+      {/* =======CardProject===== */}
+      <CardProjects />
     </section>
   );
 };
