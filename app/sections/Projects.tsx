@@ -20,17 +20,17 @@ const Projects = () => {
             pauseOnHover={false}
             disabled={false}
           />
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center">
+            Featured{" "}
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-500">
+              Projects
+            </span>
+          </h2>
+          <p className="text-gray-400 max-w-xl mx-auto mb-8 text-center">
+            A collection of my best work in website development and graphic
+            design.
+          </p>
         </div>
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center">
-          Featured{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-500">
-            Projects
-          </span>
-        </h2>
-        <p className="text-gray-400 max-w-xl mx-auto mb-8 text-center">
-          A collection of my best work in website development and graphic
-          design.
-        </p>
         <div className="flex flex-wrap justify-center gap-4">
           <button className="px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border text-primary hover:text-white hover:bg-black border-primary shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300">
             All Projects
@@ -80,7 +80,7 @@ const Projects = () => {
       <CardProjects />
       <div className="mt-12 text-center">
         {/* di bikinin auto berapa project yang keliatan */}
-        <p className="text-gray-500 text-sm">Showing 12 of 12 projects</p>
+        <p className="text-gray-500 text-sm mb-30">Showing ? of ? projects</p>
       </div>
     </section>
   );

@@ -37,19 +37,19 @@ const About = () => {
                 pauseOnHover={false}
                 disabled={false}
               />
+              <h1
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-center flex flex-col"
+              >
+                {/* text sub judul */}
+                <span className="text-primary">
+                  Transforming ideas into impactful
+                </span>
+                <span className="text-primary">Web Experiences</span>
+                <span className="text-primary">through technology</span>
+              </h1>
             </div>
-            <h1
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-center flex flex-col"
-            >
-              {/* text sub judul */}
-              <span className="text-primary">
-                Transforming ideas into impactful
-              </span>
-              <span className="text-primary">Web Experiences</span>
-              <span className="text-primary">through technology</span>
-            </h1>
             <div
               data-aos="fade-up"
               data-aos-duration="1000"
