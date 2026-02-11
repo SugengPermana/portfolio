@@ -5,7 +5,7 @@ import Link from "next/link";
 const CardProjects = () => {
   return (
     // grid card
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
       {/* card 1 */}
       <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
         <div className="group rounded-2xl bg-neutral-900 border border-white/10 overflow-hidden flex flex-col h-full  transition-colors duration-300 hover:border-blue-500/30">
