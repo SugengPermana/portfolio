@@ -1,5 +1,6 @@
 import ShinyText from "../components/ui/ShinyText";
 import CvResume from "../components/ui/CvResume";
+import TechTools from "../components/ui/TechTools";
 
 const Resume = () => {
   return (
@@ -32,9 +33,11 @@ const Resume = () => {
           </p>
         </div>
       </div>
-      {/* cv resume */}
       <div>
+        {/* cv resume */}
         <CvResume />
+        {/* tech tools */}
+        <TechTools />
       </div>
     </section>
   );

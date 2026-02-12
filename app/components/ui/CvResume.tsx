@@ -1,5 +1,3 @@
-import { div } from "framer-motion/client";
-
 const CvResume = () => {
   return (
     <div>
