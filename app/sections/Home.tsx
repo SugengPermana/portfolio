@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { IconArrowRight, IconDownload } from "@tabler/icons-react";
+import { SocialLinks } from "../components/SocialLinks";
 
 const Home = () => {
   return (
@@ -64,60 +65,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-linear-to-br from-purple-600/10 via-transparent to-blue-600/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
         <div className="relative shrink-0 z-10 order-2 md:order-1 w-full md:w-auto flex flex-col md:flex-row justify-center items-center gap-6">
           <div className="order-2 md:order-1 flex flex-row md:flex-col gap-4">
-            <Link
-              href="https://www.instagram.com/sgprmna_"
-              target="_blank"
-              className="p-3 rounded-full bg-accent/10 border border-border text-muted-foreground hover:text-foreground hover:bg-accent hover:border-accent-foreground/20 transition-colors shadow-lg"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                stroke="#000000"
-              >
-                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
-                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                <path d="M16.5 7.5l0 .01" />
-              </svg>
-            </Link>
-            <Link
-              href="https://github.com/SugengPermana"
-              target="_blank"
-              className="p-3 rounded-full bg-accent/10 border border-border text-muted-foreground hover:text-foreground hover:bg-accent hover:border-accent-foreground/20 transition-colors shadow-lg"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="text-gray-500"
-                stroke="currentColor"
-              >
-                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-              </svg>
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/sugengpermanadesembry"
-              target="_blank"
-              className="p-3 rounded-full bg-accent/10 border border-border text-muted-foreground hover:text-foreground hover:bg-accent hover:border-accent-foreground/20 transition-colors shadow-lg text-primary"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                stroke="#000000"
-              >
-                <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
-                <path d="M8 11l0 5" />
-                <path d="M8 8l0 .01" />
-                <path d="M12 16l0 -5" />
-                <path d="M16 16v-3a2 2 0 0 0 -4 0" />
-              </svg>
-            </Link>
+            <SocialLinks className="flex-row md:flex-col" />
           </div>
           <div className="relative order-1 md:order-2">
             <div className="w-70 h-70 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-2xl p-[2px] bg-linear-to-br from-purple-500 via-blue-500 to-purple-400 shadow-lg shadow-purple-500/30 group">

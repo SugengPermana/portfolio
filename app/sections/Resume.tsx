@@ -1,4 +1,4 @@
-import ShinyText from "../components/ui/ShinyText";
+import { SectionTitle } from "../components/SectionTitle";
 import CvResume from "../components/ui/CvResume";
 import TechTools from "../components/ui/TechTools";
 
@@ -8,19 +8,7 @@ const Resume = () => {
       <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
         <div className="text-center mb-20">
           {/* judul Resume */}
-          <ShinyText
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-primary backdrop-blur-sm mb-6 group hover:scale-105 transition-transform duration-300"
-            text="✨ Resume "
-            speed={2}
-            delay={1}
-            color="#a600ff"
-            shineColor="#e1ff00"
-            spread={110}
-            direction="left"
-            yoyo={false}
-            pauseOnHover={false}
-            disabled={false}
-          />
+          <SectionTitle text="✨ Resume " className="mb-6" />
           <h2 className="text-3xl md:text-5xl font-bold mb-6 ">
             Education &{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-500">

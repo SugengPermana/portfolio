@@ -1,7 +1,8 @@
 "use client";
-import ShinyText from "../components/ui/ShinyText";
+import { SectionTitle } from "../components/SectionTitle";
 import Link from "next/link";
 import CardAbout from "../components/ui/CardAbout";
+import { stats } from "../lib/data";
 
 const About = () => {
   return (
@@ -24,19 +25,7 @@ const About = () => {
               className="text-center mb-10"
             >
               {/* text judul */}
-              <ShinyText
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-primary backdrop-blur-sm mb-8 group hover:scale-105 transition-transform duration-300"
-                text="✨ About Me "
-                speed={2}
-                delay={1}
-                color="#a600ff"
-                shineColor="#e1ff00"
-                spread={110}
-                direction="left"
-                yoyo={false}
-                pauseOnHover={false}
-                disabled={false}
-              />
+              <SectionTitle text="✨ About Me " className="mb-8" />
               <h1
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -55,70 +44,32 @@ const About = () => {
               data-aos-duration="1000"
               className="flex flex-wrap justify-center gap-6 md:gap-12 mt-12 py-8 px-4"
             >
-              <div className="group flex flex-col items-center justify-center relative">
-                {/* bg and border */}
-                <div className="absolute inset-0 bg-card rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
-                <div className="absolute inset-0 rounded-2xl border border-border -z-10"></div>
-                {/* 2+ */}
-                <div className="relative p-8 text-center">
-                  <div className="relative">
-                    <span className="text-5xl md:text-6xl font-bold text-foreground mb-3 block group-hover:scale-110 transition-transform duration-500">
-                      2+
-                    </span>
-                    <div className="absolute inset-0 bg-linear-to-r from-purple-500/20 to-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-                  </div>
-                  {/* happy client */}
-                  <div className="flex items-center gap-2 justify-center">
-                    <div className="w-1 h-1 bg-linear-to-r from-purple-400 to-blue-400 rounded-full"></div>
-                    <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-                      Fun Clients
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="group flex flex-col items-center  relative justify-center">
-                {/* bg and border  */}
-                <div className="absolute inset-0 bg-card rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
-                <div className="absolute inset-0 rounded-2xl border border-border -z-10"></div>
-                {/* 2+ */}
-                <div className="relative p-8 text-center">
-                  <div className="relative">
-                    <span className="text-5xl md:text-6xl font-bold text-foreground mb-3 block group-hover:scale-110 transition-transform duration-500">
-                      10+
-                    </span>
-                    <div className="absolute inset-0 bg-linear-to-r from-purple-500/20 to-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-                  </div>
-                  {/* happy client */}
-
-                  <div className="flex items-center gap-2 justify-center">
-                    <div className="w-1 h-1 bg-linear-to-r from-purple-400 to-blue-400 rounded-full"></div>
-                    <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-                      Projects
-                    </span>
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="group flex flex-col items-center justify-center relative"
+                >
+                  {/* bg and border */}
+                  <div className="absolute inset-0 bg-card rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
+                  <div className="absolute inset-0 rounded-2xl border border-border -z-10"></div>
+                  {/* Value */}
+                  <div className="relative p-8 text-center">
+                    <div className="relative">
+                      <span className="text-5xl md:text-6xl font-bold text-foreground mb-3 block group-hover:scale-110 transition-transform duration-500">
+                        {stat.value}
+                      </span>
+                      <div className="absolute inset-0 bg-linear-to-r from-purple-500/20 to-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                    </div>
+                    {/* Label */}
+                    <div className="flex items-center gap-2 justify-center">
+                      <div className="w-1 h-1 bg-linear-to-r from-purple-400 to-blue-400 rounded-full"></div>
+                      <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+                        {stat.label}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="group flex flex-col items-center  relative justify-center">
-                {/* bg and border  */}
-                <div className="absolute inset-0 bg-card rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
-                <div className="absolute inset-0 rounded-2xl border border-border -z-10"></div>
-                {/* 2+ */}
-                <div className="relative p-8 text-center">
-                  <div className="relative">
-                    <span className="text-5xl md:text-6xl font-bold text-foreground mb-3 block group-hover:scale-110 transition-transform duration-500">
-                      1+
-                    </span>
-                    <div className="absolute inset-0 bg-linear-to-r from-purple-500/20 to-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-                  </div>
-                  {/* happy client */}
-                  <div className="flex items-center gap-2 justify-center">
-                    <div className="w-1 h-1 bg-linear-to-r from-purple-400 to-blue-400 rounded-full"></div>
-                    <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-                      Years Exp
-                    </span>
-                  </div>
-                </div>
-              </div>
+              ))}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 pt-30">
                 <div className="space-y-8">
                   <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">

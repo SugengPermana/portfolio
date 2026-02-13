@@ -109,8 +109,9 @@ const DockIcon = ({
   mouseX,
   className,
   children,
+  href,
   ...props
-}: DockIconProps) => {
+}: DockIconProps & { href?: string }) => {
   const ref = useRef<HTMLDivElement>(null);
   const padding = Math.max(6, size * 0.2);
   const defaultMouseX = useMotionValue(Infinity);
@@ -134,6 +135,24 @@ const DockIcon = ({
     damping: 12,
   });
 
+  if (href) {
+    return (
+      <motion.a
+        ref={ref}
+        href={href}
+        style={{ width: scaleSize, height: scaleSize, padding }}
+        className={cn(
+          "flex aspect-square cursor-pointer items-center justify-center rounded-full",
+          disableMagnification && "hover:bg-muted-foreground transition-colors",
+          className,
+        )}
+        {...(props as any)}
+      >
+        <div>{children}</div>
+      </motion.a>
+    );
+  }
+
   return (
     <motion.div
       ref={ref}
@@ -143,7 +162,7 @@ const DockIcon = ({
         disableMagnification && "hover:bg-muted-foreground transition-colors",
         className,
       )}
-      {...props}
+      {...(props as any)}
     >
       <div>{children}</div>
     </motion.div>
