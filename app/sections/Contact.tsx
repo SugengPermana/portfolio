@@ -4,13 +4,13 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden pb-10 border-t border-white/10 mt-40 w-full "
+      className="relative overflow-hidden pb-10 border-t border-border mt-40 w-full "
     >
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-linear-to-r from-transparent via-border to-transparent"></div>
       <div className="max-w-6xl mx-auto px-6 py-12 relative z-10">
         <div className="text-center">
           <ShinyText
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-linear-to-r from-purple-500/10 to-blue-500/10 border border-primary backdrop-blur-sm mb-15 group hover:scale-105 transition-transform duration-300"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-primary backdrop-blur-sm mb-15 group hover:scale-105 transition-transform duration-300"
             text="✨ Get In Touch "
             speed={2}
             delay={1}
@@ -28,7 +28,7 @@ const Contact = () => {
           <div className="flex flex-col gap-10">
             <div className="flex gap-6">
               <Link
-                className="p-4 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-white text-2xl hover:bg-purple-600 hover:border-purple-600 hover:-translate-y-1 transition-all duration-300"
+                className="p-4 rounded-2xl border border-border bg-card flex items-center justify-center text-foreground text-2xl hover:bg-purple-600 hover:border-purple-600 hover:text-white hover:-translate-y-1 transition-all duration-300"
                 href=""
               >
                 <svg
@@ -48,7 +48,7 @@ const Contact = () => {
                 </svg>
               </Link>
               <Link
-                className="p-4 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-white text-2xl hover:bg-purple-600 hover:border-purple-600 hover:-translate-y-1 transition-all duration-300"
+                className="p-4 rounded-2xl border border-border bg-card flex items-center justify-center text-foreground text-2xl hover:bg-purple-600 hover:border-purple-600 hover:text-white hover:-translate-y-1 transition-all duration-300"
                 href=""
               >
                 <svg
@@ -67,7 +67,7 @@ const Contact = () => {
                 </svg>
               </Link>
               <Link
-                className="p-4 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-white text-2xl hover:bg-purple-600 hover:border-purple-600 hover:-translate-y-1 transition-all duration-300"
+                className="p-4 rounded-2xl border border-border bg-card flex items-center justify-center text-foreground text-2xl hover:bg-purple-600 hover:border-purple-600 hover:text-white hover:-translate-y-1 transition-all duration-300"
                 href=""
               >
                 <svg
@@ -86,7 +86,7 @@ const Contact = () => {
               </Link>
             </div>
             <div className="max-w-3xl mt-4">
-              <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">
                 Want to know more about me, tell me about your project or just
                 to say hello?
                 <span className="text-purple-500"> Drop me a line </span>
@@ -94,7 +94,7 @@ const Contact = () => {
               </h2>
             </div>
           </div>
-          <div className="w-full h-[1px] bg-white/10 my-4"></div>
+          <div className="w-full h-[1px] bg-border my-4"></div>
         </div>
       </div>
     </section>

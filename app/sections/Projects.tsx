@@ -8,7 +8,7 @@ const Projects = () => {
         <div className="text-center mb-10">
           {/* judul Projects */}
           <ShinyText
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-linear-to-r from-purple-500/10 to-blue-500/10 border border-primary backdrop-blur-sm mb-6 group hover:scale-105 transition-transform duration-300"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-primary backdrop-blur-sm mb-6 group hover:scale-105 transition-transform duration-300"
             text="✨ Projects "
             speed={2}
             delay={1}
@@ -26,16 +26,16 @@ const Projects = () => {
               Projects
             </span>
           </h2>
-          <p className="text-gray-400 max-w-xl mx-auto mb-8 text-center">
+          <p className="text-muted-foreground max-w-xl mx-auto mb-8 text-center">
             A collection of my best work in website development and graphic
             design.
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-4">
-          <button className="px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border text-primary hover:text-white hover:bg-black border-primary shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300">
+          <button className="px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border text-primary-foreground bg-primary border-primary shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300">
             All Projects
           </button>
-          <button className="px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border bg-white/10 text-primary hover:text-white hover:bg-linear-to-r hover:from-purple-400 hover:to-blue-500 border-primary shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300">
+          <button className="px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border bg-accent/10 text-muted-foreground hover:text-primary-foreground hover:bg-primary border-primary shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ const Projects = () => {
             </span>
             Web Dev
           </button>
-          <button className="px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border bg-white/10 text-primary hover:text-white hover:bg-linear-to-r hover:from-purple-400 hover:to-blue-500 border-primary shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300">
+          <button className="px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border bg-accent/10 text-muted-foreground hover:text-primary-foreground hover:bg-primary border-primary shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,9 @@ const Projects = () => {
       <CardProjects />
       <div className="mt-12 text-center">
         {/* di bikinin auto berapa project yang keliatan */}
-        <p className="text-gray-500 text-sm mb-30">Showing ? of ? projects</p>
+        <p className="text-muted-foreground text-sm mb-30">
+          Showing ? of ? projects
+        </p>
       </div>
     </section>
   );

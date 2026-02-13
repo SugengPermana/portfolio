@@ -3,10 +3,9 @@ import { Poppins } from "next/font/google";
 import { Chakra_Petch } from "next/font/google";
 import { Navbar } from "./components/Navbar";
 import AOSProvider from "./components/AOSProvider";
-import Footer from "@/app/components/Footer";
 import "./globals.css";
-import { ThemeProvider } from "./components/theme-provider";
-
+import { AnimatedThemeToggler } from "./components/ui/animated-theme-toggler";
+import { ThemeProvider } from "next-themes";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -35,7 +34,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${chakra_Petch.variable} font-sans antialiased overflow-x-hidden`}
       >
         <ThemeProvider
-          attribute="data-theme"
+          attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange

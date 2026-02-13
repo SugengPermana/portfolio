@@ -9,7 +9,7 @@ const Resume = () => {
         <div className="text-center mb-20">
           {/* judul Resume */}
           <ShinyText
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-linear-to-r from-purple-500/10 to-blue-500/10 border border-primary backdrop-blur-sm mb-6 group hover:scale-105 transition-transform duration-300"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-primary backdrop-blur-sm mb-6 group hover:scale-105 transition-transform duration-300"
             text="✨ Resume "
             speed={2}
             delay={1}
@@ -27,7 +27,7 @@ const Resume = () => {
               Experience
             </span>
           </h2>
-          <p className="text-gray-400 md:text-xl max-w-2xl mx-auto">
+          <p className="text-muted-foreground md:text-xl max-w-2xl mx-auto">
             Academic journey and professional experiences that shaped my
             expertise.
           </p>

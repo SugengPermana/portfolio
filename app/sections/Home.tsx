@@ -8,13 +8,13 @@ const Home = () => {
     <section id="home" className="w-full max-w-7xl mx-auto pt-10 mb-20">
       <div className="w-full max-w-5xl mx-auto pb-10 px-4 flex flex-col items-center justify-center text-center relative z-10 mb-15 md:mb-20 md:pt-20 lg:pt-15 lg:mb-5">
         <div className="mb-6">
-          <span className="font-chakra px-4 py-1.5 rounded-full border border-primary/20 text-xs tracking-widest text-primary uppercase backdrop-blur-md">
+          <span className="font-chakra px-4 py-1.5 rounded-full border border-primary/20 text-xs tracking-widest text-primary uppercase backdrop-blur-md bg-background/50">
             Portfolio 2026 • Edition
           </span>
         </div>
         <div className="relative mb-8">
           <div className="absolute -inset-10 from-purple-500/20 to-blue-500/20 blur-[60px] rounded-full pointer-events-none"></div>
-          <h4 className="font-chakra relative text-4xl md:text-7xl sm:text-5xl   text-primary-content tracking-tighter leading-[1.1] uppercase">
+          <h4 className="font-chakra relative text-4xl md:text-7xl sm:text-5xl text-foreground tracking-tighter leading-[1.1] uppercase">
             Sugeng
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-pink-500 to-orange-500">
               .DEV
@@ -25,7 +25,7 @@ const Home = () => {
           <Link
             href="#resume"
             target="_blank"
-            className="group relative inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-sm tracking-wide transition-transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] uppercase border bg-primary text-primary-content"
+            className="group relative inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-sm tracking-wide transition-transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] uppercase border bg-primary text-primary-foreground"
           >
             <IconDownload className="h-4 w-4" />
             <span>Open cv</span>
@@ -36,7 +36,7 @@ const Home = () => {
             group relative inline-flex items-center gap-3
             px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide
             transition-all hover:scale-105
-            text-primary-content border border-primary bg-primary"
+            text-primary-foreground border border-primary bg-primary"
           >
             <span>Lets Work Together</span>
             <IconArrowRight className="h-4 w-4" />
@@ -44,7 +44,7 @@ const Home = () => {
         </div>
 
         <div className="mt-20 md:mb-15 flex flex-col items-center gap-4">
-          <span className="text-[10px] md:text-xs font-medium tracking-[0.2em] text-gray-500 uppercase animate-bounce">
+          <span className="text-[10px] md:text-xs font-medium tracking-[0.2em] text-muted-foreground uppercase animate-bounce">
             Scroll For more
           </span>
           <div
@@ -56,7 +56,7 @@ const Home = () => {
 
       <div
         className="group/card w-full max-w-8xl mx-auto p-4 md:p-8 rounded-4xl
-        border border-white/5 bg-neutral-900 shadow-2xl shadow-purple-900/20
+        border border-border bg-card shadow-2xl shadow-purple-900/20
 
         flex flex-col md:flex-row items-center gap-6 md:gap-10
         relative overflow-hidden transition-all duration-500 hover:border-purple-500/30 hover:shadow-purple-500/20"
@@ -67,7 +67,7 @@ const Home = () => {
             <Link
               href="https://www.instagram.com/sgprmna_"
               target="_blank"
-              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-gray-800 hover:border-gray-600 transition-colors shadow-lg"
+              className="p-3 rounded-full bg-accent/10 border border-border text-muted-foreground hover:text-foreground hover:bg-accent hover:border-accent-foreground/20 transition-colors shadow-lg"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ const Home = () => {
             <Link
               href="https://github.com/SugengPermana"
               target="_blank"
-              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-gray-800 hover:border-gray-600 transition-colors shadow-lg"
+              className="p-3 rounded-full bg-accent/10 border border-border text-muted-foreground hover:text-foreground hover:bg-accent hover:border-accent-foreground/20 transition-colors shadow-lg"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const Home = () => {
             <Link
               href="https://www.linkedin.com/in/sugengpermanadesembry"
               target="_blank"
-              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-gray-800 hover:border-gray-600 transition-colors shadow-lg text-primary"
+              className="p-3 rounded-full bg-accent/10 border border-border text-muted-foreground hover:text-foreground hover:bg-accent hover:border-accent-foreground/20 transition-colors shadow-lg text-primary"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@ const Home = () => {
         </div>
         <div className="order-1 md:order-2 text-left space-y-4 relative z-10 w-full">
           <div className="relative flex justify-start">
-            <span className="relative px-4 py-2 text-xs md:text-xs font-medium text-white/90 rounded-xl inline-flex items-center gap-2 backdrop-blur-md bg-white/5 border border-white/20 shadow-lg">
+            <span className="relative px-4 py-2 text-xs md:text-xs font-medium text-foreground/90 rounded-xl inline-flex items-center gap-2 backdrop-blur-md bg-background/50 border border-border shadow-lg">
               <span className="text-yellow-300">👋</span>
               <span>Hallo zusammen!</span>
             </span>
@@ -147,7 +147,7 @@ const Home = () => {
               Sugeng Permana Desembry
             </span>
           </h1>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start gap-3 text-gray-200 text-lg font-medium">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start gap-3 text-muted-foreground text-lg font-medium">
             <div className="flex items-center gap-2">
               <div className="relative p-2 rounded-full bg-linear-to-br from-purple-500/20 to-blue-500/20">
                 {/* icon koper di sini */}
@@ -165,34 +165,36 @@ const Home = () => {
               </div>
               <span>Web Developer</span>
             </div>
-            <span className="hidden sm:block w-1 h-1 rounded-full bg-gray-600"></span>
+            <span className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground"></span>
             <div className="flex flex-wrap justify-start gap-2">
-              <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-lg text-cyan-300 bg-white/5 border border-white/10 backdrop-blur-sm cursor-pointer text-xs md:text-sm font-medium">
+              <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-lg text-cyan-500 dark:text-cyan-300 bg-accent/10 border border-border backdrop-blur-sm cursor-pointer text-xs md:text-sm font-medium">
                 {/* belum di kasih hover animasi */}
                 Frontend Dev
               </span>
-              <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-lg text-purple-400 bg-white/5 border border-white/10 backdrop-blur-sm cursor-pointer text-xs md:text-sm font-medium">
+              <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-lg text-purple-600 dark:text-purple-400 bg-accent/10 border border-border backdrop-blur-sm cursor-pointer text-xs md:text-sm font-medium">
                 Backend Dev
               </span>
-              <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-lg text-blue-300 bg-white/5 border border-white/10 backdrop-blur-sm cursor-pointer text-xs md:text-sm font-medium">
+              <span className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-lg text-blue-500 dark:text-blue-300 bg-accent/10 border border-border backdrop-blur-sm cursor-pointer text-xs md:text-sm font-medium">
                 AI Automation
               </span>
             </div>
           </div>
           <div className="max-w-lg">
-            <div className="inline-flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-900/50 border border-gray-800">
+            <div className="inline-flex items-center gap-3 px-3 py-2 rounded-lg bg-card border border-border">
               {/* buletan warna warni di sini */}
               <div className="w-2 h-2 rounded-full"></div>
-              <div className="text-sm text-gray-300">
+              <div className="text-sm text-foreground">
                 Solving
-                <span className="text-gray-500">•</span>
-                <span className="text-cyan-400 font-mono">Line 2005</span>
+                <span className="text-muted-foreground">•</span>
+                <span className="text-cyan-500 dark:text-cyan-400 font-mono">
+                  Line 2005
+                </span>
               </div>
               {/* panah berputar di sini */}
-              <div className="text-xs text-gray-400">⟳</div>
+              <div className="text-xs text-muted-foreground">⟳</div>
             </div>
           </div>
-          <div className="pt-2 flex items-center justify-start gap-2 text-sm text-gray-500 font-medium">
+          <div className="pt-2 flex items-center justify-start gap-2 text-sm text-muted-foreground font-medium">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

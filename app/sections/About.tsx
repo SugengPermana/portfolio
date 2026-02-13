@@ -25,7 +25,7 @@ const About = () => {
             >
               {/* text judul */}
               <ShinyText
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-linear-to-r from-purple-500/10 to-blue-500/10 border border-primary backdrop-blur-sm mb-8 group hover:scale-105 transition-transform duration-300"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-primary backdrop-blur-sm mb-8 group hover:scale-105 transition-transform duration-300"
                 text="✨ About Me "
                 speed={2}
                 delay={1}
@@ -57,12 +57,12 @@ const About = () => {
             >
               <div className="group flex flex-col items-center justify-center relative">
                 {/* bg and border */}
-                <div className="absolute inset-0 bg-neutral-900 rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
-                <div className="absolute inset-0 rounded-2xl border border-white/10 -z-10"></div>
+                <div className="absolute inset-0 bg-card rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
+                <div className="absolute inset-0 rounded-2xl border border-border -z-10"></div>
                 {/* 2+ */}
                 <div className="relative p-8 text-center">
                   <div className="relative">
-                    <span className="text-5xl md:text-6xl font-bold bg-linear-to-r from-white via-white to-gray-300 bg-clip-text text-transparent mb-3 block group-hover:scale-110 transition-transform duration-500">
+                    <span className="text-5xl md:text-6xl font-bold text-foreground mb-3 block group-hover:scale-110 transition-transform duration-500">
                       2+
                     </span>
                     <div className="absolute inset-0 bg-linear-to-r from-purple-500/20 to-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
@@ -70,7 +70,7 @@ const About = () => {
                   {/* happy client */}
                   <div className="flex items-center gap-2 justify-center">
                     <div className="w-1 h-1 bg-linear-to-r from-purple-400 to-blue-400 rounded-full"></div>
-                    <span className="text-sm font-medium text-gray-300 uppercase tracking-wider">
+                    <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
                       Fun Clients
                     </span>
                   </div>
@@ -78,20 +78,21 @@ const About = () => {
               </div>
               <div className="group flex flex-col items-center  relative justify-center">
                 {/* bg and border  */}
-                <div className="absolute inset-0 bg-neutral-900 rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
-                <div className="absolute inset-0 rounded-2xl border border-white/10 -z-10"></div>
+                <div className="absolute inset-0 bg-card rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
+                <div className="absolute inset-0 rounded-2xl border border-border -z-10"></div>
                 {/* 2+ */}
                 <div className="relative p-8 text-center">
                   <div className="relative">
-                    <span className="text-5xl md:text-6xl font-bold bg-linear-to-r from-white via-white to-gray-300 bg-clip-text text-transparent mb-3 block group-hover:scale-110 transition-transform duration-500">
+                    <span className="text-5xl md:text-6xl font-bold text-foreground mb-3 block group-hover:scale-110 transition-transform duration-500">
                       10+
                     </span>
                     <div className="absolute inset-0 bg-linear-to-r from-purple-500/20 to-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
                   </div>
                   {/* happy client */}
+
                   <div className="flex items-center gap-2 justify-center">
                     <div className="w-1 h-1 bg-linear-to-r from-purple-400 to-blue-400 rounded-full"></div>
-                    <span className="text-sm font-medium text-gray-300 uppercase tracking-wider">
+                    <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
                       Projects
                     </span>
                   </div>
@@ -99,12 +100,12 @@ const About = () => {
               </div>
               <div className="group flex flex-col items-center  relative justify-center">
                 {/* bg and border  */}
-                <div className="absolute inset-0 bg-neutral-900 rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
-                <div className="absolute inset-0 rounded-2xl border border-white/10 -z-10"></div>
+                <div className="absolute inset-0 bg-card rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
+                <div className="absolute inset-0 rounded-2xl border border-border -z-10"></div>
                 {/* 2+ */}
                 <div className="relative p-8 text-center">
                   <div className="relative">
-                    <span className="text-5xl md:text-6xl font-bold bg-linear-to-r from-white via-white to-gray-300 bg-clip-text text-transparent mb-3 block group-hover:scale-110 transition-transform duration-500">
+                    <span className="text-5xl md:text-6xl font-bold text-foreground mb-3 block group-hover:scale-110 transition-transform duration-500">
                       1+
                     </span>
                     <div className="absolute inset-0 bg-linear-to-r from-purple-500/20 to-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
@@ -112,7 +113,7 @@ const About = () => {
                   {/* happy client */}
                   <div className="flex items-center gap-2 justify-center">
                     <div className="w-1 h-1 bg-linear-to-r from-purple-400 to-blue-400 rounded-full"></div>
-                    <span className="text-sm font-medium text-gray-300 uppercase tracking-wider">
+                    <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
                       Years Exp
                     </span>
                   </div>
@@ -126,7 +127,7 @@ const About = () => {
                       <h2
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        className="text-3xl font-bold text-white mb-2"
+                        className="text-3xl font-bold text-foreground mb-2"
                       >
                         <span className="mr-2">Wer</span>
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-500">
@@ -138,14 +139,14 @@ const About = () => {
                       <p
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        className="text-xs uppercase tracking-[0.3em] text-gray-300 mb-6"
+                        className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6"
                       >
                         Who am I?
                       </p>
                       <div
                         data-aos="fade-up"
                         data-aos-duration="1500"
-                        className="space-y-6 text-gray-300 text-lg leading-relaxed"
+                        className="space-y-6 text-muted-foreground text-lg leading-relaxed"
                       >
                         <p>
                           I'm a passionate web developer with a knack for
@@ -178,9 +179,9 @@ const About = () => {
                         <div
                           data-aos="fade-up"
                           data-aos-duration="1000"
-                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300"
+                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
                         >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-purple-600 dark:text-purple-400">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"
@@ -197,8 +198,10 @@ const About = () => {
                             </svg>
                           </div>
                           <div className="overflow-hidden">
-                            <div className="text-xs text-gray-500">Name</div>
-                            <div className="text-white text-sm font-medium truncate">
+                            <div className="text-xs text-muted-foreground">
+                              Name
+                            </div>
+                            <div className="text-foreground text-sm font-medium truncate">
                               Sugeng Permana Desembry
                             </div>
                           </div>
@@ -207,9 +210,9 @@ const About = () => {
                         <div
                           data-aos="fade-up"
                           data-aos-duration="1000"
-                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300"
+                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
                         >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-purple-600 dark:text-purple-400">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"
@@ -225,8 +228,10 @@ const About = () => {
                             </svg>
                           </div>
                           <div className="overflow-hidden">
-                            <div className="text-xs text-gray-500">Phone</div>
-                            <div className="text-white text-sm font-medium truncate">
+                            <div className="text-xs text-muted-foreground">
+                              Phone
+                            </div>
+                            <div className="text-foreground text-sm font-medium truncate">
                               +62 882-9989-8410
                             </div>
                           </div>
@@ -235,9 +240,9 @@ const About = () => {
                         <div
                           data-aos="fade-up"
                           data-aos-duration="1000"
-                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300"
+                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
                         >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-purple-600 dark:text-purple-400">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"
@@ -254,8 +259,10 @@ const About = () => {
                             </svg>
                           </div>
                           <div className="overflow-hidden">
-                            <div className="text-xs text-gray-500">Email</div>
-                            <div className="text-white text-sm font-medium truncate">
+                            <div className="text-xs text-muted-foreground">
+                              Email
+                            </div>
+                            <div className="text-foreground text-sm font-medium truncate">
                               sugengpermanad@gmail.com
                             </div>
                           </div>
@@ -264,9 +271,9 @@ const About = () => {
                         <div
                           data-aos="fade-up"
                           data-aos-duration="1000"
-                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-white/5 transition-colors duration-300"
+                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
                         >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-purple-400">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-purple-600 dark:text-purple-400">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"
@@ -282,10 +289,10 @@ const About = () => {
                             </svg>
                           </div>
                           <div className="overflow-hidden">
-                            <div className="text-xs text-gray-500">
+                            <div className="text-xs text-muted-foreground">
                               Location
                             </div>
-                            <div className="text-white text-sm font-medium truncate">
+                            <div className="text-foreground text-sm font-medium truncate">
                               Bogor, Indonesia
                             </div>
                           </div>
@@ -295,7 +302,7 @@ const About = () => {
                           data-aos="fade-in"
                           data-aos-duration="1000"
                           href=""
-                          className="w-full mt-6 px-6 py-3 rounded-lg bg-white text-black font-bold text-sm hover:bg-gray-200 transition-colors duration-300 flex items-center justify-center gap-2 text-primary border border-primary bg-primary"
+                          className="w-full mt-6 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-bold text-sm hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 border border-primary"
                         >
                           <span>Send Message</span>
                           <svg
