@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../../lib/data";
 
-const CardProjects = () => {
+const CardProjects = ({ data }: { data: typeof projects }) => {
   return (
     // grid card
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-      {projects.map((project, index) => (
+      {data.map((project, index) => (
         <div
           key={index}
           className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 "

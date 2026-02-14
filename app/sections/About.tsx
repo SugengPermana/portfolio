@@ -39,6 +39,7 @@ const About = () => {
                 <span className="text-primary">through technology</span>
               </h1>
             </div>
+            {/* ini bg and border card */}
             <div
               data-aos="fade-up"
               data-aos-duration="1000"
@@ -70,6 +71,7 @@ const About = () => {
                   </div>
                 </div>
               ))}
+              {/* introduction sections */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 pt-30">
                 <div className="space-y-8">
                   <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">

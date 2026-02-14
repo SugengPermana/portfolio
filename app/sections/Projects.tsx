@@ -1,7 +1,17 @@
+"use client";
 import { SectionTitle } from "../components/SectionTitle";
 import CardProjects from "../components/ui/CardProjects";
 
+import { useState } from "react";
+import { projects } from "../lib/data";
+
 const Projects = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((project) => project.category === activeCategory);
   return (
     <section id="projects" className="w-full max-w-6xl mx-auto py-10 px-6">
       <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
@@ -20,10 +30,24 @@ const Projects = () => {
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-4">
-          <button className="px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border text-primary-foreground bg-primary border-primary shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300">
+          <button
+            onClick={() => setActiveCategory("All")}
+            className={`px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300 ${
+              activeCategory === "All"
+                ? "text-primary-foreground bg-primary border-primary"
+                : "bg-accent/10 text-muted-foreground hover:text-primary-foreground hover:bg-primary border-primary"
+            }`}
+          >
             All Projects
           </button>
-          <button className="px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border bg-accent/10 text-muted-foreground hover:text-primary-foreground hover:bg-primary border-primary shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300">
+          <button
+            onClick={() => setActiveCategory("Web Dev")}
+            className={`px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300 ${
+              activeCategory === "Web Dev"
+                ? "text-primary-foreground bg-primary border-primary"
+                : "bg-accent/10 text-muted-foreground hover:text-primary-foreground hover:bg-primary border-primary"
+            }`}
+          >
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +66,14 @@ const Projects = () => {
             </span>
             Web Dev
           </button>
-          <button className="px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border bg-accent/10 text-muted-foreground hover:text-primary-foreground hover:bg-primary border-primary shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300">
+          <button
+            onClick={() => setActiveCategory("Design App")}
+            className={`px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300 ${
+              activeCategory === "Design App"
+                ? "text-primary-foreground bg-primary border-primary"
+                : "bg-accent/10 text-muted-foreground hover:text-primary-foreground hover:bg-primary border-primary"
+            }`}
+          >
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,11 +96,11 @@ const Projects = () => {
         </div>
       </div>
       {/* =======CardProject===== */}
-      <CardProjects />
+      <CardProjects data={filteredProjects} />
       <div className="mt-12 text-center">
         {/* di bikinin auto berapa project yang keliatan */}
         <p className="text-muted-foreground text-sm mb-30">
-          Showing ? of ? projects
+          Showing {filteredProjects.length} of {projects.length} projects
         </p>
       </div>
     </section>
