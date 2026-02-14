@@ -3,18 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { IconArrowRight, IconDownload } from "@tabler/icons-react";
 import { SocialLinks } from "../components/SocialLinks";
+import { SectionTitle } from "../components/SectionTitle";
 
 const Home = () => {
   return (
     <section id="home" className="w-full max-w-7xl mx-auto pt-10 mb-20">
       <div className="w-full max-w-5xl mx-auto pb-10 px-4 flex flex-col items-center justify-center text-center relative z-10 mb-15 md:mb-20 md:pt-20 lg:pt-15 lg:mb-5">
         <div className="mb-6">
-          <span className="font-chakra px-4 py-1.5 rounded-full border border-primary/20 text-xs tracking-widest text-primary uppercase backdrop-blur-md bg-background/50">
-            Portfolio 2026 • Edition
-          </span>
+          <SectionTitle text="No Debug, No money" />
         </div>
         <div className="relative mb-8">
-          <div className="absolute -inset-10 from-purple-500/20 to-blue-500/20 blur-[60px] rounded-full pointer-events-none"></div>
           <h4 className="font-chakra relative text-4xl md:text-7xl sm:text-5xl text-foreground tracking-tighter leading-[1.1] uppercase">
             Sugeng
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-pink-500 to-orange-500">

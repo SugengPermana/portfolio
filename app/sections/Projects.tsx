@@ -15,10 +15,10 @@ const Projects = () => {
   return (
     <section id="projects" className="w-full max-w-6xl mx-auto py-10 px-6">
       <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
-        <div className="text-center mb-10">
+        <div className="text-center flex flex-col items-center justify-center ">
           {/* judul Projects */}
-          <SectionTitle text="✨ Projects " className="mb-6" />
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center">
+          <SectionTitle text="Projects " className="mb-6" />
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center mt-10">
             Featured{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-500">
               Projects

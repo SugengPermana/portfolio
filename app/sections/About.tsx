@@ -22,14 +22,14 @@ const About = () => {
             <div
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="text-center mb-10"
+              className="text-center flex flex-col items-center justify-center mb-10"
             >
               {/* text judul */}
-              <SectionTitle text="✨ About Me " className="mb-8" />
+              <SectionTitle text=" About Me" className="mb-10 h-10" />
               <h1
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-center flex flex-col"
+                className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-center flex flex-col mt-15"
               >
                 {/* text sub judul */}
                 <span className="text-primary">
