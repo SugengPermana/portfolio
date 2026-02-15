@@ -4,13 +4,15 @@ import Image from "next/image";
 import { IconArrowRight, IconDownload } from "@tabler/icons-react";
 import { SocialLinks } from "../components/SocialLinks";
 import { SectionTitle } from "../components/SectionTitle";
+import { AnimatedShinyButton } from "../components/ui/animated-shiny-button";
+import LiveButton from "../components/ui/live-button";
 
 const Home = () => {
   return (
     <section id="home" className="w-full max-w-7xl mx-auto pt-10 mb-20">
       <div className="w-full max-w-5xl mx-auto pb-10 px-4 flex flex-col items-center justify-center text-center relative z-10 mb-15 md:mb-20 md:pt-20 lg:pt-15 lg:mb-5">
         <div className="mb-6">
-          <SectionTitle text="No Debug, No money" />
+          <SectionTitle text="No Debug, No Money" />
         </div>
         <div className="relative mb-8">
           <h4 className="font-chakra relative text-4xl md:text-7xl sm:text-5xl text-foreground tracking-tighter leading-[1.1] uppercase">
@@ -21,25 +23,14 @@ const Home = () => {
           </h4>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-          <Link
-            href="#resume"
-            target="_blank"
-            className="group relative inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-sm tracking-wide transition-transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] uppercase border bg-primary text-primary-foreground"
-          >
-            <IconDownload className="h-4 w-4" />
-            <span>Open cv</span>
-          </Link>
-          <Link
-            href="#contact"
-            className="
-            group relative inline-flex items-center gap-3
-            px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide
-            transition-all hover:scale-105
-            text-primary-foreground border border-primary bg-primary"
-          >
-            <span>Lets Work Together</span>
-            <IconArrowRight className="h-4 w-4" />
-          </Link>
+          <AnimatedShinyButton url="#resume" className="uppercase rounded-full">
+            Open Cv
+          </AnimatedShinyButton>
+          <LiveButton
+            url="#contact"
+            text="Lets Work Together"
+            className="uppercase rounded-full"
+          />
         </div>
 
         <div className="mt-20 md:mb-15 flex flex-col items-center gap-4">
