@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import { Chakra_Petch } from "next/font/google";
+import { Chakra_Petch, Poppins } from "next/font/google";
 import { Navbar } from "./components/Navbar";
 import AOSProvider from "./components/AOSProvider";
 import "./globals.css";
-import { AnimatedThemeToggler } from "./components/ui/animated-theme-toggler";
 import { ThemeProvider } from "next-themes";
+
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "600"],
   variable: "--font-poppins",
+  display: "swap",
 });
 
 const chakra_Petch = Chakra_Petch({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "600"],
   variable: "--font-chakra-petch",
+  display: "swap",
 });
 
 export const metadata: Metadata = {

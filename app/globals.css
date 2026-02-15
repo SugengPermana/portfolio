@@ -4,9 +4,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-  --font-sans: var(--font-poppins);
-  --font-chakra: var(--font-chakra-petch);
+.font-chakra {
+  font-family: var(--font-chakra-petch);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
 }
 
 @theme inline {

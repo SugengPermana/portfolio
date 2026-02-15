@@ -1,27 +1,34 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
-import { IconArrowRight, IconDownload } from "@tabler/icons-react";
 import { SocialLinks } from "../components/SocialLinks";
 import { SectionTitle } from "../components/SectionTitle";
 import { AnimatedShinyButton } from "../components/ui/animated-shiny-button";
 import LiveButton from "../components/ui/live-button";
+import Cardhome from "../components/ui/Cardhome";
 
 const Home = () => {
   return (
     <section id="home" className="w-full max-w-7xl mx-auto pt-10 mb-20">
-      <div className="w-full max-w-5xl mx-auto pb-10 px-4 flex flex-col items-center justify-center text-center relative z-10 mb-15 md:mb-20 md:pt-20 lg:pt-15 lg:mb-5">
+      <div className="font-chakra w-full max-w-5xl mx-auto pb-10 px-4 flex flex-col items-center justify-center text-center relative z-10 mb-15 md:mb-20 md:pt-20 lg:pt-15 lg:mb-5">
         <div className="mb-6">
           <SectionTitle text="No Debug, No Money" />
         </div>
-        <div className="relative mb-8">
-          <h4 className="font-chakra relative text-4xl md:text-7xl sm:text-5xl text-foreground tracking-tighter leading-[1.1] uppercase">
+        {/* nama gw */}
+        <div className="relative mb-2">
+          <h4 className="relative text-4xl md:text-7xl sm:text-5xl text-foreground tracking-tighter leading-[1.1] uppercase">
             Sugeng
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-pink-500 to-orange-500">
               .DEV
             </span>
           </h4>
         </div>
+        {/* deskripsi */}
+        <div className="font-chakra relative mb-6">
+          <p className="text-muted-foreground text-lg font-medium">
+            Web Developer
+          </p>
+        </div>
+        {/* button */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <AnimatedShinyButton url="#resume" className="uppercase rounded-full">
             Open Cv
@@ -32,20 +39,13 @@ const Home = () => {
             className="uppercase rounded-full"
           />
         </div>
-
-        <div className="mt-20 md:mb-15 flex flex-col items-center gap-4">
-          <span className="text-[10px] md:text-xs font-medium tracking-[0.2em] text-muted-foreground uppercase animate-bounce">
-            Scroll For more
-          </span>
-          <div
-            className="w-px bg-linear-to-b from-purple-500/50 via-purple-500 to-transparent"
-            style={{ height: "80px", width: "3px" }}
-          ></div>
-        </div>
+        {/* card home */}
+        <Cardhome />
       </div>
 
+      {/* card besar profile */}
       <div
-        className="group/card w-full max-w-8xl mx-auto p-4 md:p-8 rounded-4xl
+        className="font-chakra group/card w-full max-w-8xl mx-auto p-4 md:p-8 rounded-4xl
         border border-border bg-card shadow-2xl shadow-purple-900/20
 
         flex flex-col md:flex-row items-center gap-6 md:gap-10
@@ -121,8 +121,7 @@ const Home = () => {
               {/* buletan warna warni di sini */}
               <div className="w-2 h-2 rounded-full"></div>
               <div className="text-sm text-foreground">
-                Solving
-                <span className="text-muted-foreground">•</span>
+                Solving <span className="text-muted-foreground">•</span>
                 <span className="text-cyan-500 dark:text-cyan-400 font-mono">
                   Line 2005
                 </span>
