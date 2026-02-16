@@ -5,6 +5,7 @@ import { SectionTitle } from "../components/SectionTitle";
 import { AnimatedShinyButton } from "../components/ui/animated-shiny-button";
 import LiveButton from "../components/ui/live-button";
 import Cardhome from "../components/ui/Cardhome";
+import TypingGlitch from "../components/ui/TypingGlitch";
 
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
         {/* deskripsi */}
         <div className="font-chakra relative mb-6">
           <p className="text-muted-foreground text-lg font-medium">
-            Web Developer
+            <TypingGlitch />
           </p>
         </div>
         {/* button */}
