@@ -3,6 +3,7 @@ import { AnimatedShinyButton } from "../components/ui/animated-shiny-button";
 import LiveButton from "../components/ui/live-button";
 import Cardhome from "../components/ui/Cardhome";
 import TypingGlitch from "../components/ui/TypingGlitch";
+import GradientText from "../components/ui/GradientText";
 
 const Home = () => {
   return (
@@ -13,11 +14,11 @@ const Home = () => {
         </div>
         {/* nama gw */}
         <div className="relative mb-2">
-          <h4 className="relative text-4xl md:text-7xl sm:text-5xl text-foreground tracking-tighter leading-[1.1] uppercase">
+          <h4 className="relative text-4xl md:text-7xl sm:text-5xl text-foreground tracking-tighter leading-[1.1] uppercase flex">
             Sugeng.
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-pink-500 to-orange-500">
+            <GradientText colors={["#5227FF", "#FF9FFC", "#B19EEF"]}>
               ID
-            </span>
+            </GradientText>
           </h4>
         </div>
         {/* deskripsi */}

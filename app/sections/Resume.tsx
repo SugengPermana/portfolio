@@ -4,7 +4,7 @@ import TechTools from "../components/ui/TechTools";
 
 const Resume = () => {
   return (
-    <section id="resume" className="w-full max-w-5xl mx-auto py-10  px-6">
+    <section id="resume" className="w-full max-w-5xl mx-auto py-10 px-6">
       <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
         <div className="text-center flex flex-col items-center justify-center mb-20">
           {/* judul Resume */}

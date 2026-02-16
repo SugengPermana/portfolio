@@ -1,20 +1,20 @@
 "use client";
 import { SectionTitle } from "../components/SectionTitle";
 import Link from "next/link";
-import CardAbout from "../components/ui/CardAbout";
 import { stats } from "../lib/data";
 import Image from "next/image";
 import { SocialLinks } from "../components/SocialLinks";
 import TypingGlitch from "../components/ui/TypingGlitch";
+import RotatingText from "../components/ui/RotatingText";
 
 const About = () => {
   return (
     <section className="w-full mb-20">
-      <div className="relative w-full max-w-7xl mx-auto py-32 px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
+      <div className="relative w-full max-w-7xl mx-auto py-10 lg:py-15 px-6 lg:px-8 overflow-hidden">
+        <div className=" ">
           {/* ini bg kiri kanan */}
-          <div className="absolute top-1/4 -left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 -left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
         </div>
 
         <div className="relative z-10 pt-20">
@@ -124,31 +124,124 @@ const About = () => {
               <div
                 data-aos="fade-left"
                 data-aos-duration="1000"
-                className="flex-1 flex flex-col items-center md:items-start justify-center text-center md:text-left"
+                className="
+flex-1
+flex flex-col
+justify-center
+items-center md:items-start
+text-center md:text-left
+max-w-xl
+w-full mx-auto md:mx-0
+  "
               >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-                  <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-purple-100 to-purple-300 drop-shadow-sm">
+                <h1 className="leading-tight tracking-tight space-y-2">
+                  {/* line 1 */}
+                  <span
+                    className="
+    block
+    text-3xl sm:text-4xl md:text-5xl
+    text-transparent bg-clip-text
+    bg-linear-to-r from-white via-purple-100 to-purple-300
+    drop-shadow-sm font-extrabold
+    "
+                  >
                     Fullstack Developer & AI Engineer
                   </span>
-                  <br />
-                  <span className="text-primary">
-                    Based In Bogor, Indonesia
+
+                  {/* line 2 rotating text */}
+                  <div
+                    className="
+      flex
+      items-center
+      justify-center md:justify-start
+      gap-2
+      text-lg sm:text-xl md:text-2xl
+      text-primary
+      min-h-[10px] md:min-h-[10px] font-semibold
+    "
+                  >
+                    <span>Created</span>
+
+                    <div
+                      className="
+        flex
+        items-center
+        justify-center
+        min-w-[140px]
+        md:min-w-[180px]
+      "
+                    >
+                      <RotatingText
+                        texts={[
+                          "Landing Page",
+                          "Company Profile",
+                          "Booking App",
+                          "AI Chatbot",
+                        ]}
+                        mainClassName="
+           px-3 py-1 md:py-2
+            bg-cyan-300 text-black
+            rounded-lg
+            font-semibold
+            flex items-center justify-center
+            w-full text-primary font-semibold
+          "
+                        staggerFrom="last"
+                        initial={{ y: "100%" }}
+                        animate={{ y: 0 }}
+                        exit={{ y: "-120%" }}
+                        staggerDuration={0.025}
+                        splitLevelClassName="overflow-hidden"
+                        transition={{
+                          type: "spring",
+                          damping: 30,
+                          stiffness: 400,
+                        }}
+                        rotationInterval={2000}
+                      />
+                    </div>
+                  </div>
+
+                  {/* line 3 location */}
+                  <span
+                    className=" 
+    text-base sm:text-lg md:text-xl
+    text-primary font-semibold
+    "
+                  >
+                    Based in Bogor, Indonesia
                   </span>
                 </h1>
-                {/* card value and label */}
-                <div className="flex flex-wrap gap-4 mt-8 w-full">
+
+                {/* stats */}
+                <div
+                  className="
+   flex flex-wrap
+    gap-4
+    mt-8
+    w-full
+    justify-center md:justify-start font-chakra
+  "
+                >
                   {stats.map((stat, index) => (
                     <div
                       key={index}
-                      className="group flex-1 min-w-[100px] px-5 py-4 rounded-2xl bg-card border border-border
-                        hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-900/20
-                        transition-all duration-300 text-center relative overflow-hidden"
+                      className="
+          group
+          flex-1
+         min-w-[110px]
+          max-w-[160px]
+          px-5 py-4
+          rounded-2xl
+          bg-card
+          border border-border
+          text-center
+        "
                     >
-                      <div className="absolute inset-0 bg-linear-to-br from-purple-600/5 via-transparent to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                      <span className="relative text-3xl md:text-4xl font-bold text-foreground block mb-1 group-hover:scale-105 transition-transform duration-300">
+                      <span className="text-3xl md:text-4xl font-bold block mb-1">
                         {stat.value}
                       </span>
-                      <span className="relative text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                      <span className="text-xs uppercase tracking-wider">
                         {stat.label}
                       </span>
                     </div>
