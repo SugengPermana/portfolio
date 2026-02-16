@@ -3,6 +3,9 @@ import { SectionTitle } from "../components/SectionTitle";
 import Link from "next/link";
 import CardAbout from "../components/ui/CardAbout";
 import { stats } from "../lib/data";
+import Image from "next/image";
+import { SocialLinks } from "../components/SocialLinks";
+import TypingGlitch from "../components/ui/TypingGlitch";
 
 const About = () => {
   return (
@@ -26,18 +29,132 @@ const About = () => {
             >
               {/* text judul */}
               <SectionTitle text=" About Me" className="mb-10 h-10" />
-              <h1
-                data-aos="fade-up"
+            </div>
+            {/* Two-column layout: Profile Card (left) + Subtitle (right) */}
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-16 w-full">
+              {/* Left: Compact Profile Card */}
+              <div
+                data-aos="fade-right"
                 data-aos-duration="1000"
-                className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-center flex flex-col mt-15"
+                className="font-chakra shrink-0 w-full max-w-xs mx-auto md:mx-0 rounded-3xl border border-border bg-card shadow-2xl shadow-purple-900/20 relative overflow-hidden transition-all duration-500 hover:border-purple-500/30 hover:shadow-purple-500/20 group/card"
               >
-                {/* text sub judul */}
-                <span className="text-primary">
-                  Transforming ideas into impactful
-                </span>
-                <span className="text-primary">Web Experiences</span>
-                <span className="text-primary">through technology</span>
-              </h1>
+                {/* Hover gradient overlay */}
+                <div className="absolute inset-0 bg-linear-to-br from-purple-600/10 via-transparent to-blue-600/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+                <div className="relative z-10 p-4 flex flex-col items-center text-center">
+                  {/* Briefcase icon top-left */}
+                  <div className="absolute top-4 left-4">
+                    <div className="p-2 rounded-full bg-linear-to-br from-purple-500/20 to-blue-500/20">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="#a600ff"
+                        className="icon icon-tabler icons-tabler-filled icon-tabler-briefcase"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  {/* Profile Image */}
+                  <div className="mt-6 mb-4 w-40 h-40 rounded-2xl p-[2px] bg-linear-to-br from-purple-500 via-blue-500 to-purple-400 shadow-lg shadow-purple-500/30">
+                    <div className="w-full h-full rounded-[14px] overflow-hidden bg-gray-900">
+                      <Image
+                        src="/new.png"
+                        loading="eager"
+                        alt="Profile"
+                        width={200}
+                        height={200}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110 group-hover/card:brightness-110"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Name */}
+                  <h2 className="text-xl font-bold text-foreground tracking-tight">
+                    Sugeng.ID
+                  </h2>
+
+                  {/* Role - Typing Animation */}
+                  <div className="text-sm text-muted-foreground min-h-6 mb-2">
+                    <TypingGlitch />
+                  </div>
+
+                  {/* Social Media */}
+                  <SocialLinks
+                    className="flex-row justify-center mb-6"
+                    iconClassName="p-2.5"
+                  />
+
+                  {/* Download CV */}
+                  <Link
+                    href="/cv.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full mt-2 px-5 py-2.5 rounded-xl font-semibold text-sm
+                        border border-border bg-transparent text-foreground
+                        hover:border-purple-500/50 hover:bg-purple-500/10 hover:text-purple-400
+                        transition-all duration-300 flex items-center justify-center gap-2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                      <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                      <path d="M12 17v-6" />
+                      <path d="M9.5 14.5l2.5 2.5l2.5 -2.5" />
+                    </svg>
+                    <span>Download CV</span>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right: Subtitle */}
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                className="flex-1 flex flex-col items-center md:items-start justify-center text-center md:text-left"
+              >
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+                  <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-purple-100 to-purple-300 drop-shadow-sm">
+                    Fullstack Developer & AI Engineer
+                  </span>
+                  <br />
+                  <span className="text-primary">
+                    Based In Bogor, Indonesia
+                  </span>
+                </h1>
+                {/* card value and label */}
+                <div className="flex flex-wrap gap-4 mt-8 w-full">
+                  {stats.map((stat, index) => (
+                    <div
+                      key={index}
+                      className="group flex-1 min-w-[100px] px-5 py-4 rounded-2xl bg-card border border-border
+                        hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-900/20
+                        transition-all duration-300 text-center relative overflow-hidden"
+                    >
+                      <div className="absolute inset-0 bg-linear-to-br from-purple-600/5 via-transparent to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                      <span className="relative text-3xl md:text-4xl font-bold text-foreground block mb-1 group-hover:scale-105 transition-transform duration-300">
+                        {stat.value}
+                      </span>
+                      <span className="relative text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                        {stat.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
             {/* ini bg and border card */}
             <div
@@ -45,32 +162,6 @@ const About = () => {
               data-aos-duration="1000"
               className="flex flex-wrap justify-center gap-6 md:gap-12 mt-12 py-8 px-4"
             >
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="group flex flex-col items-center justify-center relative"
-                >
-                  {/* bg and border */}
-                  <div className="absolute inset-0 bg-card rounded-2xl -z-10 shadow-2xl shadow-purple-900/20"></div>
-                  <div className="absolute inset-0 rounded-2xl border border-border -z-10"></div>
-                  {/* Value */}
-                  <div className="relative p-8 text-center">
-                    <div className="relative">
-                      <span className="text-5xl md:text-6xl font-bold text-foreground mb-3 block group-hover:scale-110 transition-transform duration-500">
-                        {stat.value}
-                      </span>
-                      <div className="absolute inset-0 bg-linear-to-r from-purple-500/20 to-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-                    </div>
-                    {/* Label */}
-                    <div className="flex items-center gap-2 justify-center">
-                      <div className="w-1 h-1 bg-linear-to-r from-purple-400 to-blue-400 rounded-full"></div>
-                      <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-                        {stat.label}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
               {/* introduction sections */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 pt-30">
                 <div className="space-y-8">
@@ -283,7 +374,6 @@ const About = () => {
                 </div>
               </div>
               {/* ===============CardAabout=================== */}
-              <CardAbout />
             </div>
           </div>
         </div>

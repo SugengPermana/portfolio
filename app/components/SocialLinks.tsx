@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { cn } from "@/app/lib/utils";
 import {
-  IconBrandInstagram,
+  IconBrandWhatsapp,
   IconBrandGithub,
   IconBrandLinkedin,
 } from "@tabler/icons-react";
@@ -15,9 +15,9 @@ interface SocialLinksProps {
 export function SocialLinks({ className, iconClassName }: SocialLinksProps) {
   const socials = [
     {
-      title: "Instagram",
-      href: "https://www.instagram.com/sgprmna_",
-      icon: <IconBrandInstagram className="h-full w-full" />,
+      title: "LinkedIn",
+      href: "https://www.linkedin.com/in/sugengpermanadesembry",
+      icon: <IconBrandLinkedin className="h-full w-full" />,
     },
     {
       title: "GitHub",
@@ -25,16 +25,16 @@ export function SocialLinks({ className, iconClassName }: SocialLinksProps) {
       icon: <IconBrandGithub className="h-full w-full" />,
     },
     {
-      title: "LinkedIn",
-      href: "https://www.linkedin.com/in/sugengpermanadesembry",
-      icon: <IconBrandLinkedin className="h-full w-full" />,
+      title: "WhatsApp",
+      href: "https://wa.me/6288299898410",
+      icon: <IconBrandWhatsapp className="h-full w-full" />,
     },
   ];
 
   return (
     <div className={cn("flex gap-4", className)}>
       {socials.map((social) => (
-        <Link // Changed to <a> because simple external links, or Link with target="_blank"
+        <Link
           key={social.title}
           href={social.href}
           target="_blank"
