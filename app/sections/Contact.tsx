@@ -16,11 +16,11 @@ const Contact = () => {
           <div className="flex flex-col gap-10">
             <SocialLinks className="gap-6" />
             <div className="max-w-3xl mt-4">
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">
-                Want to know more about me, tell me about your project or just
-                to say hello?
-                <span className="text-purple-500"> Drop me a line </span>
-                and I'll get back as soon as possible.
+              <h2 className="text-2xl md:text-3xl font-medium text-foreground leading-tight">
+                I’m always excited about new projects and opportunities. From
+                modern web apps to smart workflow automation, I help businesses
+                save time and scale faster. Ready to bring your ideas to the
+                next level? I’m just one message away.
               </h2>
             </div>
           </div>

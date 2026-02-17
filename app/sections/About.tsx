@@ -129,13 +129,13 @@ const About = () => {
               >
                 <h1 className="leading-tight tracking-tight space-y-2">
                   {/* line 1 */}
-                  <span className="block text-3xl sm:text-4xl md:text-5xl text-primary drop-shadow-sm font-extrabold mb-2 md:mb-10">
+                  <span className="block text-3xl sm:text-4xl md:text-5xl text-primary drop-shadow-sm font-extrabold mb-2 md:mb-6">
                     Fullstack Developer & AI Engineer
                   </span>
 
                   {/* line 2 rotating text */}
                   <div className="flex items-center justify-center md:justify-start gap-2 text-lg sm:text-xl md:text-2xl text-primary min-h-[10px] md:min-h-[10px] font-semibold">
-                    <span>Created</span>
+                    <span>I Created</span>
 
                     <div className="flex items-center justify-center min-w-[140px] md:min-w-[180px]">
                       <RotatingText
@@ -145,7 +145,7 @@ const About = () => {
                           "Booking App",
                           "AI Chatbot",
                         ]}
-                        mainClassName="px-3 py-1 md:py-2 bg-cyan-300 text-black rounded-lg font-semibold flex items-center justify-center w-full text-primary font-semibold"
+                        mainClassName="px-3 py-1 md:py-2 bg-cyan-500 text-black rounded-lg font-semibold flex items-center justify-center w-full text-primary font-semibold"
                         staggerFrom="last"
                         initial={{ y: "70%" }}
                         animate={{ y: 0 }}
@@ -164,9 +164,20 @@ const About = () => {
                   </div>
 
                   {/* line 3 location */}
-                  <span className="text-base sm:text-lg md:text-xl text-primary font-semibold">
-                    Based in Bogor, Indonesia
-                  </span>
+                  <div className="flex items-center justify-center sm:justify-start gap-2 text-base sm:text-lg md:text-xl text-primary font-semibold">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                      <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" />
+                    </svg>
+                    <span>Based in Bogor, Jawa Barat, Indonesia</span>
+                  </div>
                 </h1>
 
                 {/* stats */}
