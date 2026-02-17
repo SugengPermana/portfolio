@@ -14,7 +14,10 @@ const Projects = () => {
       ? projects
       : projects.filter((project) => project.category === activeCategory);
   return (
-    <section id="projects" className="w-full max-w-6xl mx-auto py-10 px-6">
+    <section
+      id="projects"
+      className="font-poppins w-full max-w-6xl mx-auto py-10 px-6"
+    >
       <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
         <div className="text-center flex flex-col items-center justify-center ">
           {/* judul Projects */}

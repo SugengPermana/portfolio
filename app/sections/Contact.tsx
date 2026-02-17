@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden pb-10 border-t border-border mt-40 w-full "
+      className="font-poppins relative overflow-hidden pb-10 border-t border-border mt-40 w-full "
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-linear-to-r from-transparent via-border to-transparent"></div>
       <div className="max-w-6xl mx-auto px-6 py-12 relative z-10">

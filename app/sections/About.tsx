@@ -194,7 +194,7 @@ const About = () => {
               className="flex flex-wrap justify-center gap-6 md:gap-12 mt-12 py-8 px-4"
             >
               {/* introduction sections */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 pt-30">
+              <div className="font-poppins grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 pt-30">
                 <div className="space-y-8">
                   <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
                     <div>
