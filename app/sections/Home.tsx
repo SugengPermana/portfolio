@@ -10,7 +10,7 @@ const Home = () => {
     <section id="home" className="w-full max-w-7xl mx-auto pt-10 mb-20">
       <div className="font-chakra w-full max-w-5xl mx-auto pb-10 px-4 flex flex-col items-center justify-center text-center relative z-10 mb-15 md:mb-20 md:pt-20 lg:pt-15 lg:mb-5">
         <div className="mb-6">
-          <SectionTitle text="No Debug, No Money" />
+          <SectionTitle text="No Coding, No Rich" />
         </div>
         {/* nama gw */}
         <div className="relative mb-2">

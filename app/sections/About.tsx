@@ -13,8 +13,8 @@ const About = () => {
       <div className="relative w-full max-w-7xl mx-auto py-10 lg:py-15 px-6 lg:px-8 overflow-hidden">
         <div className=" ">
           {/* ini bg kiri kanan */}
-          <div className="absolute top-1/4 -left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-2xl pointer-events-none"></div>
-          <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          <div className="absolute top-1/4 -left-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none"></div>
         </div>
 
         <div className="relative z-10 pt-20">
@@ -36,15 +36,15 @@ const About = () => {
               <div
                 data-aos="fade-right"
                 data-aos-duration="1000"
-                className="font-chakra shrink-0 w-full max-w-xs mx-auto md:mx-0 rounded-3xl border border-border bg-card shadow-2xl shadow-purple-900/20 relative overflow-hidden transition-all duration-500 hover:border-purple-500/30 hover:shadow-purple-500/20 group/card"
+                className="font-chakra shrink-0 w-full max-w-xs mx-auto md:mx-0 rounded-3xl border border-border bg-card shadow-2xl shadow-purple-900/20 relative overflow-hidden transition-all duration-500 hover:border-cyan-500/30 hover:shadow-purple-500/20 group/card"
               >
                 {/* Hover gradient overlay */}
-                <div className="absolute inset-0 bg-linear-to-br from-purple-600/10 via-transparent to-blue-600/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-cyan-600/10 via-transparent to-cyan-600/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
                 <div className="relative z-10 p-4 flex flex-col items-center text-center">
                   {/* Briefcase icon top-left */}
                   <div className="absolute top-4 left-4">
-                    <div className="p-2 rounded-full bg-linear-to-br from-purple-500/20 to-blue-500/20">
+                    <div className="p-2 rounded-full bg-linear-to-br from-cyan-500/20 to-cyan-500/20">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -60,7 +60,7 @@ const About = () => {
                   </div>
 
                   {/* Profile Image */}
-                  <div className="mt-6 mb-4 w-40 h-40 rounded-2xl p-[2px] bg-linear-to-br from-purple-500 via-blue-500 to-purple-400 shadow-lg shadow-purple-500/30">
+                  <div className="mt-6 mb-4 w-40 h-40 rounded-2xl p-[2px] bg-linear-to-br from-purple-500 via-cyan-500 to-purple-400 shadow-lg shadow-purple-500/30">
                     <div className="w-full h-full rounded-[14px] overflow-hidden bg-gray-900">
                       <Image
                         src="/new.png"
@@ -95,9 +95,10 @@ const About = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full mt-2 px-5 py-2.5 rounded-xl font-semibold text-sm
-                        border border-border bg-transparent text-foreground
-                        hover:border-purple-500/50 hover:bg-purple-500/10 hover:text-purple-400
-                        transition-all duration-300 flex items-center justify-center gap-2"
+                        border border-border bg-transparent 
+                        text-foreground
+                        hover:border-white hover:bg-cyan-400 hover:text-black
+                        transition-all flex items-center justify-center gap-2"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -122,55 +123,21 @@ const About = () => {
 
               {/* Right: Subtitle */}
               <div
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                className="
-flex-1
-flex flex-col
-justify-center
-items-center md:items-start
-text-center md:text-left
-max-w-xl
-w-full mx-auto md:mx-0
-  "
+                // data-aos="fade-left"
+                // data-aos-duration="1000"
+                className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left max-w-xl w-full mx-auto md:mx-0"
               >
                 <h1 className="leading-tight tracking-tight space-y-2">
                   {/* line 1 */}
-                  <span
-                    className="
-    block
-    text-3xl sm:text-4xl md:text-5xl
-    text-transparent bg-clip-text
-    bg-linear-to-r from-white via-purple-100 to-purple-300
-    drop-shadow-sm font-extrabold
-    "
-                  >
+                  <span className="block text-3xl sm:text-4xl md:text-5xl text-primary drop-shadow-sm font-extrabold mb-2 md:mb-10">
                     Fullstack Developer & AI Engineer
                   </span>
 
                   {/* line 2 rotating text */}
-                  <div
-                    className="
-      flex
-      items-center
-      justify-center md:justify-start
-      gap-2
-      text-lg sm:text-xl md:text-2xl
-      text-primary
-      min-h-[10px] md:min-h-[10px] font-semibold
-    "
-                  >
+                  <div className="flex items-center justify-center md:justify-start gap-2 text-lg sm:text-xl md:text-2xl text-primary min-h-[10px] md:min-h-[10px] font-semibold">
                     <span>Created</span>
 
-                    <div
-                      className="
-        flex
-        items-center
-        justify-center
-        min-w-[140px]
-        md:min-w-[180px]
-      "
-                    >
+                    <div className="flex items-center justify-center min-w-[140px] md:min-w-[180px]">
                       <RotatingText
                         texts={[
                           "Landing Page",
@@ -178,65 +145,36 @@ w-full mx-auto md:mx-0
                           "Booking App",
                           "AI Chatbot",
                         ]}
-                        mainClassName="
-           px-3 py-1 md:py-2
-            bg-cyan-300 text-black
-            rounded-lg
-            font-semibold
-            flex items-center justify-center
-            w-full text-primary font-semibold
-          "
+                        mainClassName="px-3 py-1 md:py-2 bg-cyan-300 text-black rounded-lg font-semibold flex items-center justify-center w-full text-primary font-semibold"
                         staggerFrom="last"
-                        initial={{ y: "100%" }}
+                        initial={{ y: "70%" }}
                         animate={{ y: 0 }}
-                        exit={{ y: "-120%" }}
+                        exit={{ y: "-100%" }}
+                        splitBy="words"
                         staggerDuration={0.025}
                         splitLevelClassName="overflow-hidden"
                         transition={{
                           type: "spring",
-                          damping: 30,
-                          stiffness: 400,
+                          damping: 50,
+                          stiffness: 500,
                         }}
-                        rotationInterval={2000}
+                        rotationInterval={3000}
                       />
                     </div>
                   </div>
 
                   {/* line 3 location */}
-                  <span
-                    className=" 
-    text-base sm:text-lg md:text-xl
-    text-primary font-semibold
-    "
-                  >
+                  <span className="text-base sm:text-lg md:text-xl text-primary font-semibold">
                     Based in Bogor, Indonesia
                   </span>
                 </h1>
 
                 {/* stats */}
-                <div
-                  className="
-   flex flex-wrap
-    gap-4
-    mt-8
-    w-full
-    justify-center md:justify-start font-chakra
-  "
-                >
+                <div className="flex flex-wrap gap-4 mt-8 w-full justify-center md:justify-start font-chakra">
                   {stats.map((stat, index) => (
                     <div
                       key={index}
-                      className="
-          group
-          flex-1
-         min-w-[110px]
-          max-w-[160px]
-          px-5 py-4
-          rounded-2xl
-          bg-card
-          border border-border
-          text-center
-        "
+                      className="group flex-1 min-w-[110px] max-w-[160px] px-5 py-4 rounded-2xl bg-card border border-border text-center"
                     >
                       <span className="text-3xl md:text-4xl font-bold block mb-1">
                         {stat.value}
@@ -318,7 +256,7 @@ w-full mx-auto md:mx-0
                           data-aos-duration="1000"
                           className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
                         >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-purple-600 dark:text-purple-400">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground text-background hover:bg-chart-5 hover:text-chart-4">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"
@@ -349,7 +287,7 @@ w-full mx-auto md:mx-0
                           data-aos-duration="1000"
                           className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
                         >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-purple-600 dark:text-purple-400">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground text-background hover:bg-chart-5 hover:text-chart-4">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"
@@ -379,7 +317,7 @@ w-full mx-auto md:mx-0
                           data-aos-duration="1000"
                           className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
                         >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-purple-600 dark:text-purple-400">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground text-background hover:bg-chart-5 hover:text-chart-4">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"
@@ -410,7 +348,7 @@ w-full mx-auto md:mx-0
                           data-aos-duration="1000"
                           className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
                         >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-purple-600 dark:text-purple-400">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground text-background hover:bg-chart-5 hover:text-chart-4">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"

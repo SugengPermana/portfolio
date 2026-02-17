@@ -40,7 +40,7 @@ export function SocialLinks({ className, iconClassName }: SocialLinksProps) {
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "p-3 rounded-full bg-accent/10 border border-border text-muted-foreground hover:text-foreground hover:bg-accent hover:border-accent-foreground/20 transition-colors shadow-lg flex items-center justify-center",
+            "p-3 rounded-full bg-accent/10 border border-border text-muted-foreground hover:text-black hover:bg-accent hover:border-accent-foreground/20 transition-colors shadow-lg flex items-center justify-center",
             iconClassName,
           )}
         >
