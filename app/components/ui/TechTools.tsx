@@ -9,7 +9,7 @@ const TechTools = () => {
     <div>
       {/* title */}
       <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
-        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-white border-b border-white/20 pb-4">
+        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-foreground border-b border-foreground/20 pb-4">
           Technologies I&apos;ve worked with
         </h3>
       </div>

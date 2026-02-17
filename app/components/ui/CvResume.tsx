@@ -104,7 +104,7 @@ const CvResume = () => {
       <div className="mb-20">
         {/* education */}
         <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-white border-b border-white/20 pb-4">
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-primary border-b border-primary/20 pb-4">
             My Education
           </h3>
         </div>
@@ -112,7 +112,7 @@ const CvResume = () => {
         <div className="flex flex-col space-y-6">
           {educationData.map((edu, index) => (
             <div key={index}>
-              {index > 0 && <div className="h-px bg-white/15 mx-2 mb-6"></div>}
+              {index > 0 && <div className="h-px bg-white/50 mx-2 mb-6"></div>}
               <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
                 <div className="flex flex-col md:grid md:grid-cols-[150px_auto_1fr] gap-4 md:gap-8 p-2">
                   {/* tanggal */}
@@ -126,19 +126,19 @@ const CvResume = () => {
                       hoverColor={edu.hoverColor}
                     />
                     <div className="flex flex-col">
-                      <h4 className="text-xl font-bold text-white">
+                      <h4 className="text-xl font-bold text-black dark:text-white">
                         {edu.major}
                       </h4>
                       <span className="text-gray-400 text-sm mt-1">
                         Studied at{" "}
-                        <span className="text-gray-300 font-medium">
+                        <span className="text-muted-foreground font-medium">
                           {edu.school}
                         </span>
                       </span>
                     </div>
                   </div>
                   {/* descripsi */}
-                  <div className="text-gray-400 text-sm leading-relaxed">
+                  <div className="text-black dark:text-white text-sm leading-relaxed">
                     {edu.description}
                   </div>
                 </div>
@@ -150,7 +150,7 @@ const CvResume = () => {
       <div className="mb-20">
         {/* experience */}
         <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-white border-b border-white/20 pb-4">
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-primary border-b border-primary/20 pb-4">
             My Experience
           </h3>
         </div>
@@ -169,17 +169,19 @@ const CvResume = () => {
                 <div className="flex items-start gap-4">
                   <SchoolIcon type={exp.iconType} hoverColor={exp.hoverColor} />
                   <div className="flex flex-col">
-                    <h4 className="text-xl font-bold text-white">{exp.role}</h4>
+                    <h4 className="text-xl font-bold text-black dark:text-white">
+                      {exp.role}
+                    </h4>
                     <span className="text-gray-400 text-sm mt-1">
                       Work{" "}
-                      <span className="text-gray-300 font-medium">
+                      <span className="text-muted-foreground font-medium">
                         {exp.company}
                       </span>
                     </span>
                   </div>
                 </div>
                 {/* descripsi */}
-                <div className="text-gray-400 text-sm leading-relaxed">
+                <div className="text-black dark:text-white text-sm leading-relaxed">
                   {exp.description}
                 </div>
               </div>

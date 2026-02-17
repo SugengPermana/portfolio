@@ -4,6 +4,7 @@ import CardProjects from "../components/ui/CardProjects";
 
 import { useState } from "react";
 import { projects } from "../lib/data";
+import GradientText from "../components/ui/GradientText";
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -18,11 +19,11 @@ const Projects = () => {
         <div className="text-center flex flex-col items-center justify-center ">
           {/* judul Projects */}
           <SectionTitle text="Projects " className="mb-6" />
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center mt-10">
-            Featured{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-500">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center mt-10 flex gap-1">
+            Featured
+            <GradientText colors={["#5227FF", "#FF9FFC", "#B19EEF"]}>
               Projects
-            </span>
+            </GradientText>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto mb-8 text-center">
             A collection of my best work in website development and graphic

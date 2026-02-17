@@ -127,7 +127,7 @@ export const techTools = [
     name: "Next Js",
     icon: IconBrandNextjs,
     progress: 90,
-    color: "#ffffff",
+    color: "#808080",
   },
   {
     name: "React",
