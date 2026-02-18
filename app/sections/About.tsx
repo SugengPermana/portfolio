@@ -123,8 +123,8 @@ const About = () => {
 
               {/* Right: Subtitle */}
               <div
-                // data-aos="fade-left"
-                // data-aos-duration="1000"
+                data-aos="fade-left"
+                data-aos-duration="1000"
                 className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left max-w-xl w-full mx-auto md:mx-0"
               >
                 <h1 className="leading-tight tracking-tight space-y-2">

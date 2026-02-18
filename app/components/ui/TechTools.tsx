@@ -8,7 +8,8 @@ const TechTools = () => {
   return (
     <div>
       {/* title */}
-      <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
+      <div  data-aos="fade-up"
+              data-aos-duration="1000" data-aos-delay="100" className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
         <h3 className="text-2xl md:text-3xl font-bold mb-8 text-foreground border-b border-foreground/20 pb-4">
           Technologies I&apos;ve worked with
         </h3>

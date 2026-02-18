@@ -19,21 +19,27 @@ const Projects = () => {
       className="font-poppins w-full max-w-6xl mx-auto py-10 px-6"
     >
       <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
-        <div className="text-center flex flex-col items-center justify-center ">
+        <div   className="text-center flex flex-col items-center justify-center ">
           {/* judul Projects */}
+          <div data-aos="fade-up"
+              data-aos-duration="1000" data-aos-delay="100">
           <SectionTitle text="Projects " className="mb-6" />
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center mt-10 flex gap-1">
+          </div>
+          <h2 data-aos="fade-up"
+              data-aos-duration="1000" data-aos-delay="200" className="text-3xl md:text-5xl font-bold mb-6 text-center mt-10 flex gap-1">
             Featured
             <GradientText colors={["#5227FF", "#FF9FFC", "#B19EEF"]}>
               Projects
             </GradientText>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto mb-8 text-center">
+          <p data-aos="fade-up"
+              data-aos-duration="1000" data-aos-delay="300" className="text-muted-foreground max-w-xl mx-auto mb-8 text-center">
             A collection of my best work in website development and graphic
             design.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div data-aos="fade-up"
+              data-aos-duration="1000" data-aos-delay="400" className="flex flex-wrap justify-center gap-4">
           <button
             onClick={() => setActiveCategory("All")}
             className={`px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300 ${
@@ -103,7 +109,8 @@ const Projects = () => {
       <CardProjects data={filteredProjects} />
       <div className="mt-12 text-center">
         {/* di bikinin auto berapa project yang keliatan */}
-        <p className="text-muted-foreground text-sm mb-30">
+        <p data-aos="fade-up"
+              data-aos-duration="1000" data-aos-delay="100" className="text-muted-foreground text-sm mb-30">
           Showing {filteredProjects.length} of {projects.length} projects
         </p>
       </div>

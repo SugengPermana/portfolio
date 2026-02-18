@@ -103,13 +103,15 @@ const CvResume = () => {
     <div>
       <div className="mb-20">
         {/* education */}
-        <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
+        <div data-aos="fade-up"
+              data-aos-duration="1000" data-aos-delay="100" className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
           <h3 className="text-2xl md:text-3xl font-bold mb-8 text-primary border-b border-primary/20 pb-4">
             My Education
           </h3>
         </div>
         {/* education entries */}
-        <div className="flex flex-col space-y-6">
+        <div data-aos="fade-up"
+              data-aos-duration="1000" data-aos-delay="100" className="flex flex-col space-y-6">
           {educationData.map((edu, index) => (
             <div key={index}>
               {index > 0 && <div className="h-px bg-white/50 mx-2 mb-6"></div>}
@@ -149,12 +151,14 @@ const CvResume = () => {
       </div>
       <div className="mb-20">
         {/* experience */}
-        <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
+        <div data-aos="fade-up"
+              data-aos-duration="1000" data-aos-delay="200" className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
           <h3 className="text-2xl md:text-3xl font-bold mb-8 text-primary border-b border-primary/20 pb-4">
             My Experience
           </h3>
         </div>
-        <div className="flex flex-col space-y-6">
+        <div data-aos="fade-up"
+              data-aos-duration="1000" data-aos-delay="200" className="flex flex-col space-y-6">
           {experienceData.map((exp, index) => (
             <div
               key={index}
