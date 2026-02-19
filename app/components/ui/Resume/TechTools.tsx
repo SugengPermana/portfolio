@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { techTools } from "../../lib/data";
+import { techTools } from "../../../lib/data";
 
 const TechTools = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);

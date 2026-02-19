@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
-import { projects } from "../../lib/data";
+import { projects } from "../../../lib/data";
 
 const CardProjects = ({ data }: { data: typeof projects }) => {
   const [selectedProject, setSelectedProject] = useState<

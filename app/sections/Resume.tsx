@@ -1,6 +1,6 @@
 import { SectionTitle } from "../components/SectionTitle";
-import CvResume from "../components/ui/CvResume";
-import TechTools from "../components/ui/TechTools";
+import CvResume from "../components/ui/Resume/CvResume";
+import TechTools from "../components/ui/Resume/TechTools";
 import GradientText from "../components/ui/GradientText";
 
 const Resume = () => {

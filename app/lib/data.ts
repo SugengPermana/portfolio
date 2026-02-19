@@ -184,3 +184,60 @@ export const techTools = [
     color: "#4479A1",
   },
 ];
+
+export interface Certificate {
+  title: string;
+  image: string;
+  description: string;
+  date: string;
+  learned: string[];
+  issuer?: string;
+}
+
+export const certificates: Certificate[] = [
+  {
+    title: "Complete Web Development Bootcamp",
+    image: "/green.png",
+    description:
+      "Comprehensive course covering HTML, CSS, JavaScript, React, Node.js, and modern web development practices.",
+    date: "January 2024",
+    learned: [
+      "Frontend development with React and Next.js",
+      "Backend development with Node.js and Express",
+      "Database management with MongoDB and MySQL",
+      "RESTful API design and implementation",
+      "Deployment and DevOps practices",
+    ],
+    issuer: "Online Learning Platform",
+  },
+  {
+    title: "Advanced JavaScript & TypeScript",
+    image: "/lambo.jpg",
+    description:
+      "Deep dive into modern JavaScript features, TypeScript type system, and advanced programming patterns.",
+    date: "March 2024",
+    learned: [
+      "ES6+ features and modern JavaScript syntax",
+      "TypeScript type system and generics",
+      "Async/await and Promises",
+      "Design patterns and best practices",
+      "Performance optimization techniques",
+    ],
+    issuer: "Tech Academy",
+  },
+  {
+    title: "UI/UX Design Fundamentals",
+    image: "/green.png",
+    description:
+      "Learn the principles of user interface and user experience design, including wireframing, prototyping, and design systems.",
+    date: "May 2024",
+    learned: [
+      "Design thinking and user research",
+      "Wireframing and prototyping with Figma",
+      "Color theory and typography",
+      "Responsive design principles",
+      "Accessibility and inclusive design",
+    ],
+    issuer: "Design Institute",
+  },
+];
