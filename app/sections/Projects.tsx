@@ -128,10 +128,10 @@ const Projects = () => {
             data-aos-delay="300"
             className="text-muted-foreground max-w-xl mx-auto mb-8 text-center"
           >
-            A collection of my best work in website development and graphic
-            design.
+            A collection of my best work in web development, graphic design, and certificates I have earned.
           </p>
         </div>
+        {/* fitur search */}
         <div
           data-aos="fade-up"
           data-aos-duration="1000"
@@ -148,6 +148,7 @@ const Projects = () => {
           >
             All Projects
           </button>
+          {/*  ganti web dev*/}
           <button
             onClick={() => setActiveCategory("Web Dev")}
             className={`px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300 ${
@@ -174,6 +175,7 @@ const Projects = () => {
             </span>
             Web Dev
           </button>
+          {/* ganti Design App */}
           <button
             onClick={() => setActiveCategory("Design App")}
             className={`px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300 ${
@@ -201,6 +203,7 @@ const Projects = () => {
             </span>
             Design App
           </button>
+          {/* ganti Certificares */}
           <button
             onClick={() => setActiveCategory("Certificates")}
             className={`px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 border shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300 ${

@@ -14,96 +14,6 @@ import {
   IconBrandMysql,
 } from "@tabler/icons-react";
 
-export const projects = [
-  {
-    title: "Grenesia",
-    description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/green.png",
-    tags: ["html", "css", "Javascript"],
-    links: {
-      code: "https://github.com/SugengPermana",
-      demo: "",
-    },
-    category: "Web Dev",
-  },
-  {
-    title: "Grenesia",
-    description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/green.png",
-    tags: ["html", "css", "Javascript"],
-    links: {
-      code: "https://github.com/SugengPermana",
-      demo: "",
-    },
-    category: "Web Dev",
-  },
-  {
-    title: "Grenesia",
-    description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/green.png",
-    tags: ["html", "css", "Javascript"],
-    links: {
-      code: "https://github.com/SugengPermana",
-      demo: "",
-    },
-    category: "Web Dev",
-  },
-  {
-    title: "Grenesia",
-    description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/lambo.jpg",
-    tags: ["html", "css", "Javascript"],
-    links: {
-      design: "#", // Placeholder for design link
-    },
-    isDesign: true,
-    category: "Design App",
-  },
-  {
-    title: "Grenesia",
-    description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/lambo.jpg",
-    tags: ["html", "css", "Javascript"],
-    links: {
-      design: "#", // Placeholder for design link
-    },
-    isDesign: true,
-    category: "Design App",
-  },
-  {
-    title: "Grenesia",
-    description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/green.png",
-    tags: ["html", "css", "Javascript"],
-    links: {
-      code: "https://github.com/SugengPermana",
-      demo: "",
-    },
-    category: "Web Dev",
-  },
-];
-
-export const stats = [
-  {
-    value: "2+",
-    label: "Fun Clients",
-  },
-  {
-    value: "10+",
-    label: "Projects",
-  },
-  {
-    value: "1+",
-    label: "Years Exp",
-  },
-];
-
 export const socialLinks = [
   {
     title: "Instagram",
@@ -239,5 +149,95 @@ export const certificates: Certificate[] = [
       "Accessibility and inclusive design",
     ],
     issuer: "Design Institute",
+  },
+];
+
+export const projects = [
+  {
+    title: "Grenesia",
+    description:
+      "My friend and I created a website that can display Geographic Information System.",
+    image: "/green.png",
+    tags: ["html", "css", "Javascript"],
+    links: {
+      code: "https://github.com/SugengPermana",
+      demo: "",
+    },
+    category: "Web Dev",
+  },
+  {
+    title: "Grenesia",
+    description:
+      "My friend and I created a website that can display Geographic Information System.",
+    image: "/green.png",
+    tags: ["html", "css", "Javascript"],
+    links: {
+      code: "https://github.com/SugengPermana",
+      demo: "",
+    },
+    category: "Web Dev",
+  },
+  {
+    title: "Grenesia",
+    description:
+      "My friend and I created a website that can display Geographic Information System.",
+    image: "/green.png",
+    tags: ["html", "css", "Javascript"],
+    links: {
+      code: "https://github.com/SugengPermana",
+      demo: "",
+    },
+    category: "Web Dev",
+  },
+  {
+    title: "Grenesia",
+    description:
+      "My friend and I created a website that can display Geographic Information System.",
+    image: "/lambo.jpg",
+    tags: ["html", "css", "Javascript"],
+    links: {
+      design: "#", // Placeholder for design link
+    },
+    isDesign: true,
+    category: "Design App",
+  },
+  {
+    title: "Grenesia",
+    description:
+      "My friend and I created a website that can display Geographic Information System.",
+    image: "/lambo.jpg",
+    tags: ["html", "css", "Javascript"],
+    links: {
+      design: "#", // Placeholder for design link
+    },
+    isDesign: true,
+    category: "Design App",
+  },
+  {
+    title: "Grenesia",
+    description:
+      "My friend and I created a website that can display Geographic Information System.",
+    image: "/green.png",
+    tags: ["html", "css", "Javascript"],
+    links: {
+      code: "https://github.com/SugengPermana",
+      demo: "",
+    },
+    category: "Web Dev",
+  },
+];
+
+export const stats = [
+  {
+    value: "2+",
+    label: "Fun Clients",
+  },
+  {
+    value: "10+",
+    label: "Projects",
+  },
+  {
+    value: "1+",
+    label: "Years Exp",
   },
 ];

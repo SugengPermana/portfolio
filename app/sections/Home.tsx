@@ -12,8 +12,7 @@ const Home = () => {
       
       <div className="font-chakra w-full max-w-5xl mx-auto pb-10 px-4 flex flex-col items-center justify-center text-center relative z-10 mb-15 md:mb-20 md:pt-20 lg:pt-15 lg:mb-5">
       
-      <Meteors />
-
+   
         <div className="mb-6">
           <SectionTitle text="No Coding, No Rich" />
         </div>
