@@ -60,7 +60,7 @@ const About = () => {
                   </div>
 
                   {/* Profile Image */}
-                  <div className="mt-6 mb-4 w-40 h-40 rounded-2xl p-[2px] bg-linear-to-br from-purple-500 via-cyan-500 to-purple-400 shadow-lg shadow-purple-500/30">
+                  <div className="mt-6 mb-4 w-40 h-40 rounded-2xl p-0.5 bg-linear-to-br from-purple-500 via-cyan-500 to-purple-400 shadow-lg shadow-purple-500/30">
                     <div className="w-full h-full rounded-[14px] overflow-hidden bg-gray-900">
                       <Image
                         src="/new.png"
@@ -134,10 +134,10 @@ const About = () => {
                   </span>
 
                   {/* line 2 rotating text */}
-                  <div className="flex items-center justify-center md:justify-start gap-2 text-lg sm:text-xl md:text-2xl text-primary min-h-[10px] md:min-h-[10px] font-semibold">
+                  <div className="flex items-center justify-center md:justify-start gap-2 text-lg sm:text-xl md:text-2xl text-primary min-h-2.5 md:min-h-2.5 font-semibold">
                     <span>I Created</span>
 
-                    <div className="flex items-center justify-center min-w-[140px] md:min-w-[180px]">
+                    <div className="flex items-center justify-center min-w-35 md:min-w-45">
                       <RotatingText
                         texts={[
                           "Landing Page",
@@ -185,7 +185,7 @@ const About = () => {
                   {stats.map((stat, index) => (
                     <div
                       key={index}
-                      className="group flex-1 min-w-[110px] max-w-[160px] px-5 py-4 rounded-2xl bg-card border border-border text-center"
+                      className="group flex-1 min-w-27.5 max-w-40 px-5 py-4 rounded-2xl bg-card border border-border text-center"
                     >
                       <span className="text-3xl md:text-4xl font-bold block mb-1">
                         {stat.value}
@@ -387,7 +387,7 @@ const About = () => {
                         <Link
                           data-aos="fade-in"
                           data-aos-duration="1000"
-                          href=""
+                          href="#contact"
                           className="w-full mt-6 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-bold text-sm hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 border border-primary"
                         >
                           <span>Send Message</span>

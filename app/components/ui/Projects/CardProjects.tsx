@@ -162,6 +162,7 @@ const CardProjects = ({ data }: { data: typeof projects }) => {
           >
             {/* Close button */}
             <button
+            title="close"
               onClick={closeModal}
               className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/50 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
             >

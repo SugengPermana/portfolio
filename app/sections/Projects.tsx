@@ -257,7 +257,7 @@ const Projects = () => {
               className="group relative rounded-2xl overflow-hidden cursor-pointer border border-white/10 bg-neutral-900 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-primary/20"
             >
               {/* Full Image Certificate */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden">
+              <div className="relative w-full aspect-4/3 overflow-hidden">
                 <Image
                   src={certificate.image}
                   alt={certificate.title}
@@ -323,7 +323,7 @@ const Projects = () => {
       {/* ====== Certificate Detail Modal ====== */}
       {selectedCertificate && (
         <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 animate-in fade-in duration-200"
+          className="fixed inset-0 z-9999 flex items-center justify-center p-4 animate-in fade-in duration-200"
           onClick={closeCertificateModal}
         >
           {/* Backdrop */}
@@ -336,6 +336,7 @@ const Projects = () => {
           >
             {/* Close button */}
             <button
+              title="close certificate detail"
               onClick={closeCertificateModal}
               className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/50 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
             >

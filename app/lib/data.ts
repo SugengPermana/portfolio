@@ -154,14 +154,26 @@ export const certificates: Certificate[] = [
 
 export const projects = [
   {
-    title: "Grenesia",
+    title: "Bedakin",
     description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/green.png",
-    tags: ["html", "css", "Javascript"],
+      "I developed a marketplace-style website that enables users to sell and purchase service-based products. Each product includes detailed information, and users can interact by leaving comments and submitting reviews based on their experience. These features help build trust and transparency between buyers and sellers. The platform focuses on usability, allowing users to easily explore products, share feedback, and engage within the marketplace environment.",
+    image: "/bedakin.png",
+    tags: ["react", "tailwind", "nodejs", "express", "neonDB"],
     links: {
-      code: "https://github.com/SugengPermana",
-      demo: "",
+      code: "https://github.com/SugengPermana/Bedakin",
+      demo: "https://github.com/SugengPermana/Bedakin",
+    },
+    category: "Web Dev",
+  },
+  {
+    title: "Belanja",
+    description:
+      " I developed an e-commerce website called Belanja.com that allows users to browse and purchase products through a user-friendly frontend interface. Customers can explore product listings, view detailed product information, and complete purchases seamlessly. The platform focuses on providing a smooth and responsive shopping experience for users.",
+    image: "/belanja.png",
+    tags: ["html", "css", "javascript", "nodejs"],
+    links: {
+      code: "https://github.com/SugengPermana/Belanja.com",
+      demo: "https://sugengpermana.github.io/Belanja.com/",
     },
     category: "Web Dev",
   },
@@ -172,35 +184,12 @@ export const projects = [
     image: "/green.png",
     tags: ["html", "css", "Javascript"],
     links: {
-      code: "https://github.com/SugengPermana",
-      demo: "",
+      code: "https://github.com/SugengPermana/Belanja.com",
+      demo: "https://sugengpermana.github.io/Belanja.com/",
     },
     category: "Web Dev",
   },
-  {
-    title: "Grenesia",
-    description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/green.png",
-    tags: ["html", "css", "Javascript"],
-    links: {
-      code: "https://github.com/SugengPermana",
-      demo: "",
-    },
-    category: "Web Dev",
-  },
-  {
-    title: "Grenesia",
-    description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/lambo.jpg",
-    tags: ["html", "css", "Javascript"],
-    links: {
-      design: "#", // Placeholder for design link
-    },
-    isDesign: true,
-    category: "Design App",
-  },
+  
   {
     title: "Grenesia",
     description:
