@@ -158,7 +158,7 @@ export const projects = [
     description:
       "I developed a marketplace-style website that enables users to sell and purchase service-based products. Each product includes detailed information, and users can interact by leaving comments and submitting reviews based on their experience. These features help build trust and transparency between buyers and sellers. The platform focuses on usability, allowing users to easily explore products, share feedback, and engage within the marketplace environment.",
     image: "/bedakin.png",
-    tags: ["react", "tailwind", "nodejs", "express", "neonDB"],
+    tags: ["react", "tailwind", "nodejs", "express", "neonDB", "typescript"],
     links: {
       code: "https://github.com/SugengPermana/Bedakin",
       demo: "https://github.com/SugengPermana/Bedakin",
@@ -169,7 +169,7 @@ export const projects = [
     title: "Belanja",
     description:
       " I developed an e-commerce website called Belanja.com that allows users to browse and purchase products through a user-friendly frontend interface. Customers can explore product listings, view detailed product information, and complete purchases seamlessly. The platform focuses on providing a smooth and responsive shopping experience for users.",
-    image: "/belanja.png",
+    image: "/belanja_com.png",
     tags: ["html", "css", "javascript", "nodejs"],
     links: {
       code: "https://github.com/SugengPermana/Belanja.com",
@@ -178,42 +178,54 @@ export const projects = [
     category: "Web Dev",
   },
   {
-    title: "Grenesia",
+    title: "VillaPlus",
     description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/green.png",
-    tags: ["html", "css", "Javascript"],
+      "I developed a website called Villa Plus that allows users to explore and view villa recommendations. The platform provides curated villa listings with detailed information to help users find suitable accommodation based on their preferences. The website is designed with a clean and user-friendly interface to ensure a smooth browsing experience.",
+    image: "/villa_plus.png",
+    tags: ["next js", "react", "tailwind", "node js", "typescript"],
     links: {
-      code: "https://github.com/SugengPermana/Belanja.com",
-      demo: "https://sugengpermana.github.io/Belanja.com/",
+      code: "https://github.com/SugengPermana/villa-plus",
+      demo: "https://villa-plus.vercel.app/",
     },
     category: "Web Dev",
   },
   
   {
-    title: "Grenesia",
+    title: "Task Manajemen",
     description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/lambo.jpg",
+    "I developed a task management website that allows users to create and manage tasks efficiently. Users can add tasks, track their progress, and organize their work in one centralized platform. The system is designed to help users stay organized and improve productivity through a simple and user-friendly interface.",
+    image: "/Task_manajemen.png",
     tags: ["html", "css", "Javascript"],
     links: {
-      design: "#", // Placeholder for design link
-    },
-    isDesign: true,
-    category: "Design App",
-  },
-  {
-    title: "Grenesia",
-    description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/green.png",
-    tags: ["html", "css", "Javascript"],
-    links: {
-      code: "https://github.com/SugengPermana",
-      demo: "",
+      code: "https://github.com/SugengPermana/Task_Manajemen",
+      demo: "https://task-manajemen.vercel.app/",
     },
     category: "Web Dev",
   },
+  {
+    title: "Portfolio V1",
+    description:
+    "I created a personal portfolio website (Version 1) to display my projects, development progress, and professional background. The platform highlights my work, technical skills, and experiences, providing a clear overview of my capabilities as a web developer. The website is designed with a modern and responsive interface to ensure a smooth user experience.",
+    image: "/portfolio-1.png",
+    tags: ["react", "javascript", "tailwind"],
+    links: {
+      code: "https://github.com/SugengPermana/Portofolio_SugengPermana",
+      demo: "https://sugengpermana.vercel.app/",
+    },
+    category: "Web Dev",
+  },
+  // {
+  //   title: "Grenesia",
+  //   description:
+  //     "My friend and I created a website that can display Geographic Information System.",
+  //   image: "/lambo.jpg",
+  //   tags: ["html", "css", "Javascript"],
+  //   links: {
+  //     design: "#", // Placeholder for design link
+  //   },
+  //   isDesign: true,
+  //   category: "Design App",
+  // },
 ];
 
 export const stats = [
