@@ -106,50 +106,136 @@ export interface Certificate {
 
 export const certificates: Certificate[] = [
   {
-    title: "Complete Web Development Bootcamp",
-    image: "/green.png",
+    title: "Memulai Pemograman Dengan Python",
+    image: "/memulai_python.jpg",
     description:
-      "Comprehensive course covering HTML, CSS, JavaScript, React, Node.js, and modern web development practices.",
-    date: "January 2024",
+      "",
+    date: "Mei 2025",
     learned: [
-      "Frontend development with React and Next.js",
-      "Backend development with Node.js and Express",
-      "Database management with MongoDB and MySQL",
-      "RESTful API design and implementation",
-      "Deployment and DevOps practices",
+      "belajar basic if condition, numbering, classess",
     ],
-    issuer: "Online Learning Platform",
+    issuer: "dicoding",
   },
   {
-    title: "Advanced JavaScript & TypeScript",
-    image: "/lambo.jpg",
+    title: "Belajar Dasar pemograman Javascript",
+    image: "/javascript.png",
     description:
-      "Deep dive into modern JavaScript features, TypeScript type system, and advanced programming patterns.",
-    date: "March 2024",
+      "",
+    date: " juli 2025",
     learned: [
       "ES6+ features and modern JavaScript syntax",
-      "TypeScript type system and generics",
       "Async/await and Promises",
       "Design patterns and best practices",
       "Performance optimization techniques",
+      "OOP"
     ],
-    issuer: "Tech Academy",
+    issuer: "dicoding",
   },
   {
-    title: "UI/UX Design Fundamentals",
-    image: "/green.png",
+    title: "Ai Praktis Untuk Produktivitas",
+    image: "/ai-produk.jpg",
     description:
-      "Learn the principles of user interface and user experience design, including wireframing, prototyping, and design systems.",
-    date: "May 2024",
+    "",
+    date: "juli 2025",
     learned: [
-      "Design thinking and user research",
-      "Wireframing and prototyping with Figma",
-      "Color theory and typography",
-      "Responsive design principles",
-      "Accessibility and inclusive design",
+      "belajar ai untuk productivitas setiap hari",
+      "mempelajari dasar dasar ai",
+      "belajar membuat promnt yang di mengerti ai",
     ],
-    issuer: "Design Institute",
+    issuer: "dicoding",
   },
+  {
+    title: "Belajar Back end pemula dengan javascript",
+    image: "/backend.png",
+    description:
+      "",
+    date: "agustus 2025",
+    learned: [
+      "Backend development dengan Node.js dan Express",
+      "RESTful API design dan implementation",
+    ],
+    issuer: "dicoding",
+  },
+  {
+    title: "Belajar Dasar Cloud & Aws",
+    image: "/cloud.png",
+    description:
+      "",
+    date: "agustus 2025",
+    learned: [
+      "basic deploy with cloud dan aws",
+      "mempelajari cloud dan aws menggunakan ai",
+    ],
+    issuer: "diconding",
+  },
+  {
+    title: "Fundamental Junior Web Developer",
+    image: "/junior.jpg",
+    description:
+      "",
+    date: "agustus 2025",
+    learned: [
+      "belajar basic best Practice",
+      "mempelajari karir ke depan nya bagi seornag web developer",
+      "mempelajari analogi seorang web developer seperti apa "
+    ],
+    issuer: "komdigi",
+  },
+  {
+    title: "introduction data science with R",
+    image: "/intro-R.jpg",
+    description:
+      "",
+    date: "agustus 2025",
+    learned: [
+      "mempelajari konsep bahasa R",
+      "belajar bagaimana cara kerja R",
+    ],
+    issuer: "dicoding",
+  },
+  {
+    title: "R For data Science",
+    image: "/R-data.jpg",
+    description:
+      "",
+    date: "agustus 2025",
+    learned: [
+      "Mempelajari serangan apa yang akan terjadi",
+      "belajar konsep dari cybersecurity",
+      "belajar melindungi diri dari serangan sosial enginering  "
+    ],
+    issuer: "DQLab",
+  },
+  {
+    title: "Guide Learn R With Ai ",
+    image: "/ai-R.jpg",
+    description:
+      "",
+    date: "september 2025",
+    learned: [
+      "Mempelajari serangan apa yang akan terjadi",
+      "belajar konsep dari cybersecurity",
+      "belajar melindungi diri dari serangan sosial enginering  "
+    ],
+    issuer: "dicoding",
+  },
+  {
+    title: "Introduction to cybersecurity",
+    image: "/cybersecurity.jpg",
+    description:
+      "",
+    date: "september 2025",
+    learned: [
+      "Mempelajari serangan apa yang akan terjadi",
+      "belajar konsep dari cybersecurity",
+      "belajar melindungi diri dari serangan sosial enginering  "
+    ],
+    issuer: "dicoding",
+  },
+  
+  
+  
+  
 ];
 
 export const projects = [
@@ -214,18 +300,19 @@ export const projects = [
     },
     category: "Web Dev",
   },
-  // {
-  //   title: "Grenesia",
-  //   description:
-  //     "My friend and I created a website that can display Geographic Information System.",
-  //   image: "/lambo.jpg",
-  //   tags: ["html", "css", "Javascript"],
-  //   links: {
-  //     design: "#", // Placeholder for design link
-  //   },
-  //   isDesign: true,
-  //   category: "Design App",
-  // },
+  
+  {
+    title: "Grenesia",
+    description:
+      "My friend and I created a website that can display Geographic Information System.",
+    image: "/lambo.jpg",
+    tags: ["html", "css", "Javascript"],
+    links: {
+      design: "#", // Placeholder for design link
+    },
+    isDesign: true,
+    category: "Design App",
+  },
 ];
 
 export const stats = [
@@ -234,7 +321,7 @@ export const stats = [
     label: "Fun Clients",
   },
   {
-    value: "10+",
+    value: "4+",
     label: "Projects",
   },
   {
