@@ -163,7 +163,7 @@ export const certificates: Certificate[] = [
       "",
     date: "agustus 2025",
     learned: [
-      "basic deploy with cloud dan aws",
+      "basic konsep cloud dan aws",
       "mempelajari cloud dan aws menggunakan ai",
     ],
     issuer: "diconding",
@@ -191,7 +191,7 @@ export const certificates: Certificate[] = [
       "mempelajari konsep bahasa R",
       "belajar bagaimana cara kerja R",
     ],
-    issuer: "dicoding",
+    issuer: "DQlab",
   },
   {
     title: "R For data Science",
@@ -200,9 +200,8 @@ export const certificates: Certificate[] = [
       "",
     date: "agustus 2025",
     learned: [
-      "Mempelajari serangan apa yang akan terjadi",
-      "belajar konsep dari cybersecurity",
-      "belajar melindungi diri dari serangan sosial enginering  "
+      "belajar basic class R",
+      "belajar menggunakan R"
     ],
     issuer: "DQLab",
   },
@@ -217,7 +216,7 @@ export const certificates: Certificate[] = [
       "belajar konsep dari cybersecurity",
       "belajar melindungi diri dari serangan sosial enginering  "
     ],
-    issuer: "dicoding",
+    issuer: "DQlab",
   },
   {
     title: "Introduction to cybersecurity",
@@ -230,12 +229,9 @@ export const certificates: Certificate[] = [
       "belajar konsep dari cybersecurity",
       "belajar melindungi diri dari serangan sosial enginering  "
     ],
-    issuer: "dicoding",
+    issuer: "Networking Academy",
   },
-  
-  
-  
-  
+
 ];
 
 export const projects = [

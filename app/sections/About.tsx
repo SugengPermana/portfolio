@@ -205,7 +205,7 @@ const About = () => {
               className="flex flex-wrap justify-center gap-6 md:gap-12 mt-12 py-8 px-4"
             >
               {/* introduction sections */}
-              <div className="font-poppins grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 pt-30">
+              <div className="font-poppins gap-16 mb-20 pt-30 md:px-30">
                 <div className="space-y-8">
                   <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
                     <div>
@@ -225,196 +225,32 @@ const About = () => {
                       <p
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6"
+                        className="text-xs uppercase tracking-[0.3em] text-foreground mb-6"
                       >
-                        Who am I?
+                        Siapa gue?
                       </p>
                       <div
                         data-aos="fade-up"
                         data-aos-duration="1500"
-                        className="space-y-6 text-muted-foreground text-lg leading-relaxed"
+                        className="space-y-4 text-muted-foreground text-md "
                       >
-                        <p>
-                          I'm a passionate web developer with a knack for
-                          building engaging and user-friendly digital
-                          experiences. I specialize in modern web technologies
-                          and am always eager to learn new things.
+                        {/*perkenalan gw*/}
+                        <p> 
+                        Halo! Gua Sugeng, seorang Frontend sekaligus Backend Developer yang berbasis di Indonesia. Gua suka banget ngulik AI dan selalu penasaran gimana sesuatu bisa dibuat dari nol sampai bisa dipakai orang lain. Gua juga fokus bikin website yang modern, responsif, dan pastinya user-friendly.
                         </p>
+                        {/* tujuan gw ngapain */}
                         <p>
-                          My goal is to leverage my technical skills to create
-                          solutions that are not only functional but also
-                          visually <strong>appealing and intuitive</strong> to
-                          use.
+                        Tujuan gua adalah menggunakan skill teknis yang gua punya untuk membuat solusi yang tidak cuma berfungsi dengan baik, tapi juga punya tampilan yang menarik, nyaman dan mudah digunakan oleh siapa pun.
                         </p>
+                        {/* apa yang menjadi goal untuk 5 tahun ke depan di bidang ai ini */}
                         <p>
-                          Beyond development, I’m a lifelong learner who
-                          continuously explores emerging web technologies and
-                          AI-driven solutions to deliver innovative,
-                          future-ready experiences.
+                        Di waktu senggang, gua juga terus belajar dan eksplor teknologi web terbaru dan AI. Goal gua adalah terus berkembang dan bisa bikin produk digital yang modern, relevan, dan benar-benar bermanfaat. Kalau tertarik, yuk collab bareng gua.
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                {/* section form kontak */}
-                <div className="space-y-6">
-                  <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
-                    <div className="p-6 rounded-2xl">
-                      <div className="space-y-4">
-                        {/* Name */}
-                        <div
-                          data-aos="fade-up"
-                          data-aos-duration="1000"
-                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
-                        >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground text-background hover:bg-chart-5 hover:text-chart-4">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 24 24"
-                              fill="currentColor"
-                              className="w-5 h-5"
-                            >
-                              <path
-                                stroke="none"
-                                d="M0 0h24v24H0z"
-                                fill="none"
-                              />
-                              <path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" />
-                              <path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" />
-                            </svg>
-                          </div>
-                          <div className="overflow-hidden">
-                            <div className="text-xs text-muted-foreground">
-                              Name
-                            </div>
-                            <div className="text-foreground text-sm font-medium truncate">
-                              Sugeng Permana Desembry
-                            </div>
-                          </div>
-                        </div>
-                        {/* phone */}
-                        <div
-                          data-aos="fade-up"
-                          data-aos-duration="1000"
-                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
-                        >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground text-background hover:bg-chart-5 hover:text-chart-4">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 24 24"
-                              fill="currentColor"
-                              className="h-5 w-5"
-                            >
-                              <path
-                                stroke="none"
-                                d="M0 0h24v24H0z"
-                                fill="none"
-                              />
-                              <path d="M9 3a1 1 0 0 1 .877 .519l.051 .11l2 5a1 1 0 0 1 -.313 1.16l-.1 .068l-1.674 1.004l.063 .103a10 10 0 0 0 3.132 3.132l.102 .062l1.005 -1.672a1 1 0 0 1 1.113 -.453l.115 .039l5 2a1 1 0 0 1 .622 .807l.007 .121v4c0 1.657 -1.343 3 -3.06 2.998c-8.579 -.521 -15.418 -7.36 -15.94 -15.998a3 3 0 0 1 2.824 -2.995l.176 -.005h4z" />
-                            </svg>
-                          </div>
-                          <div className="overflow-hidden">
-                            <div className="text-xs text-muted-foreground">
-                              Phone
-                            </div>
-                            <div className="text-foreground text-sm font-medium truncate">
-                              +62 882-9989-8410
-                            </div>
-                          </div>
-                        </div>
-                        {/* email */}
-                        <div
-                          data-aos="fade-up"
-                          data-aos-duration="1000"
-                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
-                        >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground text-background hover:bg-chart-5 hover:text-chart-4">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 24 24"
-                              fill="currentColor"
-                              className="h-5 w-5"
-                            >
-                              <path
-                                stroke="none"
-                                d="M0 0h24v24H0z"
-                                fill="none"
-                              />
-                              <path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" />
-                              <path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" />
-                            </svg>
-                          </div>
-                          <div className="overflow-hidden">
-                            <div className="text-xs text-muted-foreground">
-                              Email
-                            </div>
-                            <div className="text-foreground text-sm font-medium truncate">
-                              sugengpermanad@gmail.com
-                            </div>
-                          </div>
-                        </div>
-                        {/* location */}
-                        <div
-                          data-aos="fade-up"
-                          data-aos-duration="1000"
-                          className="flex items-center gap-4 p-2 rounded-lg hover:bg-accent/10 transition-colors duration-300"
-                        >
-                          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground text-background hover:bg-chart-5 hover:text-chart-4">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 24 24"
-                              fill="currentColor"
-                              className="h-5 w-5"
-                            >
-                              <path
-                                stroke="none"
-                                d="M0 0h24v24H0z"
-                                fill="none"
-                              />
-                              <path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6" />
-                            </svg>
-                          </div>
-                          <div className="overflow-hidden">
-                            <div className="text-xs text-muted-foreground">
-                              Location
-                            </div>
-                            <div className="text-foreground text-sm font-medium truncate">
-                              Bogor, Indonesia
-                            </div>
-                          </div>
-                        </div>
-                        {/* send message */}
-                        <Link
-                          data-aos="fade-in"
-                          data-aos-duration="1000"
-                          href="#contact"
-                          className="w-full mt-6 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-bold text-sm hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 border border-primary"
-                        >
-                          <span>Send Message</span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            className="h-5 w-5
-                            "
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
-                            <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
-                            <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
-                            <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
-                            <path d="M5 3l-1 -1" />
-                            <path d="M4 7h-1" />
-                            <path d="M14 3l1 -1" />
-                            <path d="M15 6h1" />
-                          </svg>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
               {/* ===============CardAabout=================== */}
             </div>
           </div>

@@ -18,7 +18,7 @@ const Resume = () => {
           </div>
           <h2 data-aos="fade-up"
               data-aos-duration="1000" data-aos-delay="200" className="text-3xl md:text-5xl font-bold mb-6 mt-10 flex gap-1">
-            Education
+            Education &
             <GradientText colors={["#5227FF", "#FF9FFC", "#B19EEF"]}>
               Experience
             </GradientText>
