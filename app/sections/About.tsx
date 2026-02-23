@@ -91,7 +91,7 @@ const About = () => {
 
                   {/* Download CV */}
                   <Link
-                    href="/cv.pdf"
+                    href=""
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full mt-2 px-5 py-2.5 rounded-xl font-semibold text-sm
@@ -232,11 +232,11 @@ const About = () => {
                       <div
                         data-aos="fade-up"
                         data-aos-duration="1500"
-                        className="space-y-4 text-muted-foreground text-md "
+                        className="space-y-4 text-muted-foreground text-md mb-5 "
                       >
                         {/*perkenalan gw*/}
                         <p> 
-                        Halo! Gua Sugeng, seorang Frontend sekaligus Backend Developer yang berbasis di Indonesia. Gua suka banget ngulik AI dan selalu penasaran gimana sesuatu bisa dibuat dari nol sampai bisa dipakai orang lain. Gua juga fokus bikin website yang modern, responsif, dan pastinya user-friendly.
+                        Halo! Gua Sugeng, seorang Frontend sekaligus Backend Developer yang berlokasi di bogor. Gua suka banget ngulik AI dan selalu penasaran gimana sesuatu bisa dibuat dari nol sampai bisa dipakai orang lain. Gua juga fokus bikin website yang modern, responsif, dan pastinya user-friendly.
                         </p>
                         {/* tujuan gw ngapain */}
                         <p>
@@ -247,6 +247,19 @@ const About = () => {
                         Di waktu senggang, gua juga terus belajar dan eksplor teknologi web terbaru dan AI. Goal gua adalah terus berkembang dan bisa bikin produk digital yang modern, relevan, dan benar-benar bermanfaat. Kalau tertarik, yuk collab bareng gua.
                         </p>
                       </div>
+                      <div data-aos="fade-up"
+                        data-aos-duration="1000">
+                      <p className="uppercase text-foreground">
+                        apa yang gw bisa?
+                      </p>
+                      <p className="text-muted-foreground text-md mb-5">
+                        gue Berpengalaman menggunakan teknologi seperti React, Next.js, TypeScript, Node.js, dan berbagai tools modern untuk membangun aplikasi end-to-end.
+                      </p>
+                      <p className="text-muted-foreground text-md">
+                      ga cuma itu, gw juga Terampil dalam membuat REST API, mengelola database, mengoptimalkan performa aplikasi, serta mengimplementasikan fitur yang scapable dan dinamic untuk user
+                      </p>
+                      </div>
+                      
                     </div>
                   </div>
                 </div>

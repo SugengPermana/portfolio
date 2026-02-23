@@ -4,7 +4,6 @@ import LiveButton from "../components/ui/Home/live-button";
 import Cardhome from "../components/ui/Home/Cardhome";
 import TypingGlitch from "../components/ui/TypingGlitch";
 import GradientText from "../components/ui/GradientText";
-import { Meteors } from "../components/ui/meteors";
 
 const Home = () => {
   return (
@@ -14,7 +13,7 @@ const Home = () => {
       
    
         <div className="mb-6">
-          <SectionTitle text="No Coding, No Rich" />
+          <SectionTitle text="Coding is Progress, but I am lazy" />
         </div>
 
 

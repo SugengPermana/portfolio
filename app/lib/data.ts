@@ -238,7 +238,7 @@ export const projects = [
   {
     title: "Bedakin",
     description:
-      "I developed a marketplace-style website that enables users to sell and purchase service-based products. Each product includes detailed information, and users can interact by leaving comments and submitting reviews based on their experience. These features help build trust and transparency between buyers and sellers. The platform focuses on usability, allowing users to easily explore products, share feedback, and engage within the marketplace environment.",
+      "Saya mengembangkan website bergaya marketplace yang memungkinkan pengguna untuk menjual dan membeli produk berbasis layanan. Setiap produk dilengkapi dengan informasi detail, serta fitur komentar dan review yang memungkinkan pengguna berbagi pengalaman mereka. Fitur ini membantu membangun kepercayaan dan transparansi antara pembeli dan penjual. Platform ini dirancang dengan fokus pada kemudahan penggunaan, sehingga pengguna dapat menjelajahi layanan, memberikan feedback, dan berinteraksi dengan mudah di dalam sistem marketplace.",
     image: "/bedakin.png",
     tags: ["react", "tailwind", "nodejs", "express", "neonDB", "typescript"],
     links: {
@@ -250,7 +250,7 @@ export const projects = [
   {
     title: "Belanja",
     description:
-      " I developed an e-commerce website called Belanja.com that allows users to browse and purchase products through a user-friendly frontend interface. Customers can explore product listings, view detailed product information, and complete purchases seamlessly. The platform focuses on providing a smooth and responsive shopping experience for users.",
+      "Saya mengembangkan website e-commerce bernama Belanja.com yang memungkinkan pengguna untuk menjelajahi dan membeli produk melalui antarmuka frontend yang user-friendly. Pengguna dapat melihat daftar produk, membaca informasi detail, dan melakukan proses pembelian dengan lancar. Platform ini dirancang untuk memberikan pengalaman belanja yang responsif, cepat, dan nyaman bagi pengguna.",
     image: "/belanja_com.png",
     tags: ["html", "css", "javascript", "nodejs"],
     links: {
@@ -262,7 +262,7 @@ export const projects = [
   {
     title: "VillaPlus",
     description:
-      "I developed a website called Villa Plus that allows users to explore and view villa recommendations. The platform provides curated villa listings with detailed information to help users find suitable accommodation based on their preferences. The website is designed with a clean and user-friendly interface to ensure a smooth browsing experience.",
+      "Saya mengembangkan website bernama Villa Plus yang memungkinkan pengguna untuk menjelajahi dan melihat rekomendasi villa. Platform ini menyediakan daftar villa pilihan dengan informasi detail untuk membantu pengguna menemukan akomodasi yang sesuai dengan kebutuhan dan preferensi mereka. Website ini dirancang dengan tampilan yang bersih, modern, dan mudah digunakan untuk memastikan pengalaman browsing yang nyaman.",
     image: "/villa_plus.png",
     tags: ["next js", "react", "tailwind", "node js", "typescript"],
     links: {
@@ -275,7 +275,7 @@ export const projects = [
   {
     title: "Task Manajemen",
     description:
-    "I developed a task management website that allows users to create and manage tasks efficiently. Users can add tasks, track their progress, and organize their work in one centralized platform. The system is designed to help users stay organized and improve productivity through a simple and user-friendly interface.",
+    "Saya mengembangkan website manajemen tugas yang memungkinkan pengguna untuk membuat dan mengelola tugas secara efisien. Pengguna dapat menambahkan tugas, memantau progress, dan mengatur pekerjaan mereka dalam satu platform terpusat. Sistem ini dirancang untuk membantu meningkatkan produktivitas dengan antarmuka yang sederhana, intuitif, dan mudah digunakan.",
     image: "/Task_manajemen.png",
     tags: ["html", "css", "Javascript"],
     links: {
@@ -287,7 +287,7 @@ export const projects = [
   {
     title: "Portfolio V1",
     description:
-    "I created a personal portfolio website (Version 1) to display my projects, development progress, and professional background. The platform highlights my work, technical skills, and experiences, providing a clear overview of my capabilities as a web developer. The website is designed with a modern and responsive interface to ensure a smooth user experience.",
+    "Saya membuat website portfolio pribadi untuk menampilkan proyek, progress pembelajaran, dan latar belakang profesional saya sebagai developer. Platform ini menampilkan hasil karya, skill teknis, dan pengalaman yang saya miliki, sehingga memberikan gambaran yang jelas tentang kemampuan saya dalam pengembangan web. Website ini dirancang dengan tampilan modern, responsif, dan fokus pada pengalaman pengguna.",
     image: "/portfolio-1.png",
     tags: ["react", "javascript", "tailwind"],
     links: {
@@ -298,11 +298,11 @@ export const projects = [
   },
   
   {
-    title: "Grenesia",
+    title: "Sepatu Sneakers",
     description:
-      "My friend and I created a website that can display Geographic Information System.",
-    image: "/lambo.jpg",
-    tags: ["html", "css", "Javascript"],
+      "Saya membuat desain produk sepatu untuk kebutuhan promosi di media sosial. Desain ini berfokus pada tampilan yang clean dan modern, dengan produk sebagai fokus utama agar mudah menarik perhatian. Saya mengatur komposisi, tipografi, dan warna agar terlihat seimbang dan nyaman dilihat, serta menambahkan elemen seperti label, harga, dan call-to-action untuk mendukung kebutuhan promosi.",
+    image: "/shoes.png",
+    tags: ["figma"],
     links: {
       design: "#", // Placeholder for design link
     },
