@@ -4,17 +4,18 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const GREETINGS = [
-  "Halo",
-  "Hello",
-  "Bonjour",
-  "Hallo",
-  "你好",
-  "Здравствуйте",
-  "مرحبا",
-  "Ciao",
+  "Halo.",
+  "Hello.",
+  "hola.",
+  "Hallo.",
+  "Bonjour.",
+  "你好.",
+  "Здравствуйте.",
+  "مرحبا.",
+  "Ciao.",
 ] as const;
 
-type Step = "greeting" | "progress" | "done" | "exit";
+type Step = "greeting" | "progress" | "done";
 
 const GREETING_INTERVAL = 400; // ms
 const PROGRESS_DURATION = 400; // ms
@@ -81,33 +82,36 @@ const IntroAnimation: React.FC = () => {
     return () => window.cancelAnimationFrame(frameId);
   }, [visible, step]);
 
-  // After "Hello Sugeng", schedule exit
+  // After "Hello Sugeng", schedule exit (curtain slide up)
   useEffect(() => {
     if (!visible || step !== "done") return;
 
     const timeoutId = window.setTimeout(() => {
-      setStep("exit");
+      // Trigger AnimatePresence exit animation
       setVisible(false);
     }, FINAL_VISIBLE_DURATION);
 
     return () => window.clearTimeout(timeoutId);
   }, [visible, step]);
 
-  if (!visible && step === "exit") {
-    return null;
-  }
-
   return (
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed inset-0 z-9999 bg-black flex items-center justify-center"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          key="intro"
+          className="fixed inset-0 z-999 bg-black flex items-center justify-center"
+          initial={{ y: 0 }}
+          animate={{ y: 0 }}
+          exit={{
+            y: "-100vh",
+            scale: 0.98,
+            transition: {
+              duration: 1,
+              ease: [0.76, 0, 0.24, 1],
+            },
+          }}
         >
-          <div className="flex flex-col items-center justify-center space-y-6 text-center">
+          <div className="font-chakra flex flex-col items-center justify-center space-y-6 text-center">
             {step === "greeting" && (
               <motion.p
                 key={GREETINGS[greetingIndex]}
@@ -124,7 +128,7 @@ const IntroAnimation: React.FC = () => {
             {step === "progress" && (
               <div className="flex w-full max-w-xs flex-col items-center gap-4">
                 <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-300">
-                  Loading
+                  Process...
                 </p>
                 <div className="relative h-2 w-full overflow-hidden rounded-full bg-neutral-800">
                   <div
