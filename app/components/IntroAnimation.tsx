@@ -18,7 +18,7 @@ type Step = "greeting" | "progress" | "done" | "exit";
 
 const GREETING_INTERVAL = 400; // ms
 const PROGRESS_DURATION = 400; // ms
-const FINAL_VISIBLE_DURATION = 600; // ms
+const FINAL_VISIBLE_DURATION = 800; // ms
 
 const IntroAnimation: React.FC = () => {
   const [step, setStep] = useState<Step>("greeting");

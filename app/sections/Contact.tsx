@@ -13,23 +13,23 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const { name, email, message } = formData;
-    
+
     // Create mailto link with pre-filled information
     const subject = encodeURIComponent(`Contact from ${name}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     );
     const mailtoLink = `mailto:sugengpermanadesembry@gmail.com?subject=${subject}&body=${body}`;
-    
+
     // Open email client
     window.location.href = mailtoLink;
-    
+
     // Reset form
     setFormData({ name: "", email: "", message: "" });
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,

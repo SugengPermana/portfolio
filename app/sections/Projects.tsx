@@ -1,6 +1,8 @@
 "use client";
 import { SectionTitle } from "../components/SectionTitle";
-import CardProjects, { UnifiedItem } from "../components/ui/Projects/CardProjects";
+import CardProjects, {
+  UnifiedItem,
+} from "../components/ui/Projects/CardProjects";
 import { useState, useMemo } from "react";
 import { projects, certificates } from "../lib/data";
 import GradientText from "../components/ui/GradientText";
@@ -31,13 +33,13 @@ const Projects = () => {
     return allItems.filter(
       (item) =>
         item.type === "project" &&
-        (item.data as (typeof projects)[0]).category === activeCategory
+        (item.data as (typeof projects)[0]).category === activeCategory,
     );
   }, [activeCategory, allItems]);
 
   const visibleItems = useMemo(
     () => filteredItems.slice(0, visibleCount),
-    [filteredItems, visibleCount]
+    [filteredItems, visibleCount],
   );
   const hasMoreItems = visibleCount < filteredItems.length;
   const totalFiltered = filteredItems.length;
@@ -53,11 +55,7 @@ const Projects = () => {
     >
       <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
         <div className="text-center flex flex-col items-center justify-center ">
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="100"
-          >
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <SectionTitle text="Projects " className="mb-6" />
           </div>
           <h2

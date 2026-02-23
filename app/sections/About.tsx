@@ -235,35 +235,50 @@ const About = () => {
                         className="space-y-4 text-muted-foreground text-md mb-5 "
                       >
                         {/*perkenalan gw*/}
-                        <p> 
-                        Halo! Gua Sugeng, seorang Frontend sekaligus Backend Developer yang berlokasi di bogor. Gua suka banget ngulik AI dan selalu penasaran gimana sesuatu bisa dibuat dari nol sampai bisa dipakai orang lain. Gua juga fokus bikin website yang modern, responsif, dan pastinya user-friendly.
+                        <p>
+                          Halo! Gua Sugeng, seorang Frontend sekaligus Backend
+                          Developer yang berlokasi di bogor. Gua suka banget
+                          ngulik AI dan selalu penasaran gimana sesuatu bisa
+                          dibuat dari nol sampai bisa dipakai orang lain. Gua
+                          juga fokus bikin website yang modern, responsif, dan
+                          pastinya user-friendly.
                         </p>
                         {/* tujuan gw ngapain */}
                         <p>
-                        Tujuan gua adalah menggunakan skill teknis yang gua punya untuk membuat solusi yang tidak cuma berfungsi dengan baik, tapi juga punya tampilan yang menarik, nyaman dan mudah digunakan oleh siapa pun.
+                          Tujuan gua adalah menggunakan skill teknis yang gua
+                          punya untuk membuat solusi yang tidak cuma berfungsi
+                          dengan baik, tapi juga punya tampilan yang menarik,
+                          nyaman dan mudah digunakan oleh siapa pun.
                         </p>
                         {/* apa yang menjadi goal untuk 5 tahun ke depan di bidang ai ini */}
                         <p>
-                        Di waktu senggang, gua juga terus belajar dan eksplor teknologi web terbaru dan AI. Goal gua adalah terus berkembang dan bisa bikin produk digital yang modern, relevan, dan benar-benar bermanfaat. Kalau tertarik, yuk collab bareng gua.
+                          Di waktu senggang, gua juga terus belajar dan eksplor
+                          teknologi web terbaru dan AI. Goal gua adalah terus
+                          berkembang dan bisa bikin produk digital yang modern,
+                          relevan, dan benar-benar bermanfaat. Kalau tertarik,
+                          yuk collab bareng gua.
                         </p>
                       </div>
-                      <div data-aos="fade-up"
-                        data-aos-duration="1000">
-                      <p className="uppercase text-foreground">
-                        apa yang gw bisa?
-                      </p>
-                      <p className="text-muted-foreground text-md mb-5">
-                        gue Berpengalaman menggunakan teknologi seperti React, Next.js, TypeScript, Node.js, dan berbagai tools modern untuk membangun aplikasi end-to-end.
-                      </p>
-                      <p className="text-muted-foreground text-md">
-                      ga cuma itu, gw juga Terampil dalam membuat REST API, mengelola database, mengoptimalkan performa aplikasi, serta mengimplementasikan fitur yang scapable dan dinamic untuk user
-                      </p>
+                      <div data-aos="fade-up" data-aos-duration="1000">
+                        <p className="uppercase text-foreground">
+                          apa yang gw bisa?
+                        </p>
+                        <p className="text-muted-foreground text-md mb-5">
+                          gue Berpengalaman menggunakan teknologi seperti React,
+                          Next.js, TypeScript, Node.js, dan berbagai tools
+                          modern untuk membangun aplikasi end-to-end.
+                        </p>
+                        <p className="text-muted-foreground text-md">
+                          ga cuma itu, gw juga Terampil dalam membuat REST API,
+                          mengelola database, mengoptimalkan performa aplikasi,
+                          serta mengimplementasikan fitur yang scapable dan
+                          dinamic untuk user
+                        </p>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
-                </div>
+              </div>
               {/* ===============CardAabout=================== */}
             </div>
           </div>

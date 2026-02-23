@@ -42,7 +42,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <IntroAnimation />
+          {/* <IntroAnimation /> */}
           <CursorTrail />
           <Navbar />
           <AOSProvider>{children}</AOSProvider>

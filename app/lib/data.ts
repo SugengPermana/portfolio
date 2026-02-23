@@ -11,7 +11,7 @@ import {
   IconBrandTailwind,
   IconBrandFigma,
   IconBrandNodejs,
-  IconBrandMysql,
+  IconBrandPython,
 } from "@tabler/icons-react";
 
 export const socialLinks = [
@@ -88,10 +88,10 @@ export const techTools = [
     color: "#339933",
   },
   {
-    name: "My Sql",
-    icon: IconBrandMysql,
+    name: "python",
+    icon: IconBrandPython,
     progress: 75,
-    color: "#4479A1",
+    color: "#FFD43B",
   },
 ];
 

@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import React, { useEffect, useRef } from "react";
 
@@ -26,7 +26,7 @@ export const CursorTrail: React.FC = () => {
       y: 0,
       opacity: 0,
       scale: BASE_SCALE,
-    }))
+    })),
   );
   const rafIdRef = useRef<number | null>(null);
   const lastMoveTimeRef = useRef<number>(0);
@@ -69,8 +69,7 @@ export const CursorTrail: React.FC = () => {
 
         const t =
           FOLLOW_STRENGTH_HEAD -
-          ((FOLLOW_STRENGTH_HEAD - FOLLOW_STRENGTH_TAIL) *
-            i) /
+          ((FOLLOW_STRENGTH_HEAD - FOLLOW_STRENGTH_TAIL) * i) /
             Math.max(PARTICLE_COUNT - 1, 1);
 
         particle.x += (target.x - particle.x) * t;
@@ -100,7 +99,7 @@ export const CursorTrail: React.FC = () => {
 
         element.style.opacity = particle.opacity.toFixed(3);
         element.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${particle.scale.toFixed(
-          3
+          3,
         )})`;
       }
 
@@ -136,7 +135,7 @@ export const CursorTrail: React.FC = () => {
               style={{
                 opacity: 0,
                 filter: `drop-shadow(0 0 30px rgba(192,132,252,${depthOpacity.toFixed(
-                  2
+                  2,
                 )}))`,
               }}
             />
@@ -148,4 +147,3 @@ export const CursorTrail: React.FC = () => {
 };
 
 export default CursorTrail;
-
