@@ -5,6 +5,7 @@ import CursorTrail from "./components/CursorTrail";
 import AOSProvider from "./components/AOSProvider";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import IntroAnimation from "./components/IntroAnimation";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <IntroAnimation />
           <CursorTrail />
           <Navbar />
           <AOSProvider>{children}</AOSProvider>
