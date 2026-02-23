@@ -304,7 +304,7 @@ export const projects = [
     image: "/shoes.png",
     tags: ["figma"],
     links: {
-      design: "#", // Placeholder for design link
+      design: "/shoes.png", // Placeholder for design link
     },
     isDesign: true,
     category: "Design App",
