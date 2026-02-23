@@ -6,7 +6,7 @@ import Resume from "./sections/Resume";
 
 export default function Page() {
   return (
-    <main className="relative flex flex-col items-center px-4 pb-32">
+    <main className="relative flex flex-col items-center px-8 pb-32">
       <Home />
       <About />
       <Projects />

@@ -86,6 +86,7 @@ const Projects = () => {
           className="flex flex-wrap justify-center gap-4"
         >
           <button
+          title="All Item"
             onClick={() => {
               setActiveCategory("All");
               setVisibleCount(ITEMS_PER_PAGE);
