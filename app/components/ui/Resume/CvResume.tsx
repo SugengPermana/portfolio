@@ -1,38 +1,10 @@
 "use client";
-import { useState } from "react";
-
-const educationData = [
-  {
-    period: "2024 - Present",
-    major: "S1 Information Technology",
-    school: "Universitas Pamulang",
-    description:
-      "Currently I am studying at Universitas Pamulang, Information Technology Department, Informatics Engineering Study Program, 3nd Semester.",
-    hoverColor: "#003d7a",
-    iconType: "graduation" as const,
-  },
-  {
-    period: "2021 - 2024",
-    major: "Pariwisata & Perhotelan",
-    school: "SMK Laboratorium Indonesia",
-    description:
-      "I also graduated from SMK Laboratorium Indonesia majoring in Pariwisata & Perhotelan in this school I learn about public speaking and how to serve guests.",
-    hoverColor: "#006d3a",
-    iconType: "graduation" as const,
-  },
-];
-
-const experienceData = [
-  {
-    period: "2025 - Present",
-    role: "Freelance As Web Developer",
-    company: "EveryWhere",
-    description:
-      "I work as a freelance web developer, creating websites for clients and helping them with their web development needs.",
-    hoverColor: "#a600ff",
-    iconType: "briefcase" as const,
-  },
-];
+import { useEffect, useState } from "react";
+import {
+  resumeBadges,
+  resumeEducation,
+  resumeExperiences,
+} from "../../../lib/data";
 
 const SchoolIcon = ({
   type,
@@ -47,7 +19,7 @@ const SchoolIcon = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="w-12 h-12 shrink-0 rounded-xl border border-white/10 flex items-center justify-center transition-all duration-300 cursor-pointer"
+      className="w-12 h-12 shrink-0 rounded-xl border border-muted-foreground flex items-center justify-center transition-all duration-300 cursor-pointer"
       style={{
         backgroundColor: hovered ? `${hoverColor}20` : "rgba(255,255,255,0.05)",
         borderColor: hovered ? `${hoverColor}50` : "rgba(255,255,255,0.1)",
@@ -98,99 +70,357 @@ const SchoolIcon = ({
   );
 };
 
+const SuitcaseIcon = () => (
+  <div className="w-11 h-11 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 21l18 0" />
+      <path d="M9 6h6" />
+      <path d="M10 6l-.5 -2h5l-.5 2" />
+      <path d="M5 21v-11a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v11" />
+    </svg>
+  </div>
+);
+
+const BadgeIcon = () => (
+  <div className="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/40 flex items-center justify-center text-amber-400">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 3l2.1 2.1 2.9-.4-.4 2.9 2.1 2.1-2.1 2.1.4 2.9-2.9-.4L12 18l-2.1 2.1-2.9.4.4-2.9L5.3 12l2.1-2.1-.4-2.9 2.9.4z" />
+      <path d="M9 14l1.5-2L9 10.5" />
+      <path d="M15 14l-1.5-2L15 10.5" />
+      <path d="M10.5 11.5h3" />
+    </svg>
+  </div>
+);
+
+const SchoolBuildingIcon = () => (
+  <div className="w-10 h-10 rounded-2xl bg-blue-500/10 border border-blue-500/40 flex items-center justify-center text-blue-400">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 21h18" />
+      <path d="M5 21V9l7-4 7 4v12" />
+      <path d="M9 21v-6h6v6" />
+      <path d="M10 13h1" />
+      <path d="M13 13h1" />
+    </svg>
+  </div>
+);
+
 const CvResume = () => {
+  const [activeExperienceIndex, setActiveExperienceIndex] = useState(0);
+
+  useEffect(() => {
+    if (resumeExperiences.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setActiveExperienceIndex((prev) => (prev + 1) % resumeExperiences.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const activeExperience = resumeExperiences[activeExperienceIndex];
+
   return (
-    <div>
-      <div className="mb-20">
-        {/* education */}
-        <div data-aos="fade-up"
-              data-aos-duration="1000" data-aos-delay="100" className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-primary border-b border-primary/20 pb-4">
-            My Education
-          </h3>
-        </div>
-        {/* education entries */}
-        <div data-aos="fade-up"
-              data-aos-duration="1000" data-aos-delay="100" className="flex flex-col space-y-6">
-          {educationData.map((edu, index) => (
-            <div key={index}>
-              {index > 0 && <div className="h-px bg-white/50 mx-2 mb-6"></div>}
-              <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
-                <div className="flex flex-col md:grid md:grid-cols-[150px_auto_1fr] gap-4 md:gap-8 p-2">
-                  {/* tanggal */}
-                  <div className="text-gray-400 font-medium text-sm md:text-base pt-1">
-                    {edu.period}
-                  </div>
-                  {/* logo + jurusan dan universitas */}
-                  <div className="flex items-start gap-4">
-                    <SchoolIcon
-                      type={edu.iconType}
-                      hoverColor={edu.hoverColor}
-                    />
-                    <div className="flex flex-col">
-                      <h4 className="text-xl font-bold text-black dark:text-white">
-                        {edu.major}
-                      </h4>
-                      <span className="text-gray-400 text-sm mt-1">
-                        Studied at{" "}
-                        <span className="text-muted-foreground font-medium">
-                          {edu.school}
-                        </span>
-                      </span>
-                    </div>
-                  </div>
-                  {/* descripsi */}
-                  <div className="text-black dark:text-white text-sm leading-relaxed">
-                    {edu.description}
-                  </div>
-                </div>
+    <div className="space-y-20">
+      {/* EXPERIENCE - horizontal timeline with auto-rotate */}
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="100"
+        className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0"
+      >
+        {/* header + horizontal timeline with center dot */}
+        <div className="mb-2">
+          <div className="relative w-full py-8 md:py-10">
+            {/* timeline line — starts from button right edge to container right border */}
+            <div className="absolute left-12 md:left-40 lg:left-40 right-0 top-1/2 h-px bg-linear-to-r from-primary/50 via-primary/30 to-primary/10" />
+
+            {/* button icon on the left, sitting on the timeline */}
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 flex items-center gap-3">
+              <SuitcaseIcon />
+              <span className="hidden md:inline uppercase tracking-[0.25em] text-xs text-muted-foreground">
+                Experience
+              </span>
+            </div>
+
+            {/* period — above dot, raised higher */}
+            <div
+              className="absolute left-1/2 -translate-x-1/2 z-10 pointer-events-none"
+              style={{ top: "calc(50% - 2.5rem)" }}
+            >
+              <div className="text-xs md:text-sm font-medium tracking-wide text-primary/80 whitespace-nowrap">
+                {activeExperience.period}
               </div>
             </div>
-          ))}
+
+            {/* dot — centered exactly on timeline line */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+              <div className="relative flex items-center justify-center">
+                <div
+                  className="w-4 h-4 md:w-5 md:h-5 rounded-full border-2 border-primary bg-background"
+                  style={{
+                    boxShadow: `0 0 20px ${activeExperience.hoverColor}aa`,
+                  }}
+                />
+                <div className="absolute inset-0 animate-ping rounded-full bg-primary/20" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* carousel content, always centered under fixed dot */}
+        <div className="relative w-full max-w-3xl mx-auto mt-2 overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-out"
+            style={{
+              transform: `translateX(-${activeExperienceIndex * 100}%)`,
+            }}
+          >
+            {resumeExperiences.map((exp) => (
+              <div
+                key={exp.id}
+                className="w-full shrink-0 px-2 sm:px-4 flex justify-center"
+              >
+                <div className="w-full max-w-3xl rounded-2xl px-4 py-3 sm:px-6 sm:py-4 md:px-12 lg:px-20 md:py-6 text-center">
+                  <h4 className="text-base sm:text-lg md:text-2xl text-black dark:text-white mb-1">
+                    {exp.role}
+                  </h4>
+                  <p className="text-sm md:text-base text-muted-foreground mb-2 sm:mb-3">
+                    <span className="font-semibold">{exp.company}</span>
+                  </p>
+                  <p className="text-xs sm:text-sm text-black dark:text-white/90 leading-relaxed mb-2 sm:mb-3">
+                    {exp.description}
+                  </p>
+                  {exp.achievements && exp.achievements.length > 0 && (
+                    <ul className="text-xs md:text-sm text-muted-foreground space-y-1.5 text-left list-disc pl-4 sm:pl-5">
+                      {exp.achievements.map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* dots navigation under card */}
+        <div className="flex items-center justify-center gap-3 mt-4">
+          {resumeExperiences.map((exp, index) => {
+            const isActive = index === activeExperienceIndex;
+            return (
+              <button
+                key={exp.id}
+                type="button"
+                onClick={() => setActiveExperienceIndex(index)}
+                className="group relative"
+              >
+                <span
+                  className={`block rounded-full transition-all duration-300 ${
+                    isActive
+                      ? "w-4 h-4 bg-primary shadow-[0_0_12px_rgba(79,70,229,0.9)]"
+                      : "w-2.5 h-2.5 bg-muted-foreground/40 group-hover:bg-primary/60"
+                  }`}
+                />
+              </button>
+            );
+          })}
         </div>
       </div>
-      <div className="mb-20">
-        {/* experience */}
-        <div data-aos="fade-up"
-              data-aos-duration="1000" data-aos-delay="200" className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-primary border-b border-primary/20 pb-4">
-            My Experience
-          </h3>
-        </div>
-        <div data-aos="fade-up"
-              data-aos-duration="1000" data-aos-delay="200" className="flex flex-col space-y-6">
-          {experienceData.map((exp, index) => (
-            <div
-              key={index}
-              className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0"
-            >
-              <div className="flex flex-col md:grid md:grid-cols-[150px_auto_1fr] gap-4 md:gap-8 p-2">
-                {/* tanggal */}
-                <div className="text-gray-400 font-medium text-sm md:text-base pt-1">
-                  {exp.period}
-                </div>
-                {/* logo + role dan company */}
-                <div className="flex items-start gap-4">
-                  <SchoolIcon type={exp.iconType} hoverColor={exp.hoverColor} />
-                  <div className="flex flex-col">
-                    <h4 className="text-xl font-bold text-black dark:text-white">
-                      {exp.role}
-                    </h4>
-                    <span className="text-gray-400 text-sm mt-1">
-                      Work{" "}
-                      <span className="text-muted-foreground font-medium">
-                        {exp.company}
-                      </span>
-                    </span>
-                  </div>
-                </div>
-                {/* descripsi */}
-                <div className="text-black dark:text-white text-sm leading-relaxed">
-                  {exp.description}
-                </div>
-              </div>
+
+      {/* BADGES & EDUCATION - vertical timelines */}
+      <div className="grid md:grid-cols-2 gap-10 md:gap-12 mb-30">
+        {/* badges column */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <BadgeIcon />
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                Badges
+              </p>
             </div>
-          ))}
+          </div>
+
+          <div className="relative pl-6">
+            <div className="absolute left-1.75 top-0 bottom-0 w-px bg-linear-to-b from-amber-400/60 via-amber-400/20 to-transparent" />
+
+            <div className="space-y-0">
+              {resumeBadges.map((badge, index) => (
+                <div key={index} className="relative">
+                  {/* dot — centered on timeline line */}
+                  <div
+                    className="absolute -left-6 top-6 flex items-center justify-center"
+                    style={{ width: "0.875rem" }}
+                  >
+                    <div className="w-3 h-3 rounded-full bg-amber-400 shadow-[0_0_14px_rgba(251,191,36,0.8)]" />
+                  </div>
+
+                  {/* card */}
+                  <div className="flex-1 bg-white/5 dark:bg-black/25 border border-amber-400/30 rounded-2xl px-4 py-3 md:px-5 md:py-4">
+                    <p className="text-[11px] md:text-xs font-medium uppercase tracking-wide text-amber-300 mb-1">
+                      {badge.month}
+                    </p>
+                    <h4 className="text-sm md:text-base font-semibold text-black dark:text-white">
+                      {badge.title}
+                    </h4>
+                    <p className="text-xs md:text-sm text-muted-foreground mb-2">
+                      Issued by{" "}
+                      <span className="font-medium text-amber-200">
+                        {badge.issuer}
+                      </span>
+                    </p>
+                    <p className="text-xs md:text-sm text-black dark:text-white/90 mb-2">
+                      {badge.description}
+                    </p>
+                    <a
+                      href={badge.certificateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-[11px] md:text-xs font-medium text-amber-300 hover:text-amber-200"
+                    >
+                      View Badges
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+
+                  {/* separator line between cards */}
+                  {index < resumeBadges.length - 1 && (
+                    <div className="relative h-7">
+                      <div className="absolute left-[-1.1rem] top-0 bottom-0 flex items-center">
+                        <div className="w-80 h-px bg-amber-400/30" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* education column */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <SchoolBuildingIcon />
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                Education
+              </p>
+            </div>
+          </div>
+
+          <div className="relative pl-6">
+            <div className="absolute left-1.75 top-0 bottom-0 w-px bg-linear-to-b from-blue-400/60 via-blue-400/20 to-transparent" />
+
+            <div className="space-y-0">
+              {resumeEducation.map((edu, index) => (
+                <div key={index} className="relative">
+                  {/* dot — centered on timeline line */}
+                  <div
+                    className="absolute -left-6 top-6 flex items-center justify-center"
+                    style={{ width: "0.875rem" }}
+                  >
+                    <div className="w-3 h-3 rounded-full bg-blue-400 shadow-[0_0_14px_rgba(96,165,250,0.8)]" />
+                  </div>
+
+                  {/* card */}
+                  <div className="flex-1 bg-white/5 dark:bg-black/25 border border-blue-400/30 rounded-2xl px-4 py-3 md:px-5 md:py-4 flex flex-col gap-2">
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <p className="text-[11px] md:text-xs font-medium uppercase tracking-wide text-blue-300 mb-1">
+                          {edu.period}
+                        </p>
+                        <h4 className="text-sm md:text-base font-semibold text-black dark:text-white">
+                          {edu.major}
+                        </h4>
+                        <p className="text-xs md:text-sm text-muted-foreground">
+                          Studied at{" "}
+                          <span className="font-medium text-blue-200">
+                            {edu.school}
+                          </span>
+                        </p>
+                      </div>
+                      {edu.image && (
+                        <a
+                          href={edu.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden border border-white/10 shrink-0 hover:border-blue-300 transition-colors"
+                        >
+                          <img
+                            src={edu.image}
+                            alt={edu.school}
+                            className="w-full h-full object-cover"
+                          />
+                        </a>
+                      )}
+                    </div>
+
+                    <p className="text-xs md:text-sm text-black dark:text-white/90 leading-relaxed">
+                      {edu.description}
+                    </p>
+
+                    {edu.achievements && edu.achievements.length > 0 && (
+                      <ul className="list-disc pl-4 space-y-1 text-[11px] md:text-xs text-muted-foreground">
+                        {edu.achievements.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+
+                    <div className="pt-1">
+                      <a
+                        href={edu.learnMoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[11px] md:text-xs font-medium text-blue-300 hover:text-blue-200"
+                      >
+                        Learn more
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* separator line between cards */}
+                  {index < resumeEducation.length - 1 && (
+                    <div className="relative h-7">
+                      <div className="absolute left-[-1.1rem] top-0 bottom-0 flex items-center">
+                        <div className="w-80 h-px bg-blue-400/30" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
