@@ -14,6 +14,39 @@ import {
   IconBrandPython,
 } from "@tabler/icons-react";
 
+export interface ResumeEducation {
+  period: string;
+  major: string;
+  school: string;
+  description: string;
+  hoverColor: string;
+  iconType: "graduation";
+  image?: string;
+  website?: string;
+  learnMoreUrl?: string;
+  achievements?: string[];
+}
+
+export interface ResumeExperience {
+  id: string;
+  period: string;
+  role: string;
+  company: string;
+  description: string;
+  hoverColor: string;
+  iconType: "briefcase";
+  image?: string;
+  achievements?: string[];
+}
+
+export interface ResumeBadge {
+  month: string;
+  title: string;
+  issuer: string;
+  description: string;
+  certificateUrl: string;
+}
+
 export const socialLinks = [
   {
     title: "Instagram",
@@ -232,6 +265,94 @@ export const certificates: Certificate[] = [
     issuer: "Networking Academy",
   },
 
+];
+
+export const resumeEducation: ResumeEducation[] = [
+  {
+    period: "2024 - Present",
+    major: "S1 Information Technology",
+    school: "Universitas Pamulang",
+    description:
+      "Currently I am studying at Universitas Pamulang, Information Technology Department, Informatics Engineering Study Program, 3nd Semester.",
+    hoverColor: "#003d7a",
+    iconType: "graduation",
+    image: "/pamulang.png",
+    website: "https://unpam.ac.id/",
+    learnMoreUrl: "https://unpam.ac.id/",
+    achievements: [
+      "Maintained strong academic performance in core programming and computer science subjects.",
+      "Actively involved in campus tech communities and self-learning modern web technologies.",
+    ],
+  },
+  {
+    period: "2021 - 2024",
+    major: "Pariwisata & Perhotelan",
+    school: "SMK Laboratorium Indonesia",
+    description:
+      "I also graduated from SMK Laboratorium Indonesia majoring in Pariwisata & Perhotelan in this school I learn about public speaking and how to serve guests.",
+    hoverColor: "#006d3a",
+    iconType: "graduation",
+    image: "/kkgj.png",
+    website: "https://smklaboratoriumindonesia.sch.id/",
+    learnMoreUrl: "https://smklaboratoriumindonesia.sch.id/",
+    achievements: [
+      "Developed strong public speaking and customer service skills.",
+      "Participated in school events and hospitality-related activities.",
+    ],
+  },
+];
+
+export const resumeExperiences: ResumeExperience[] = [
+  {
+    id: "Freelance",
+    period: "2025 - Present",
+    role: "Freelance",
+    company: "Remote - Bogor",
+    description:
+      "I work as a freelance web developer, creating websites for clients and helping them with their web development needs.",
+    hoverColor: "#a600ff",
+    iconType: "briefcase",
+    image: "",
+    achievements: [
+      "Built responsive landing pages and company profiles using modern frontend stacks.",
+      "Collaborated with clients to translate business needs into usable web interfaces.",
+    ],
+  },
+  {
+    id: "magang",
+    period: "Feb - April 2023",
+    role: "Tour Guide",
+    company: "On Site - Museum Sejarah Jakarta",
+    description:
+      "selama 3 bulan gue ikut terlibat langsung dalam memandu wisatawan asing dan local,Tugas utama gue membantu pengunjung kalau mereka butuh informasi mengenai museum, sekaligus menjaga koleksi museum",
+    hoverColor: "#a600ff",
+    iconType: "briefcase",
+    image: "",
+    achievements: [
+      "Membantu pengunjung dengan ngasih informasi tentang ruangan dan koleksi yang ada di museum.",
+      "Ikut ngejaga koleksi museum dan memastikan area museum tetap tertata dengan baik",
+      "Menjadi pemandu tourist local dan asing selama 3 bulan magang"
+    ],
+  },
+];
+
+export const resumeBadges: ResumeBadge[] = [
+  {
+    month: "February 2025",
+    title: "Frontend Web Developer Badge",
+    issuer: "Online Course Platform",
+    description:
+      "Completed a comprehensive frontend course covering React, Tailwind CSS, and modern JavaScript best practices.",
+    certificateUrl: "#",
+  },
+  {
+    month: "December 2024",
+    title: "JavaScript Fundamentals Badge",
+    issuer: "Coding Bootcamp",
+    description:
+      "Strengthened JavaScript fundamentals including ES6+, asynchronous programming, and DOM manipulation.",
+    certificateUrl: "#",
+  },
 ];
 
 export const projects = [

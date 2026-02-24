@@ -19,7 +19,7 @@ const Resume = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="200"
-            className="text-3xl md:text-5xl font-bold mb-6 mt-10 flex gap-2"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 mt-10 flex gap-2"
           >
             Education &
             <GradientText colors={["#5227FF", "#FF9FFC", "#B19EEF"]}>
@@ -32,8 +32,8 @@ const Resume = () => {
             data-aos-delay="300"
             className="text-muted-foreground md:text-xl max-w-2xl mx-auto"
           >
-            Academic journey and professional experiences that shaped my
-            expertise.
+            Academic journey with badges and professional experiences that
+            shaped my expertise.
           </p>
         </div>
       </div>
