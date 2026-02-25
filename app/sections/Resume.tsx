@@ -36,7 +36,12 @@ const Resume = () => {
             shaped my expertise.
           </p>
           <div className="relative w-full py-8 md:py-10">
-            <div className="absolute left-0 right-0 top-1/2 h-1.25 bg-accent-foreground/40"></div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+              className="absolute left-0 right-0 top-1/2 h-1.25 bg-accent-foreground/40"
+            ></div>
           </div>
         </div>
       </div>

@@ -108,7 +108,7 @@ const BadgeIcon = () => (
 );
 
 const SchoolBuildingIcon = () => (
-  <div className="w-10 h-10 rounded-4xl border bg-primary/10 text-primary border-foreground flex items-center justify-center">
+  <div className="w-10 h-10 rounded-4xl border bg-accent text-primary border-foreground flex items-center justify-center">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="20"
@@ -256,7 +256,7 @@ const CvResume = () => {
           <div className="flex items-center gap-3 mb-6">
             <BadgeIcon />
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+              <p className="text-xs uppercase tracking-[0.25em] text-primary">
                 Badges
               </p>
             </div>
@@ -323,7 +323,7 @@ const CvResume = () => {
           <div className="flex items-center gap-3 mb-6">
             <SchoolBuildingIcon />
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+              <p className="text-xs uppercase tracking-[0.25em] text-primary">
                 Education
               </p>
             </div>
@@ -344,28 +344,29 @@ const CvResume = () => {
                   </div>
 
                   {/* card */}
-                  <div className="flex-1 bg-white/5 dark:bg-black/25 border border-blue-400/30 rounded-2xl px-4 py-3 md:px-5 md:py-4 flex flex-col gap-2">
+                  <div className="flex-1 bg-white/5 dark:bg-black/25 border border-blue-400/80 rounded-2xl px-4 py-3 md:px-5 md:py-4 flex flex-col gap-2">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <p className="text-[11px] md:text-xs font-medium uppercase tracking-wide text-blue-300 mb-1">
+                        <p className="border border-accent-foreground/30 max-w-fit px-2 py-1 rounded-sm text-[9px] md:text-xs font-medium uppercase tracking-wide text-blue-500 mb-2">
                           {edu.period}
                         </p>
-                        <h4 className="text-sm md:text-base font-semibold text-black dark:text-white">
+                        <h4 className="text-sm md:text-base font-semibold text-black dark:text-white mb-1">
                           {edu.major}
                         </h4>
                         <p className="text-xs md:text-sm text-muted-foreground">
                           Studied at{" "}
-                          <span className="font-medium text-blue-200">
+                          <span className="font-medium text-blue-500">
                             {edu.school}
                           </span>
                         </p>
+                        {/* Image Logo Education*/}
                       </div>
                       {edu.image && (
                         <a
                           href={edu.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden border border-white/10 shrink-0 hover:border-blue-300 transition-colors"
+                          className="w-12 h-12 md:w-14 md:h-14 rounded-md overflow-hidden border border-white/10 shrink-0 hover:border-blue-300 transition-colors"
                         >
                           <img
                             src={edu.image}
@@ -393,7 +394,7 @@ const CvResume = () => {
                         href={edu.learnMoreUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-[11px] md:text-xs font-medium text-blue-300 hover:text-blue-200"
+                        className="inline-flex items-center gap-1 text-[11px] md:text-xs font-medium text-blue-500 hover:text-blue-400"
                       >
                         Learn more
                         <span aria-hidden="true">↗</span>

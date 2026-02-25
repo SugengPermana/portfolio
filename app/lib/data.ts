@@ -257,7 +257,7 @@ export const resumeEducation: ResumeEducation[] = [
       "Currently I am studying at Universitas Pamulang, Information Technology Department, Informatics Engineering Study Program, 3nd Semester.",
     hoverColor: "#003d7a",
     iconType: "graduation",
-    image: "/pamulang.png",
+    image: "/unpam.png",
     website: "https://unpam.ac.id/",
     learnMoreUrl: "https://unpam.ac.id/",
     achievements: [
@@ -319,19 +319,19 @@ export const resumeExperiences: ResumeExperience[] = [
 
 export const resumeBadges: ResumeBadge[] = [
   {
-    month: "February 2025",
-    title: "Frontend Web Developer Badge",
-    issuer: "Online Course Platform",
+    month: "Juli - November 2025",
+    title: "Google Cloud Badge",
+    issuer: "Google Cloud",
     description:
       "Completed a comprehensive frontend course covering React, Tailwind CSS, and modern JavaScript best practices.",
-    certificateUrl: "#",
+    certificateUrl:
+      "https://www.skills.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965",
   },
   {
-    month: "December 2024",
-    title: "JavaScript Fundamentals Badge",
-    issuer: "Coding Bootcamp",
-    description:
-      "Strengthened JavaScript fundamentals including ES6+, asynchronous programming, and DOM manipulation.",
+    month: "????????",
+    title: "Coming Soon",
+    issuer: "????????",
+    description: "Coming soon",
     certificateUrl: "#",
   },
 ];
