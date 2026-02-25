@@ -51,7 +51,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="font-poppins w-full max-w-6xl mx-auto py-10 px-6"
+      className="font-poppins w-full max-w-6xl mx-auto py-10 px-6 mb-20"
     >
       <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0 ">
         <div className="text-center flex flex-col items-center justify-center ">
@@ -86,7 +86,7 @@ const Projects = () => {
           className="flex flex-wrap justify-center gap-4"
         >
           <button
-          title="All Item"
+            title="All Item"
             onClick={() => {
               setActiveCategory("All");
               setVisibleCount(ITEMS_PER_PAGE);
@@ -202,7 +202,7 @@ const Projects = () => {
             Showing {visibleItems.length} of {totalFiltered} items
           </p>
           <button
-          title="load more"
+            title="load more"
             onClick={loadMore}
             className="px-6 py-2.5 rounded-full text-sm font-medium border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
           >

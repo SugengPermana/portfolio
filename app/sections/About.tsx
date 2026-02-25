@@ -260,19 +260,25 @@ const About = () => {
                         </p>
                       </div>
                       <div data-aos="fade-up" data-aos-duration="1000">
-                        <p className="uppercase text-foreground">
-                          apa yang gw bisa?
+                        <p className="uppercase text-foreground mb-2">
+                          apa yang gue bisa?
                         </p>
-                        <p className="text-muted-foreground text-md mb-5">
+                        <p className="text-muted-foreground text-md mb-2">
                           gue Berpengalaman menggunakan teknologi seperti React,
                           Next.js, TypeScript, Node.js, dan berbagai tools
                           modern untuk membangun aplikasi end-to-end.
                         </p>
                         <p className="text-muted-foreground text-md">
-                          ga cuma itu, gw juga Terampil dalam membuat REST API,
-                          mengelola database, mengoptimalkan performa aplikasi,
-                          serta mengimplementasikan fitur yang scapable dan
-                          dinamic untuk user
+                          ga cuma itu, gue juga Berpengalaman dalam
+                          mengembangkan REST API, mengelola database, serta
+                          mengoptimalkan performa aplikasi untuk mendukung
+                          sistem yang scalable dan efisien. Aktif memanfaatkan
+                          AI sebagai development partner untuk mempercepat
+                          problem-solving, meningkatkan kualitas kode, dan
+                          merancang solusi yang adaptif terhadap kebutuhan user.
+                          Terbiasa membangun fitur dinamis yang tidak hanya
+                          fungsional, tetapi juga memberikan pengalaman pengguna
+                          yang optimal.
                         </p>
                       </div>
                     </div>

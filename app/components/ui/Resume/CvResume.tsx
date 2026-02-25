@@ -92,7 +92,7 @@ const SuitcaseIcon = () => (
 );
 
 const BadgeIcon = () => (
-  <div className="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/40 flex items-center justify-center text-amber-400">
+  <div className="w-10 h-10 rounded-4xl border bg-accent text-primary border-foreground flex items-center justify-center ">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="20"
@@ -100,30 +100,22 @@ const BadgeIcon = () => (
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
     >
-      <path d="M12 3l2.1 2.1 2.9-.4-.4 2.9 2.1 2.1-2.1 2.1.4 2.9-2.9-.4L12 18l-2.1 2.1-2.9.4.4-2.9L5.3 12l2.1-2.1-.4-2.9 2.9.4z" />
-      <path d="M9 14l1.5-2L9 10.5" />
-      <path d="M15 14l-1.5-2L15 10.5" />
-      <path d="M10.5 11.5h3" />
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M17 17v-13l-5 3l-5 -3v13l5 3l5 -3" />
     </svg>
   </div>
 );
 
 const SchoolBuildingIcon = () => (
-  <div className="w-10 h-10 rounded-2xl bg-blue-500/10 border border-blue-500/40 flex items-center justify-center text-blue-400">
+  <div className="w-10 h-10 rounded-4xl border bg-primary/10 text-primary border-foreground flex items-center justify-center">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
-      viewBox="0 0 24 24"
+      viewBox="0 0 24 26"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
     >
       <path d="M3 21h18" />
       <path d="M5 21V9l7-4 7 4v12" />
@@ -271,7 +263,7 @@ const CvResume = () => {
           </div>
 
           <div className="relative pl-6">
-            <div className="absolute left-1.75 top-0 bottom-0 w-px bg-linear-to-b from-amber-400/60 via-amber-400/20 to-transparent" />
+            <div className="absolute left-1.75 top-0 bottom-0 w-px bg-linear-to-b from-cyan-400/60 via-cyan-400/20 to-transparent" />
 
             <div className="space-y-0">
               {resumeBadges.map((badge, index) => (
@@ -281,20 +273,20 @@ const CvResume = () => {
                     className="absolute -left-6 top-6 flex items-center justify-center"
                     style={{ width: "0.875rem" }}
                   >
-                    <div className="w-3 h-3 rounded-full bg-amber-400 shadow-[0_0_14px_rgba(251,191,36,0.8)]" />
+                    <div className="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_14px_rgba(79,70,229,0.9)]" />
                   </div>
 
                   {/* card */}
-                  <div className="flex-1 bg-white/5 dark:bg-black/25 border border-amber-400/30 rounded-2xl px-4 py-3 md:px-5 md:py-4">
-                    <p className="text-[11px] md:text-xs font-medium uppercase tracking-wide text-amber-300 mb-1">
+                  <div className="flex-1 bg-white/5 dark:bg-black/25 border border-cyan-400/50 to-purple-400/50 rounded-2xl px-4 py-3 md:px-5 md:py-4">
+                    <p className="border border-accent-foreground/30 max-w-fit px-2 py-1 rounded-sm text-[9px] md:text-xs font-medium uppercase tracking-wide text-cyan-600 dark:text-cyan-400 mb-2">
                       {badge.month}
                     </p>
-                    <h4 className="text-sm md:text-base font-semibold text-black dark:text-white">
+                    <h4 className="text-sm md:text-base font-semibold text-black dark:text-white mb-1">
                       {badge.title}
                     </h4>
                     <p className="text-xs md:text-sm text-muted-foreground mb-2">
                       Issued by{" "}
-                      <span className="font-medium text-amber-200">
+                      <span className="font-medium text-cyan-600 dark:text-cyan-400">
                         {badge.issuer}
                       </span>
                     </p>
@@ -305,7 +297,7 @@ const CvResume = () => {
                       href={badge.certificateUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-[11px] md:text-xs font-medium text-amber-300 hover:text-amber-200"
+                      className="inline-flex items-center gap-1 text-[11px] md:text-xs font-medium text-cyan-600 dark:text-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300"
                     >
                       View Badges
                       <span aria-hidden="true">↗</span>
@@ -316,7 +308,7 @@ const CvResume = () => {
                   {index < resumeBadges.length - 1 && (
                     <div className="relative h-7">
                       <div className="absolute left-[-1.1rem] top-0 bottom-0 flex items-center">
-                        <div className="w-80 h-px bg-amber-400/30" />
+                        <div className="w-80 h-px bg-cyan-400/80" />
                       </div>
                     </div>
                   )}

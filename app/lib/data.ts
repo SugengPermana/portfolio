@@ -141,34 +141,29 @@ export const certificates: Certificate[] = [
   {
     title: "Memulai Pemograman Dengan Python",
     image: "/memulai_python.jpg",
-    description:
-      "",
+    description: "",
     date: "Mei 2025",
-    learned: [
-      "belajar basic if condition, numbering, classess",
-    ],
+    learned: ["belajar basic if condition, numbering, classess"],
     issuer: "dicoding",
   },
   {
     title: "Belajar Dasar pemograman Javascript",
     image: "/javascript.png",
-    description:
-      "",
+    description: "",
     date: " juli 2025",
     learned: [
       "ES6+ features and modern JavaScript syntax",
       "Async/await and Promises",
       "Design patterns and best practices",
       "Performance optimization techniques",
-      "OOP"
+      "OOP",
     ],
     issuer: "dicoding",
   },
   {
     title: "Ai Praktis Untuk Produktivitas",
     image: "/ai-produk.jpg",
-    description:
-    "",
+    description: "",
     date: "juli 2025",
     learned: [
       "belajar ai untuk productivitas setiap hari",
@@ -180,8 +175,7 @@ export const certificates: Certificate[] = [
   {
     title: "Belajar Back end pemula dengan javascript",
     image: "/backend.png",
-    description:
-      "",
+    description: "",
     date: "agustus 2025",
     learned: [
       "Backend development dengan Node.js dan Express",
@@ -192,8 +186,7 @@ export const certificates: Certificate[] = [
   {
     title: "Belajar Dasar Cloud & Aws",
     image: "/cloud.png",
-    description:
-      "",
+    description: "",
     date: "agustus 2025",
     learned: [
       "basic konsep cloud dan aws",
@@ -204,67 +197,55 @@ export const certificates: Certificate[] = [
   {
     title: "Fundamental Junior Web Developer",
     image: "/junior.jpg",
-    description:
-      "",
+    description: "",
     date: "agustus 2025",
     learned: [
       "belajar basic best Practice",
       "mempelajari karir ke depan nya bagi seornag web developer",
-      "mempelajari analogi seorang web developer seperti apa "
+      "mempelajari analogi seorang web developer seperti apa ",
     ],
     issuer: "komdigi",
   },
   {
     title: "introduction data science with R",
     image: "/intro-R.jpg",
-    description:
-      "",
+    description: "",
     date: "agustus 2025",
-    learned: [
-      "mempelajari konsep bahasa R",
-      "belajar bagaimana cara kerja R",
-    ],
+    learned: ["mempelajari konsep bahasa R", "belajar bagaimana cara kerja R"],
     issuer: "DQlab",
   },
   {
     title: "R For data Science",
     image: "/R-data.jpg",
-    description:
-      "",
+    description: "",
     date: "agustus 2025",
-    learned: [
-      "belajar basic class R",
-      "belajar menggunakan R"
-    ],
+    learned: ["belajar basic class R", "belajar menggunakan R"],
     issuer: "DQLab",
   },
   {
     title: "Guide Learn R With Ai ",
     image: "/ai-R.jpg",
-    description:
-      "",
+    description: "",
     date: "september 2025",
     learned: [
       "Mempelajari serangan apa yang akan terjadi",
       "belajar konsep dari cybersecurity",
-      "belajar melindungi diri dari serangan sosial enginering  "
+      "belajar melindungi diri dari serangan sosial enginering  ",
     ],
     issuer: "DQlab",
   },
   {
     title: "Introduction to cybersecurity",
     image: "/cybersecurity.jpg",
-    description:
-      "",
+    description: "",
     date: "september 2025",
     learned: [
       "Mempelajari serangan apa yang akan terjadi",
       "belajar konsep dari cybersecurity",
-      "belajar melindungi diri dari serangan sosial enginering  "
+      "belajar melindungi diri dari serangan sosial enginering  ",
     ],
     issuer: "Networking Academy",
   },
-
 ];
 
 export const resumeEducation: ResumeEducation[] = [
@@ -309,12 +290,12 @@ export const resumeExperiences: ResumeExperience[] = [
     role: "Freelance",
     company: "Remote - Bogor",
     description:
-      "I work as a freelance web developer, creating websites for clients and helping them with their web development needs.",
+      "Saya bekerja sebagai freelance web developer, membuat website untuk client dan membantu mereka dengan kebutuhan web development mereka.",
     hoverColor: "#a600ff",
     iconType: "briefcase",
     image: "",
     achievements: [
-      "Built responsive landing pages and company profiles using modern frontend stacks.",
+      "Membuat landing pages, company profile, booking villa, dan e-commerce menggunakan stack frontend modern seperti react atau nextjs atau wordpress untuk efisensi cepat",
       "Collaborated with clients to translate business needs into usable web interfaces.",
     ],
   },
@@ -324,14 +305,14 @@ export const resumeExperiences: ResumeExperience[] = [
     role: "Tour Guide",
     company: "On Site - Museum Sejarah Jakarta",
     description:
-      "selama 3 bulan gue ikut terlibat langsung dalam memandu wisatawan asing dan local,Tugas utama gue membantu pengunjung kalau mereka butuh informasi mengenai museum, sekaligus menjaga koleksi museum",
+      "Dalam masa magang saya berinteraksi langsung dengan wisatawan lokal dari berbagai rombongan sekolah serta wisatawan asing. Tugas saya mencakup memberikan informasi terkait ruangan dan koleksi museum, menjawab pertanyaan pengunjung, serta memastikan area museum tetap tertib, aman, dan terjaga dengan baik untuk mendukung pengalaman kunjungan yang nyaman.",
     hoverColor: "#a600ff",
     iconType: "briefcase",
     image: "",
     achievements: [
-      "Membantu pengunjung dengan ngasih informasi tentang ruangan dan koleksi yang ada di museum.",
-      "Ikut ngejaga koleksi museum dan memastikan area museum tetap tertata dengan baik",
-      "Menjadi pemandu tourist local dan asing selama 3 bulan magang"
+      "Membantu pengunjung dengan memberikan informasi tentang ruangan dan koleksi yang ada di museum.",
+      "Ikut ngejaga koleksi museum dan memastikan area museum tetap teratur dengan baik",
+      "Menjadi pemandu tourist local dan asing selama 3 bulan magang setiap harinya",
     ],
   },
 ];
@@ -392,11 +373,11 @@ export const projects = [
     },
     category: "Web Dev",
   },
-  
+
   {
     title: "Task Manajemen",
     description:
-    "Saya mengembangkan website manajemen tugas yang memungkinkan pengguna untuk membuat dan mengelola tugas secara efisien. Pengguna dapat menambahkan tugas, memantau progress, dan mengatur pekerjaan mereka dalam satu platform terpusat. Sistem ini dirancang untuk membantu meningkatkan produktivitas dengan antarmuka yang sederhana, intuitif, dan mudah digunakan.",
+      "Saya mengembangkan website manajemen tugas yang memungkinkan pengguna untuk membuat dan mengelola tugas secara efisien. Pengguna dapat menambahkan tugas, memantau progress, dan mengatur pekerjaan mereka dalam satu platform terpusat. Sistem ini dirancang untuk membantu meningkatkan produktivitas dengan antarmuka yang sederhana, intuitif, dan mudah digunakan.",
     image: "/Task_manajemen.png",
     tags: ["html", "css", "Javascript"],
     links: {
@@ -408,7 +389,7 @@ export const projects = [
   {
     title: "Portfolio V1",
     description:
-    "Saya membuat website portfolio pribadi untuk menampilkan proyek, progress pembelajaran, dan latar belakang profesional saya sebagai developer. Platform ini menampilkan hasil karya, skill teknis, dan pengalaman yang saya miliki, sehingga memberikan gambaran yang jelas tentang kemampuan saya dalam pengembangan web. Website ini dirancang dengan tampilan modern, responsif, dan fokus pada pengalaman pengguna.",
+      "Saya membuat website portfolio pribadi untuk menampilkan proyek, progress pembelajaran, dan latar belakang profesional saya sebagai developer. Platform ini menampilkan hasil karya, skill teknis, dan pengalaman yang saya miliki, sehingga memberikan gambaran yang jelas tentang kemampuan saya dalam pengembangan web. Website ini dirancang dengan tampilan modern, responsif, dan fokus pada pengalaman pengguna.",
     image: "/portfolio-1.png",
     tags: ["react", "javascript", "tailwind"],
     links: {
@@ -417,7 +398,7 @@ export const projects = [
     },
     category: "Web Dev",
   },
-  
+
   {
     title: "Sepatu Sneakers",
     description:

@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
+import React, { useState } from "react";
 
 interface LiveButtonProps {
-  text: string
-  url: string
-  className?: string
+  text: string;
+  url: string;
+  className?: string;
 }
 
 export default function LiveButton({
@@ -13,16 +13,17 @@ export default function LiveButton({
   url,
   className = "",
 }: LiveButtonProps) {
-  const [isHovered, setIsHovered] = useState(false)
-  const [isPressed, setIsPressed] = useState(false)
+  const [isHovered, setIsHovered] = useState(false);
+  const [isPressed, setIsPressed] = useState(false);
 
   return (
     <button
+      title="button"
       className={`group relative flex h-12 min-w-[9.3rem] items-center justify-center gap-3 overflow-hidden rounded-lg border border-gray-300 bg-white px-6 transition-all duration-500 ease-out before:absolute before:inset-0 before:translate-x-full before:bg-linear-to-r before:from-transparent before:via-black/5 before:to-transparent before:transition-transform before:duration-700 hover:scale-105 hover:border-gray-400 hover:shadow-lg hover:shadow-black/20 hover:before:translate-x-full active:scale-95 dark:border-gray-600 dark:bg-black dark:before:via-white/5 dark:hover:border-gray-500 dark:hover:shadow-white/20 ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => {
-        setIsHovered(false)
-        setIsPressed(false)
+        setIsHovered(false);
+        setIsPressed(false);
       }}
       onMouseDown={() => setIsPressed(true)}
       onMouseUp={() => setIsPressed(false)}
@@ -50,5 +51,5 @@ export default function LiveButton({
       {/* Hover state border animation */}
       <div className="absolute inset-0 animate-pulse rounded-lg border-2 border-cyan-200/0 opacity-0 transition-all duration-500 group-hover:border-cyan-500/30 group-hover:opacity-100 dark:group-hover:border-cyan-200/30"></div>
     </button>
-  )
+  );
 }
