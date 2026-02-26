@@ -6,6 +6,8 @@ import AOSProvider from "./components/AOSProvider";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import IntroAnimation from "./components/IntroAnimation";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,7 +25,7 @@ const chakra_Petch = Chakra_Petch({
 
 export const metadata: Metadata = {
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
   title: "Sugeng Permana D - Portfolio",
   description: "Personal portfolio built with Next.js",
@@ -49,6 +51,8 @@ export default function RootLayout({
           <CursorTrail />
           <Navbar />
           <AOSProvider>{children}</AOSProvider>
+          <Analytics />
+          <SpeedInsights />
           {/* <Footer /> */}
         </ThemeProvider>
       </body>
