@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { SectionTitle } from "../components/SectionTitle";
 import Link from "next/link";
 import { stats } from "../lib/data";
@@ -8,6 +9,34 @@ import TypingGlitch from "../components/ui/About/TypingGlitch";
 import RotatingText from "../components/ui/About/RotatingText";
 
 const About = () => {
+  const [isGlitching, setIsGlitching] = useState(false);
+
+  useEffect(() => {
+    let intervalId: NodeJS.Timeout | undefined;
+    let glitchTimeoutId: NodeJS.Timeout | undefined;
+
+    const scheduleGlitch = () => {
+      const delay = 2500 + Math.random() * 1500; // 2500ms – 4000ms
+
+      intervalId = setTimeout(() => {
+        const duration = 120 + Math.random() * 180; // 120ms – 300ms
+        setIsGlitching(true);
+
+        glitchTimeoutId = setTimeout(() => {
+          setIsGlitching(false);
+          scheduleGlitch();
+        }, duration);
+      }, delay);
+    };
+
+    scheduleGlitch();
+
+    return () => {
+      if (intervalId) clearTimeout(intervalId);
+      if (glitchTimeoutId) clearTimeout(glitchTimeoutId);
+    };
+  }, []);
+
   return (
     <section className="w-full mb-20">
       <div className="relative w-full max-w-7xl mx-auto py-10 lg:py-15 px-6 lg:px-8 overflow-hidden">
@@ -59,19 +88,37 @@ const About = () => {
                     </div>
                   </div>
 
-                  {/* Profile Image */}
-                  <div className="mt-6 mb-4 w-40 h-40 rounded-2xl p-0.5 bg-linear-to-br from-purple-500 via-cyan-500 to-purple-400 shadow-lg shadow-purple-500/30">
-                    <div className="w-full h-full rounded-[14px] overflow-hidden bg-gray-900">
-                      <Image
-                        src="/new.png"
-                        loading="eager"
-                        alt="Profile"
-                        width={200}
-                        height={200}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110 group-hover/card:brightness-110"
-                      />
-                    </div>
+                {/* Profile Image with synchronized glitch overlay */}
+                <div
+                  className={`mt-6 mb-4 w-40 h-40 rounded-2xl p-0.5 bg-linear-to-br from-purple-500 via-cyan-500 to-purple-400 shadow-lg shadow-purple-500/30 glitch-image ${
+                    isGlitching ? "glitch-active" : ""
+                  }`}
+                >
+                  <div className="relative w-full h-full rounded-[14px] overflow-hidden bg-gray-900">
+                    <Image
+                      src="/new.png"
+                      loading="eager"
+                      alt="Profile"
+                      width={200}
+                      height={200}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110 group-hover/card:brightness-110"
+                    />
+                    {/* RGB glitch overlay layers */}
+                    <div
+                      aria-hidden="true"
+                      className="glitch-layer glitch-layer--red"
+                    />
+                    <div
+                      aria-hidden="true"
+                      className="glitch-layer glitch-layer--cyan"
+                    />
+                    {/* Optional scanline overlay */}
+                    <div
+                      aria-hidden="true"
+                      className="glitch-scanline"
+                    />
                   </div>
+                </div>
 
                   {/* Name */}
                   <h2 className="text-xl font-bold text-foreground tracking-tight">
@@ -80,7 +127,7 @@ const About = () => {
 
                   {/* Role - Typing Animation */}
                   <div className="text-sm text-muted-foreground min-h-6 mb-2">
-                    <TypingGlitch />
+                    <TypingGlitch isGlitching={isGlitching} />
                   </div>
 
                   {/* Social Media */}

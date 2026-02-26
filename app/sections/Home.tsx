@@ -25,7 +25,9 @@ const Home = () => {
         {/* deskripsi */}
         <div className="font-chakra relative mb-6">
           <p className="text-muted-foreground text-lg font-medium">
-            <TypingGlitch />
+            {/* Home tidak perlu glitch sinkron dengan profile image,
+                jadi kita pass false agar tetap kompatibel */}
+            <TypingGlitch isGlitching={false} />
           </p>
         </div>
         {/* button */}
