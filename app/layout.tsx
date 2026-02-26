@@ -22,7 +22,10 @@ const chakra_Petch = Chakra_Petch({
 });
 
 export const metadata: Metadata = {
-  title: "Sugeng - Portfolio",
+  icons: {
+    icon: '/favicon.ico',
+  },
+  title: "Sugeng Permana D - Portfolio",
   description: "Personal portfolio built with Next.js",
 };
 
