@@ -144,12 +144,7 @@ const CvResume = () => {
   return (
     <div className="space-y-20">
       {/* EXPERIENCE - horizontal timeline with auto-rotate */}
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="100"
-        className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0"
-      >
+      <div className="transition-all duration-1000 ease-out transform opacity-100 translate-y-0">
         {/* header + horizontal timeline with center dot */}
         <div className="mb-2">
           <div className="relative w-full py-8 md:py-10">
@@ -157,7 +152,11 @@ const CvResume = () => {
             <div className="absolute left-12 md:left-40 lg:left-40 right-0 top-1/2 h-px bg-linear-to-r from-primary/50 via-primary/30 to-primary/10" />
 
             {/* button icon on the left, sitting on the timeline */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 flex items-center gap-3">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 flex items-center gap-3"
+            >
               <SuitcaseIcon />
               <span className="hidden md:inline uppercase tracking-[0.25em] text-xs text-muted-foreground">
                 Experience
@@ -166,6 +165,8 @@ const CvResume = () => {
 
             {/* period — above dot, raised higher */}
             <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
               className="absolute left-1/2 -translate-x-1/2 z-10 pointer-events-none"
               style={{ top: "calc(50% - 2.5rem)" }}
             >
@@ -175,7 +176,11 @@ const CvResume = () => {
             </div>
 
             {/* dot — centered exactly on timeline line */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none"
+            >
               <div className="relative flex items-center justify-center">
                 <div
                   className="w-4 h-4 md:w-5 md:h-5 rounded-full border-2 border-primary bg-background"
@@ -190,7 +195,12 @@ const CvResume = () => {
         </div>
 
         {/* carousel content, always centered under fixed dot */}
-        <div className="relative w-full max-w-3xl mx-auto mt-2 overflow-hidden">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+          className="relative w-full max-w-3xl mx-auto mt-2 overflow-hidden"
+        >
           <div
             className="flex transition-transform duration-500 ease-out"
             style={{
@@ -253,10 +263,19 @@ const CvResume = () => {
       <div className="grid md:grid-cols-2 gap-10 md:gap-12 mb-30">
         {/* badges column */}
         <div>
-          <div className="flex items-center gap-3 mb-6">
+          <div
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            className="flex items-center gap-3 mb-6"
+          >
             <BadgeIcon />
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-primary">
+              <p
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                className="text-xs uppercase tracking-[0.25em] text-primary"
+              >
                 Badges
               </p>
             </div>
@@ -267,7 +286,12 @@ const CvResume = () => {
 
             <div className="space-y-0">
               {resumeBadges.map((badge, index) => (
-                <div key={index} className="relative">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  key={index}
+                  className="relative"
+                >
                   {/* dot — centered on timeline line */}
                   <div
                     className="absolute -left-6 top-6 flex items-center justify-center"
@@ -320,10 +344,19 @@ const CvResume = () => {
 
         {/* education column */}
         <div>
-          <div className="flex items-center gap-3 mb-6">
+          <div
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            className="flex items-center gap-3 mb-6"
+          >
             <SchoolBuildingIcon />
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-primary">
+              <p
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                className="text-xs uppercase tracking-[0.25em] text-primary"
+              >
                 Education
               </p>
             </div>
@@ -334,7 +367,12 @@ const CvResume = () => {
 
             <div className="space-y-0">
               {resumeEducation.map((edu, index) => (
-                <div key={index} className="relative">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  key={index}
+                  className="relative"
+                >
                   {/* dot — centered on timeline line */}
                   <div
                     className="absolute -left-6 top-6 flex items-center justify-center"

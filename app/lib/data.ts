@@ -254,15 +254,14 @@ export const resumeEducation: ResumeEducation[] = [
     major: "S1 Information Technology",
     school: "Universitas Pamulang",
     description:
-      "Currently I am studying at Universitas Pamulang, Information Technology Department, Informatics Engineering Study Program, 3nd Semester.",
+      "Saat ini saya sedang menempuh pendidikan di Universitas Pamulang, pada Jurusan ilmu komputer, Program Studi Teknik Informatika, dan sedang berada di semester 4. saya mempelajari keterampilan sebagai web developer, khusus nya front-End dan Backend, Goal saya ingin menjadi fullstack developer.",
     hoverColor: "#003d7a",
     iconType: "graduation",
     image: "/unpam.png",
     website: "https://unpam.ac.id/",
     learnMoreUrl: "https://unpam.ac.id/",
     achievements: [
-      "Maintained strong academic performance in core programming and computer science subjects.",
-      "Actively involved in campus tech communities and self-learning modern web technologies.",
+      "Aktif mengembangkan kemampuan secara mandiri dengan mempelajari teknologi web modern seperti frontend dan backend development melalui praktik langsung dan pembuatan proyek pribadi.",
     ],
   },
   {
@@ -270,15 +269,15 @@ export const resumeEducation: ResumeEducation[] = [
     major: "Pariwisata & Perhotelan",
     school: "SMK Laboratorium Indonesia",
     description:
-      "I also graduated from SMK Laboratorium Indonesia majoring in Pariwisata & Perhotelan in this school I learn about public speaking and how to serve guests.",
+      "Saya juga merupakan lulusan SMK Laboratorium Indonesia dengan jurusan Pariwisata & Perhotelan. Selama menempuh pendidikan di sana, saya mempelajari keterampilan komunikasi, khususnya public speaking, serta bagaimana memberikan pelayanan yang baik dan profesional kepada tamu.",
     hoverColor: "#006d3a",
     iconType: "graduation",
     image: "/kkgj.png",
-    website: "https://smklaboratoriumindonesia.sch.id/",
+    website: "https://smklaboratoriumindonesia.wordpress.com/",
     learnMoreUrl: "https://smklaboratoriumindonesia.sch.id/",
     achievements: [
-      "Developed strong public speaking and customer service skills.",
-      "Participated in school events and hospitality-related activities.",
+      "Mengembangkan kemampuan public speaking yang baik, termasuk berbicara dengan percaya diri, menyampaikan informasi dengan jelas, dan berinteraksi langsung dengan berbagai orang.",
+      "Terbiasa menghadapi dan berinteraksi dengan banyak orang, sehingga membentuk kemampuan komunikasi interpersonal yang baik dan sikap yang adaptif.",
     ],
   },
 ];
@@ -323,7 +322,7 @@ export const resumeBadges: ResumeBadge[] = [
     title: "Google Cloud Badge",
     issuer: "Google Cloud",
     description:
-      "Completed a comprehensive frontend course covering React, Tailwind CSS, and modern JavaScript best practices.",
+      "Menyelesaikan pelatihan dan hands-on labs menggunakan platform Google Cloud, termasuk Compute Engine, Cloud Storage, dan dasar-dasar cloud computing. dan Memahami konsep core cloud seperti virtual machines, cloud storage, networking, dan identity & access management (IAM). ",
     certificateUrl:
       "https://www.skills.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965",
   },

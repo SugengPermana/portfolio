@@ -4,7 +4,7 @@ import Link from "next/link";
 import { stats } from "../lib/data";
 import Image from "next/image";
 import { SocialLinks } from "../components/SocialLinks";
-import TypingGlitch from "../components/ui/TypingGlitch";
+import TypingGlitch from "../components/ui/About/TypingGlitch";
 import RotatingText from "../components/ui/About/RotatingText";
 
 const About = () => {

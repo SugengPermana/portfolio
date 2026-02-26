@@ -39,7 +39,7 @@ const Resume = () => {
             <div
               data-aos="fade-up"
               data-aos-duration="1000"
-              data-aos-delay="400"
+              data-aos-delay="500"
               className="absolute left-0 right-0 top-1/2 h-1.25 bg-accent-foreground/40"
             ></div>
           </div>

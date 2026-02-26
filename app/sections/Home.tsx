@@ -2,7 +2,7 @@ import { SectionTitle } from "../components/SectionTitle";
 import { AnimatedShinyButton } from "../components/ui/Home/animated-shiny-button";
 import LiveButton from "../components/ui/Home/live-button";
 import Cardhome from "../components/ui/Home/Cardhome";
-import TypingGlitch from "../components/ui/TypingGlitch";
+import TypingGlitch from "../components/ui/About/TypingGlitch";
 import GradientText from "../components/ui/GradientText";
 
 const Home = () => {
