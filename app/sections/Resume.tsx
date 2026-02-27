@@ -19,7 +19,7 @@ const Resume = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="200"
-            className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 mt-10 flex gap-2"
+            className="text-xl md:text-4xl lg:text-5xl font-bold mb-6 mt-10 flex gap-1"
           >
             Education &
             <GradientText colors={["#5227FF", "#FF9FFC", "#B19EEF"]}>

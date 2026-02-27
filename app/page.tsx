@@ -6,12 +6,14 @@ import Resume from "./sections/Resume";
 
 export default function Page() {
   return (
-    <main className="relative flex flex-col items-center px-8 pb-32">
-      <Home />
-      <About />
-      <Projects />
-      <Resume />
-      <Contact />
+    <main className="relative w-full overflow-x-hidden">
+      <div className="flex flex-col max-w-6xl mx-auto px-4 md:px-8 lg:px-10 pb-24">
+        <Home />
+        <About />
+        <Projects />
+        <Resume />
+        <Contact />
+      </div>
     </main>
   );
 }
